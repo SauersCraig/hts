@@ -30,7 +30,6 @@ export function Restaurants({ restaurants }) {
 
           <p>{i.city}</p>
           {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-          <button onClick={() => onClickVote(i.id, i.votes)}>Vote</button>
         </div>
       ))}
     </div>
