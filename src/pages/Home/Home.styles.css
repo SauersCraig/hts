@@ -9,3 +9,9 @@
   font-size: 3em;
   text-align: center;
 }
+.htsLink {
+  display: block;
+  margin: 0 auto 0;
+  text-align: center;
+  color: black;
+}

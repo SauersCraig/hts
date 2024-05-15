@@ -37,20 +37,23 @@ function App() {
 
   if (!session) {
     return (
-      <Auth
-        supabaseClient={supabase}
-        localization={{
-          variables: {
-            sign_in: {
-              email_label: "Your email address",
-              password_label: " strong password",
-              display_name_label: "User Name",
+      <>
+        <Home />
+        <Auth
+          supabaseClient={supabase}
+          localization={{
+            variables: {
+              sign_in: {
+                email_label: "Your email address",
+                password_label: " strong password",
+                display_name_label: "User Name",
+              },
             },
-          },
-        }}
-        appearance={{ theme: ThemeSupa }}
-        providers={[]}
-      />
+          }}
+          appearance={{ theme: ThemeSupa }}
+          providers={[]}
+        />
+      </>
     );
   } else {
     return (
