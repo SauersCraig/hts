@@ -35,38 +35,19 @@ function App() {
     return () => subscription.unsubscribe();
   }, []);
 
-  if (!session) {
-    return (
-      <Auth
-        supabaseClient={supabase}
-        localization={{
-          variables: {
-            sign_in: {
-              email_label: "Your email address",
-              password_label: " strong password",
-              display_name_label: "User Name",
-            },
-          },
-        }}
-        appearance={{ theme: ThemeSupa }}
-        providers={[]}
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route
+        path="/Restaurants"
+        element={<Restaurants restaurants={restaurants} />}
       />
-    );
-  } else {
-    return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/Restaurants"
-          element={<Restaurants restaurants={restaurants} />}
-        />
-        <Route
-          path="/GoldenTomato"
-          element={<GoldenTomato session={session} />}
-        />
-      </Routes>
-    );
-  }
+      <Route
+        path="/GoldenTomato"
+        element={<GoldenTomato session={session} />}
+      />
+    </Routes>
+  );
 }
 
 export default App;
