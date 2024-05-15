@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Tungsten-Semibold";
+  src: local("Tungsten-Semibold"),
+    url(./assets/fonts/Tungsten-Semibold.otf) format("otf");
+}
+p {
+  font-family: "Tungsten-Semibold";
+}
