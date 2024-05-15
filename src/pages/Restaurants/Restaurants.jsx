@@ -22,7 +22,6 @@ export function Restaurants({ restaurants }) {
 
   return (
     <div>
-      <button onClick={() => setSession(null)}>Log Out</button>
       {restaurants.map((i) => (
         <div key={i.id}>
           <p>{i.name}</p>

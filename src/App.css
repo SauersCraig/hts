@@ -1,8 +1,12 @@
 @font-face {
-  font-family: "Tungsten-Semibold";
-  src: local("Tungsten-Semibold"),
-    url(./assets/fonts/Tungsten-Semibold.otf) format("otf");
+  font-family: "DukesTS";
+  src: local("DukesTS"),
+    url(./assets/fonts/Tungsten-Semibold.otf) format("opentype");
 }
 p {
-  font-family: "Tungsten-Semibold";
+  font-family: "DukesTS";
+}
+
+a {
+  font-family: "DukesTS";
 }

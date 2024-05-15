@@ -14,4 +14,8 @@
   margin: 0 auto 0;
   text-align: center;
   color: black;
+  font-size: 2em;
+}
+.htsLink:hover {
+  color: #f32735;
 }
