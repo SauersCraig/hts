@@ -1,0 +1,11 @@
+.comingSoonPage {
+}
+.homeLogo {
+  display: block;
+  width: 80%;
+  margin: 0 auto 0;
+}
+.comingSoon {
+  font-size: 3em;
+  text-align: center;
+}

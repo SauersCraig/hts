@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { supabase } from "./client";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
-
+import { Restaurants } from "./pages/Restaurants/Restaurants";
+import { Home } from "./pages/Home/Home";
+import { GoldenTomato } from "./pages/GoldenTomato/GoldenTomato";
 function App() {
   const [session, setSession] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
@@ -17,24 +18,6 @@ function App() {
   async function getRestaurants() {
     const { data } = await supabase.from("Restaurants").select();
     setRestaurants(data);
-  }
-  async function updateVotes(id, vote) {
-    const { data, error } = await supabase
-      .from("Restaurants")
-      .update({ votes: vote })
-      .eq("id", id)
-      .select();
-    if (error) {
-      console.error(error);
-    } else {
-      console.log(vote);
-      window.location.reload();
-    }
-  }
-
-  function onClickVote(id, votes) {
-    let vote = votes + 1;
-    updateVotes(id, vote);
   }
 
   useEffect(() => {
@@ -71,19 +54,17 @@ function App() {
     );
   } else {
     return (
-      <>
-        <button onClick={() => setSession(null)}>Log Out</button>
-        {restaurants.map((i) => (
-          <div key={i.id}>
-            <p>{i.name}</p>
-            <p>{i.address}</p>
-
-            <p>{i.city}</p>
-            {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-            <button onClick={() => onClickVote(i.id, i.votes)}>Vote</button>
-          </div>
-        ))}
-      </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/Restaurants"
+          element={<Restaurants restaurants={restaurants} />}
+        />
+        <Route
+          path="/GoldenTomato"
+          element={<GoldenTomato session={session} />}
+        />
+      </Routes>
     );
   }
 }
