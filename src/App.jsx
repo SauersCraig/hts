@@ -7,6 +7,7 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { Restaurants } from "./pages/Restaurants/Restaurants";
 import { Home } from "./pages/Home/Home";
 import { GoldenTomato } from "./pages/GoldenTomato/GoldenTomato";
+import { NavBar } from "./components/NavBar/NavBar";
 function App() {
   const [session, setSession] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
@@ -57,17 +58,20 @@ function App() {
     );
   } else {
     return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/Restaurants"
-          element={<Restaurants restaurants={restaurants} />}
-        />
-        <Route
-          path="/GoldenTomato"
-          element={<GoldenTomato session={session} />}
-        />
-      </Routes>
+      <div>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/Restaurants"
+            element={<Restaurants restaurants={restaurants} />}
+          />
+          <Route
+            path="/GoldenTomato"
+            element={<GoldenTomato session={session} />}
+          />
+        </Routes>
+      </div>
     );
   }
 }

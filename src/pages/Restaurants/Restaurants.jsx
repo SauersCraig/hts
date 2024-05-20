@@ -1,37 +1,37 @@
-import { supabase } from "../../client";
-
+import { useState, useEffect } from "react";
+import { RestSection } from "../../components/RestSection/RestSection";
 export function Restaurants({ restaurants }) {
-  async function updateVotes(id, vote) {
-    const { data, error } = await supabase
-      .from("Restaurants")
-      .update({ votes: vote })
-      .eq("id", id)
-      .select();
-    if (error) {
-      console.error(error);
-    } else {
-      console.log(vote);
-      window.location.reload();
-    }
-  }
+  const [rest, setRest] = useState();
 
-  function onClickVote(id, votes) {
-    let vote = votes + 1;
-    updateVotes(id, vote);
-  }
+  function onCityClick(city) {
+    const filterByCity = restaurants.filter(
+      (restaurants) => restaurants.city == city
+    );
 
+    setRest(filterByCity);
+  }
+  console.log(rest);
+  const Richmond = "Richmond, VA";
+  const Charleston = "Charleston, SC";
+  const Raleigh = "Raleigh, NC (Includes Triangle- Raleigh/Durham/Chapel Hill)";
+  const Greenville = "Greenville, SC";
+  const Charlotte = "Charlotte, NC";
+  const Knoxville = "Knoxville, TN";
   return (
     <div>
-      {restaurants.map((i) => (
-        <div key={i.id}>
-          <p>{i.name}</p>
-          <p>{i.address}</p>
-
-          <p>{i.city}</p>
-          {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-          <button onClick={() => onClickVote(i.id, i.votes)}>Vote</button>
-        </div>
-      ))}
+      <button onClick={() => onCityClick(Richmond)}>Richmond</button>
+      <button onClick={() => onCityClick(Greenville)}>Greenville</button>
+      <button onClick={() => onCityClick(Knoxville)}>Knoxville</button>
+      <button onClick={() => onCityClick(Charlotte)}>Charlotte</button>
+      <button onClick={() => onCityClick(Charleston)}>Charleston</button>
+      <button onClick={() => onCityClick(Raleigh)}>Raleigh</button>
+      <div>
+        {rest ? (
+          <RestSection rests={rest} />
+        ) : (
+          <RestSection rests={restaurants} />
+        )}
+      </div>
     </div>
   );
 }
