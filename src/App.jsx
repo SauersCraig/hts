@@ -68,7 +68,9 @@ function App() {
           />
           <Route
             path="/GoldenTomato"
-            element={<GoldenTomato session={session} />}
+            element={
+              <GoldenTomato session={session} restaurants={restaurants} />
+            }
           />
         </Routes>
       </div>
