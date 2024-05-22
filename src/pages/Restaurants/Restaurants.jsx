@@ -10,7 +10,7 @@ export function Restaurants({ restaurants }) {
 
     setRest(filterByCity);
   }
-  console.log(rest);
+
   const Richmond = "Richmond, VA";
   const Charleston = "Charleston, SC";
   const Raleigh = "Raleigh, NC (Includes Triangle- Raleigh/Durham/Chapel Hill)";

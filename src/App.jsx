@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext, useContext, useMemo } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { supabase } from "./client";
@@ -8,10 +8,13 @@ import { Restaurants } from "./pages/Restaurants/Restaurants";
 import { Home } from "./pages/Home/Home";
 import { GoldenTomato } from "./pages/GoldenTomato/GoldenTomato";
 import { NavBar } from "./components/NavBar/NavBar";
+import { RestContext } from "./RestContext";
+
 function App() {
   const [session, setSession] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
-
+  const [restName, setRestName] = useState("");
+  const value = useMemo(() => ({ restName, setRestName }), [restName]);
   useEffect(() => {
     getRestaurants();
   }, []);
@@ -38,7 +41,7 @@ function App() {
 
   if (!session) {
     return (
-      <>
+      <RestContext.Provider value={{ restName, setRestName }}>
         <Home />
         <Auth
           supabaseClient={supabase}
@@ -47,18 +50,17 @@ function App() {
               sign_in: {
                 email_label: "Your email address",
                 password_label: " strong password",
-                display_name_label: "User Name",
               },
             },
           }}
           appearance={{ theme: ThemeSupa }}
           providers={[]}
         />
-      </>
+      </RestContext.Provider>
     );
   } else {
     return (
-      <div>
+      <RestContext.Provider value={{ restName, setRestName }}>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -73,7 +75,7 @@ function App() {
             }
           />
         </Routes>
-      </div>
+      </RestContext.Provider>
     );
   }
 }

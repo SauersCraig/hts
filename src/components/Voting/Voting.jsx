@@ -1,21 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { supabase } from "../../client";
-
+import { RestContext } from "../../RestContext";
 export function Voting({ rests }) {
   const [inputSearch, setInputSearch] = useState("");
+  const { restName, setRestName } = useContext(RestContext);
   const rest = rests.sort((a, b) => a.votes - b.votes);
   const restBackwards = rest.reverse();
 
-  const filteredrests = rests.filter((el) => {
-    //if no input the return the original
-    if (inputSearch === "") {
-      return;
-    }
-    //return the item which contains the user input
-    else {
-      return el.name.toLowerCase().includes(inputSearch);
-    }
-  });
+  console.log(restName);
+ 
 
   async function updateVotes(id, vote) {
     const { data, error } = await supabase
@@ -37,16 +30,29 @@ export function Voting({ rests }) {
   }
   let inputHandler = (e) => {
     var lowerCase = e.target.value.toLowerCase();
-    setInputSearch(lowerCase);
+    setRestName(lowerCase);
   };
+
+  const filteredrests = rests.filter((el) => {
+    //if no input the return the original
+    if (restName === "") {
+      return;
+    }
+    //return the item which contains the user input
+    else {
+      return el.name.toLowerCase().includes(restName);
+    }
+   
+  });
   return (
     <div>
       <input
         type="text"
         placeholder="Search Restaurants"
         onChange={inputHandler}
+        value={restName}
       />
-      {filteredrests.map((i) => (
+      {filteredrests.slice(0, 5).map((i) => (
         <div key={i.id}>
           <p>{i.name}</p>
           {i.votes > 0 ? <p>{i.votes}</p> : <p>No votes yet</p>}
