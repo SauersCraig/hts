@@ -9,8 +9,8 @@ export function RestSection({ rests }) {
   const restBackwards = restaurants.reverse();
 
   let navigate = useNavigate();
-  const handleRouteChange = (name) => {
-    let rest = name.slice(0, 4);
+  const handleRouteChange = (item) => {
+    let rest = item;
     setRestName(rest);
     let path = "/GoldenTomato";
     navigate(path);
@@ -27,7 +27,7 @@ export function RestSection({ rests }) {
           <div>
             <p>Special HTS Dish</p>
             {i.specials ? <p>{i.specials}</p> : <p>Specials Coming Soon</p>}
-            <button onClick={() => handleRouteChange(i.name)}>Vote</button>
+            <button onClick={() => handleRouteChange(i)}>Vote</button>
             {/* <a href="GoldenTomato">Vote</a> */}
             {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
           </div>
