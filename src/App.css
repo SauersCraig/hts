@@ -3,14 +3,34 @@
   src: local("DukesTS"),
     url(./assets/fonts/Tungsten-Semibold.otf) format("opentype");
 }
+
+@font-face {
+  font-family: "Lian";
+  src: local("Lian"), url(./assets/fonts/Lian.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "ArcherPro";
+  src: local("ArcherPro"),
+    url(./assets/fonts/ArcherPro-Semibold.otf) format("opentype");
+}
+@font-face {
+  font-family: "ArcherProIta";
+  src: local("ArcherProIta"),
+    url(./assets/fonts/ArcherPro-SemiboldIta.otf) format("opentype");
+}
 p {
-  font-family: "DukesTS";
+  font-family: "ArcherPro";
 }
 
 a {
-  font-family: "DukesTS";
+  font-family: "ArcherProIta";
 }
 h1 {
   font-family: "DukesTS";
+  font-size: 3em;
+}
+button {
+  font-family: "Lian";
   font-size: 3em;
 }

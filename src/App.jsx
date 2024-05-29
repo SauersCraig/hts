@@ -14,7 +14,7 @@ function App() {
   const [session, setSession] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
   const [restName, setRestName] = useState("");
-  const value = useMemo(() => ({ restName, setRestName }), [restName]);
+
   useEffect(() => {
     getRestaurants();
   }, []);
@@ -27,7 +27,6 @@ function App() {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
-      console.log(session.user.id);
     });
 
     const {

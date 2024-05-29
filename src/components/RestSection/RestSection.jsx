@@ -20,13 +20,20 @@ export function RestSection({ rests }) {
       {restBackwards.map((i) => (
         <div key={i.id} className="restCard">
           <div>
-            <p>{i.name}</p>
+            <h1>{i.name}</h1>
             <p>{i.address}</p>
             <a href={i.website}>{i.website}</a>
           </div>
           <div>
             <p>Special HTS Dish</p>
-            {i.specials ? <p>{i.specials}</p> : <p>Specials Coming Soon</p>}
+            {i.specialName ? (
+              <div>
+                <p>{i.specialName}</p>
+                <p>{i.special}</p>
+              </div>
+            ) : (
+              <p>Specials Coming Soon</p>
+            )}
             <button onClick={() => handleRouteChange(i)}>Vote</button>
             {/* <a href="GoldenTomato">Vote</a> */}
             {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
