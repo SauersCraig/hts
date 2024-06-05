@@ -17,6 +17,7 @@ export function Restaurants({ restaurants }) {
   const Greenville = "Greenville, SC";
   const Charlotte = "Charlotte, NC";
   const Knoxville = "Knoxville, TN";
+
   return (
     <div>
       <button onClick={() => onCityClick(Richmond)}>Richmond</button>

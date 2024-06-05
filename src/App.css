@@ -34,3 +34,7 @@ button {
   font-family: "Lian";
   font-size: 3em;
 }
+body {
+  margin: 0;
+  padding: 0;
+}

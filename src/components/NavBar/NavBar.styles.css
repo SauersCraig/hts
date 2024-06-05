@@ -1,0 +1,14 @@
+.navBar {
+  background-color: #231e52;
+  padding: 20px 0 20px;
+}
+.navLogo {
+  display: block;
+  height: 100px;
+  width: auto;
+  margin: 0 auto 0;
+}
+.navBarDropdown {
+  float: right;
+  position: relative;
+}

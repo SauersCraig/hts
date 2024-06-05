@@ -9,6 +9,7 @@ import { Home } from "./pages/Home/Home";
 import { GoldenTomato } from "./pages/GoldenTomato/GoldenTomato";
 import { NavBar } from "./components/NavBar/NavBar";
 import { RestContext } from "./RestContext";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [session, setSession] = useState(null);
@@ -74,6 +75,7 @@ function App() {
             }
           />
         </Routes>
+        <Footer />
       </RestContext.Provider>
     );
   }
