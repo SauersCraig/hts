@@ -19,3 +19,21 @@
 .htsLink:hover {
   color: #f32735;
 }
+.tomLinkDiv {
+  display: block;
+  position: relative;
+  margin: 0 auto 0;
+}
+.tomImg {
+  display: block;
+  margin: 0 auto 0;
+  width: 100%;
+}
+.homeLink {
+  color: black;
+  font-family: "DukesTS";
+  font-size: 4.5em;
+  position: absolute;
+  left: 40%;
+  bottom: 30%;
+}

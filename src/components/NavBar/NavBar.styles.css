@@ -1,6 +1,7 @@
 .navBar {
   background-color: #231e52;
   padding: 20px 0 20px;
+  position: relative;
 }
 .navLogo {
   display: block;
@@ -9,6 +10,27 @@
   margin: 0 auto 0;
 }
 .navBarDropdown {
-  float: right;
-  position: relative;
+  position: absolute;
+  right: 5px;
+  top: 100px;
+  padding: 10px 20px 20px 5px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+.navBarDropdown ul {
+  padding: 0px 20px 10px 5px;
+}
+.navBarDropdown li {
+  margin: 10px 0 10px;
+  font-family: "ArcherPro";
+}
+.hamburger {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  width: 50px;
+  color: #feb81c;
+}
+.hamburger:hover {
+  cursor: pointer;
 }

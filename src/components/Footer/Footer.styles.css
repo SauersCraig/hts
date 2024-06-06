@@ -1,3 +1,11 @@
 .footerDiv {
-  background-color: yellow;
+  background-color: #feb81c;
+  height: 100px;
+  position: relative;
+}
+.ppLink {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
 }

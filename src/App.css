@@ -19,22 +19,25 @@
   src: local("ArcherProIta"),
     url(./assets/fonts/ArcherPro-SemiboldIta.otf) format("opentype");
 }
-p {
-  font-family: "ArcherPro";
-}
 
 a {
   font-family: "ArcherProIta";
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #5044bd;
+}
+ul {
+  list-style-type: none;
 }
 h1 {
   font-family: "DukesTS";
   font-size: 3em;
 }
-button {
-  font-family: "Lian";
-  font-size: 3em;
-}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "ArcherPro";
 }

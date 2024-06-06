@@ -2,7 +2,13 @@ import "./Footer.styles.css";
 function Footer() {
   return (
     <div className="footerDiv">
-      <p>Privacy Policy</p>
+      <a
+        href="https://sauerbrandsinc.com/pages/privacy-policy"
+        target="_blank"
+        className="ppLink"
+      >
+        Privacy Policy
+      </a>
     </div>
   );
 }
