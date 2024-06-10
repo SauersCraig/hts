@@ -6,7 +6,6 @@ import htsLogo from "../../assets/HTS-simple-web.png";
 export function NavBar() {
   const [open, setOpen] = useState(false);
 
-  console.log(open);
   return (
     <div className="navBar">
       <div>

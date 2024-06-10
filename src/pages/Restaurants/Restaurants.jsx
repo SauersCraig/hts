@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useContext } from "react";
 import { RestSection } from "../../components/RestSection/RestSection";
-export function Restaurants({ restaurants }) {
+import { RestContext } from "../../RestContext";
+export function Restaurants() {
+  const { rests } = useContext(RestContext);
   const [rest, setRest] = useState();
-
+  const [restaurants, setRestaurants] = rests;
   function onCityClick(city) {
     const filterByCity = restaurants.filter(
       (restaurants) => restaurants.city == city

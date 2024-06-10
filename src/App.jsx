@@ -41,7 +41,12 @@ function App() {
 
   if (!session) {
     return (
-      <RestContext.Provider value={{ restName, setRestName }}>
+      <RestContext.Provider
+        value={{
+          restName: [restName, setRestName],
+          rests: [restaurants, setRestaurants],
+        }}
+      >
         <Home />
         <Auth
           supabaseClient={supabase}
@@ -60,19 +65,22 @@ function App() {
     );
   } else {
     return (
-      <RestContext.Provider value={{ restName, setRestName }}>
+      <RestContext.Provider
+        value={{
+          resName: [restName, setRestName],
+          rests: [restaurants, setRestaurants],
+        }}
+      >
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
             path="/Restaurants"
-            element={<Restaurants restaurants={restaurants} />}
+            element={<Restaurants  />}
           />
           <Route
             path="/GoldenTomato"
-            element={
-              <GoldenTomato session={session} restaurants={restaurants} />
-            }
+            element={<GoldenTomato session={session} />}
           />
         </Routes>
         <Footer />

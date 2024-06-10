@@ -22,18 +22,36 @@
 .tomLinkDiv {
   display: block;
   position: relative;
-  margin: 0 auto 0;
+  margin: 0 auto 50px;
+  text-align: center;
 }
+
 .tomImg {
-  display: block;
-  margin: 0 auto 0;
-  width: 100%;
+  width: 75%;
 }
-.homeLink {
-  color: black;
-  font-family: "DukesTS";
-  font-size: 4.5em;
-  position: absolute;
-  left: 40%;
-  bottom: 30%;
+.tomImg:hover {
+  filter: brightness(90%);
+}
+.tomLinkContainer {
+  padding: 150px 0 0;
+}
+.tomContainer {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+@media only screen and (max-width: 900px) {
+  .tomContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .homeLink {
+    font-size: 2em;
+  }
 }

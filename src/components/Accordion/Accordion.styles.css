@@ -1,0 +1,25 @@
+.accordion-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  cursor: pointer;
+  border: 3px black solid;
+  margin: 10px 20px 10px;
+  border-radius: 10px;
+}
+.specContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.specHeader {
+  display: inline-block;
+}
+.arrowIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  width: 60px;
+  background-color: red;
+}

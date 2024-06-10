@@ -1,13 +1,12 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { supabase } from "../../client";
 import { RestContext } from "../../RestContext";
-export function Voting({ rests }) {
+export function Voting() {
   const [inputSearch, setInputSearch] = useState("");
-  const { restName, setRestName } = useContext(RestContext);
-  const rest = rests.sort((a, b) => a.votes - b.votes);
-  const restBackwards = rest.reverse();
+  const { resName, rests } = useContext(RestContext);
 
-  console.log(restName);
+  const [restName, setRestName] = resName;
+  const [restaurants, setRestaurants] = rests;
 
   async function updateVotes(id, vote) {
     const { data, error } = await supabase
@@ -32,7 +31,7 @@ export function Voting({ rests }) {
     setInputSearch(lowerCase);
   };
 
-  const filteredrests = rests.filter((el) => {
+  const filteredrests = restaurants.filter((el) => {
     //if no input the return the original
     if (inputSearch === "") {
       return;
