@@ -39,30 +39,25 @@ function App() {
     return () => subscription.unsubscribe();
   }, []);
 
-
-    return (
-      <RestContext.Provider
-        value={{
-          resName: [restName, setRestName],
-          rests: [restaurants, setRestaurants],
-        }}
-      >
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/Restaurants"
-            element={<Restaurants  />}
-          />
-          <Route
-            path="/GoldenTomato"
-            element={<GoldenTomato session={session} />}
-          />
-        </Routes>
-        <Footer />
-      </RestContext.Provider>
-    );
-  }
+  return (
+    <RestContext.Provider
+      value={{
+        resName: [restName, setRestName],
+        rests: [restaurants, setRestaurants],
+      }}
+    >
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Restaurants" element={<Restaurants />} />
+        <Route
+          path="/GoldenTomato"
+          element={<GoldenTomato session={session} />}
+        />
+      </Routes>
+      <Footer />
+    </RestContext.Provider>
+  );
 }
 
 export default App;
