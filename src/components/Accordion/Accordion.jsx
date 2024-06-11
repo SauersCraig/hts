@@ -18,31 +18,47 @@ function Accordion({ i }) {
 
   return (
     <div className="accordion-item" onClick={() => setIsActive(!isActive)}>
-      <div >
-        <h2>{i.name}</h2>
+      <div>
+        <h2 className="headerAccordion">{i.name}</h2>
         {isActive && (
-          <div>
-            <p>{i.address}</p>
-            <a href={i.website}>{i.website}</a> <br></br>
-            <button onClick={() => handleRouteChange(i)}>Vote</button>
-            {/* <a href="GoldenTomato">Vote</a> */}
+          <div className="infoAccordion">
             {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
+            <a
+              href={`https://www.google.com/maps/place/${i.address}`}
+              className="btnHTS"
+              target="_blank"
+            >
+              Directions
+            </a>
+
+            <a href={i.website} target="_blank" className="btnHTS">
+              Website
+            </a>
+
+            <a onClick={() => handleRouteChange(i)} className="btnHTS">
+              Vote
+            </a>
           </div>
         )}
       </div>
-      <div>
+      <div className="rightDiv">
         <div className="specContainer">
-          <h2 className="specHeader">Specials</h2>
+          {i.specialName ? (
+            <h2 className="specHeader">Special</h2>
+          ) : (
+            <h2 className="specHeader">Special Coming Soon</h2>
+          )}
+
           <div>
             <img src={isActive ? upIcon : downIcon} className="arrowIcon" />
           </div>
         </div>
         {isActive && (
-          <div>
+          <div className="infoAccordion">
             {i.specialName ? (
               <div>
-                <p>{i.specialName}</p>
-                <p>{i.special}</p>
+                <h3>{i.specialName}</h3>
+                <p className="">{i.special}</p>
               </div>
             ) : (
               <p>Specials Coming Soon</p>

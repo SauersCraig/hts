@@ -35,9 +35,27 @@ h1 {
   font-family: "DukesTS";
   font-size: 3em;
 }
-
+h2 {
+  font-family: "DukesTS";
+  font-size: 2em;
+}
+h3 {
+  font-family: "DukesTS";
+  font-size: 1.3em;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: "ArcherPro";
+}
+.btnHTS {
+  background-color: #ed3526;
+  padding: 10px 20px 10px;
+  color: white;
+  font-family: "ArcherPro";
+  border: 1px #ed3526 solid;
+}
+.btnHTS:hover {
+  color: #ed3526;
+  background-color: white;
 }

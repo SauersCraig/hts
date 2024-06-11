@@ -21,19 +21,17 @@ export function Home() {
             <img src={restTom} alt="drawing of tomato" className="tomImg" />
           </a>
         </div>
-
-        <div className="tomLinkDiv">
-          <a href="https://dukesmayo.com/" target="_blank">
-            <img src={moreInfo} alt="drawing of tomato" className="tomImg" />
-          </a>
-        </div>
-
         <div className="tomLinkDiv">
           <a
             href="https://dukesmayo.com/collections/merchandise"
             target="_blank"
           >
             <img src={merchTom} alt="drawing of tomato" className="tomImg" />
+          </a>
+        </div>
+        <div className="tomLinkDiv">
+          <a href="https://dukesmayo.com/" target="_blank">
+            <img src={moreInfo} alt="drawing of tomato" className="tomImg" />
           </a>
         </div>
       </div>
