@@ -1,3 +1,5 @@
-.Test {
-  padding-left: 100px;
+.restContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5px;
 }
