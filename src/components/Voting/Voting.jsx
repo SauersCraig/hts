@@ -47,10 +47,13 @@ export function Voting() {
       return (
         <div>
           {restName && (
-            <div>
-              <p>{restName.name}</p>
+            <div className="restGTContainer">
+              <p className="restGTName">{restName.name}</p>
 
-              <button onClick={() => onClickVote(restName.id, restName.votes)}>
+              <button
+                onClick={() => onClickVote(restName.id, restName.votes)}
+                className="restGTBtn"
+              >
                 Vote
               </button>
             </div>

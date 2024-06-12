@@ -29,7 +29,9 @@ function Accordion({ i }) {
     <div>
       <div className="accordion-item" onClick={() => setIsActive(!isActive)}>
         <div className="topAccordion">
-          <h2 className="headerAccordion">{i.name}</h2>
+          <div className="headerContainer">
+            <h2 className="headerAccordion">{i.name}</h2>
+          </div>
           <img src={isActive ? upIcon : downIcon} className="arrowIcon" />
         </div>
       </div>
@@ -42,10 +44,17 @@ function Accordion({ i }) {
               <div className="infoAccordion">
                 {i.specialObj ? (
                   <>
-                  <h3>The Garage Band - Kentucky Hot Brown</h3>
-                  <p>The standard open face hot mess - sourdough bread, house roasted turkey breast, cheddar cheese, smothered in gravy and topped with bacon</p>
-                  <h3>Stifler's Mom - Duke's Tomato Pie</h3>
-                  <p>Rawleigh's take on the classic summer pie - baked to perfection</p>
+                    <h3>The Garage Band - Kentucky Hot Brown</h3>
+                    <p>
+                      The standard open face hot mess - sourdough bread, house
+                      roasted turkey breast, cheddar cheese, smothered in gravy
+                      and topped with bacon
+                    </p>
+                    <h3>Stifler's Mom - Duke's Tomato Pie</h3>
+                    <p>
+                      Rawleigh's take on the classic summer pie - baked to
+                      perfection
+                    </p>
                   </>
                 ) : (
                   <p>Specials Coming Soon</p>

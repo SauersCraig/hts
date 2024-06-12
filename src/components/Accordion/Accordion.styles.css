@@ -5,7 +5,9 @@
   border-radius: 10px;
   position: relative;
 }
-
+.headerContainer {
+  width: 75%;
+}
 .headerAccordion {
   padding-left: 20px;
 }
@@ -20,7 +22,7 @@
   padding-left: 20px;
 }
 .arrowIcon {
-  width: auto;
+  width: 20%;
   height: 100%;
   background-color: red;
   border-radius: 0px 5px 5px 0px;
