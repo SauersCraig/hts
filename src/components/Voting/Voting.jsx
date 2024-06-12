@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { supabase } from "../../client";
 import { RestContext } from "../../RestContext";
+import "./Voting.styles.css";
 export function Voting() {
   const [inputSearch, setInputSearch] = useState("");
   const { resName, rests } = useContext(RestContext);
@@ -48,11 +49,7 @@ export function Voting() {
           {restName && (
             <div>
               <p>{restName.name}</p>
-              {restName.votes > 0 ? (
-                <p>{restName.votes}</p>
-              ) : (
-                <p>No votes yet</p>
-              )}
+
               <button onClick={() => onClickVote(restName.id, restName.votes)}>
                 Vote
               </button>
@@ -66,15 +63,21 @@ export function Voting() {
     <div>
       <input
         type="text"
-        placeholder="Search Restaurants"
+        placeholder="Search Restaurant Name"
         onChange={inputHandler}
+        className="goldTomInput"
       />
       {restPick()}
       {filteredrests.slice(0, 5).map((i) => (
-        <div key={i.id}>
-          <p>{i.name}</p>
-          {i.votes > 0 ? <p>{i.votes}</p> : <p>No votes yet</p>}
-          <button onClick={() => onClickVote(i.id, i.votes)}>Vote</button>
+        <div key={i.id} className="restGTContainer">
+          <p className="restGTName">{i.name}</p>
+
+          <button
+            onClick={() => onClickVote(i.id, i.votes)}
+            className="restGTBtn"
+          >
+            Vote
+          </button>
         </div>
       ))}
     </div>

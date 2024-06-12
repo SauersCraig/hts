@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import "./GoldenTomato.styles.css";
 import { Voting } from "../../components/Voting/Voting";
 import Rankings from "../../components/Rankings/Rankings";
-export function GoldenTomato({ session }) {
+export function GoldenTomato() {
   return (
-    <div>
-      <h1>Hello From Golden Tomato </h1>
+    <div className="gtContainer">
+      <h1 className="gtHeader">
+        Hello Sarah! Enjoying Hot Tomato Summer?<br></br> Vote for your favorite
+        restaurant to win the Golden Tomato Award.
+      </h1>
       <Voting />
       <Rankings />
     </div>

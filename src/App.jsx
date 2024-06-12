@@ -2,8 +2,7 @@ import { useState, useEffect, createContext, useContext, useMemo } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { supabase } from "./client";
-import { Auth } from "@supabase/auth-ui-react";
-import { ThemeSupa } from "@supabase/auth-ui-shared";
+
 import { Restaurants } from "./pages/Restaurants/Restaurants";
 import { Home } from "./pages/Home/Home";
 import { GoldenTomato } from "./pages/GoldenTomato/GoldenTomato";
@@ -12,7 +11,6 @@ import { RestContext } from "./RestContext";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  const [session, setSession] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
   const [restName, setRestName] = useState("");
 
@@ -25,20 +23,6 @@ function App() {
     setRestaurants(data);
   }
 
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-    });
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-    });
-
-    return () => subscription.unsubscribe();
-  }, []);
-
   return (
     <RestContext.Provider
       value={{
@@ -50,10 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Restaurants" element={<Restaurants />} />
-        <Route
-          path="/GoldenTomato"
-          element={<GoldenTomato session={session} />}
-        />
+        <Route path="/GoldenTomato" element={<GoldenTomato />} />
       </Routes>
       <Footer />
     </RestContext.Provider>

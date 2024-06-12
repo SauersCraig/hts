@@ -16,40 +16,64 @@ function Accordion({ i }) {
     navigate(path);
   };
 
+  function specialObj(i) {
+    console.log(i);
+    {
+      i.map((item) => {
+        console.log(item.name);
+        <p>{item.name}</p>;
+      });
+    }
+  }
   return (
-    <div className="accordion-item" onClick={() => setIsActive(!isActive)}>
-      <div className="topAccordion">
-        <h2 className="headerAccordion">{i.name}</h2>
-        <img src={isActive ? upIcon : downIcon} className="arrowIcon" />
+    <div>
+      <div className="accordion-item" onClick={() => setIsActive(!isActive)}>
+        <div className="topAccordion">
+          <h2 className="headerAccordion">{i.name}</h2>
+          <img src={isActive ? upIcon : downIcon} className="arrowIcon" />
+        </div>
       </div>
+
       {isActive && (
-        <div className="infoAccordion">
-          <div className="infoAccordion">
-            {i.specialName ? (
-              <div>
-                <h3>{i.specialName}</h3>
-                <p className="">{i.special}</p>
+        <div className="infoAccordion accordionDivide">
+          <div className="containerInfoSection">
+            <div className="specContainer">
+              <h2>Special</h2>
+              <div className="infoAccordion">
+                {i.specialObj ? (
+                  <>
+                  <h3>The Garage Band - Kentucky Hot Brown</h3>
+                  <p>The standard open face hot mess - sourdough bread, house roasted turkey breast, cheddar cheese, smothered in gravy and topped with bacon</p>
+                  <h3>Stifler's Mom - Duke's Tomato Pie</h3>
+                  <p>Rawleigh's take on the classic summer pie - baked to perfection</p>
+                  </>
+                ) : (
+                  <p>Specials Coming Soon</p>
+                )}
               </div>
-            ) : (
-              <p>Specials Coming Soon</p>
-            )}
+            </div>
+            <div className="goldenTomAccordion">
+              <h3>Votes for Golden Tomato</h3>
+              {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
+            </div>
           </div>
-          {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-          <a
-            href={`https://www.google.com/maps/place/${i.address}`}
-            className="btnHTS"
-            target="_blank"
-          >
-            Directions
-          </a>
+          <div className="accordionBtnContainer">
+            <a
+              href={`https://www.google.com/maps/place/${i.address}`}
+              className="btnHTS"
+              target="_blank"
+            >
+              Directions
+            </a>
 
-          <a href={i.website} target="_blank" className="btnHTS">
-            Website
-          </a>
+            <a href={i.website} target="_blank" className="btnHTS">
+              Website
+            </a>
 
-          <a onClick={() => handleRouteChange(i)} className="btnHTS">
-            Vote
-          </a>
+            <a onClick={() => handleRouteChange(i)} className="btnHTS">
+              Vote
+            </a>
+          </div>
         </div>
       )}
     </div>

@@ -1,3 +1,4 @@
+import "./Restaurants.styles.css";
 import { useState, useContext } from "react";
 import { RestSection } from "../../components/RestSection/RestSection";
 import { RestContext } from "../../RestContext";
@@ -22,12 +23,33 @@ export function Restaurants() {
 
   return (
     <div>
-      <button onClick={() => onCityClick(Richmond)}>Richmond</button>
-      <button onClick={() => onCityClick(Greenville)}>Greenville</button>
-      <button onClick={() => onCityClick(Knoxville)}>Knoxville</button>
-      <button onClick={() => onCityClick(Charlotte)}>Charlotte</button>
-      <button onClick={() => onCityClick(Charleston)}>Charleston</button>
-      <button onClick={() => onCityClick(Raleigh)}>Raleigh</button>
+      <div className="infoRest">
+        <p>Click on your city to find participating restaurants.</p>
+        <p>
+          Click on the participating restaurant name for restaurant info and to
+          see their Hot Tomato Summer specials and offerings.
+        </p>
+      </div>
+      <div className="cityBtnContainer">
+        <button onClick={() => onCityClick(Richmond)} className="cityBtn">
+          Richmond
+        </button>
+        <button onClick={() => onCityClick(Greenville)} className="cityBtn">
+          Greenville
+        </button>
+        <button onClick={() => onCityClick(Knoxville)} className="cityBtn">
+          Knoxville
+        </button>
+        <button onClick={() => onCityClick(Charlotte)} className="cityBtn">
+          Charlotte
+        </button>
+        <button onClick={() => onCityClick(Charleston)} className="cityBtn">
+          Charleston
+        </button>
+        <button onClick={() => onCityClick(Raleigh)} className="cityBtn">
+          Raleigh
+        </button>
+      </div>
       <div>
         {rest ? (
           <RestSection rests={rest} />
