@@ -4,3 +4,8 @@
 .gtHeader {
   text-align: center;
 }
+@media only screen and (max-width: 900px) {
+  .gtContainer {
+    padding: 10px;
+  }
+}

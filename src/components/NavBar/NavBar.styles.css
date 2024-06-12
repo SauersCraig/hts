@@ -12,8 +12,8 @@
 .navBarDropdown {
   position: absolute;
   right: 5px;
-  top: 100px;
-  padding: 10px 20px 20px 5px;
+  top: 120px;
+  padding: 10px 20px 0px 10px;
   background-color: aliceblue;
   border-radius: 5px;
   z-index: 99;
@@ -24,6 +24,7 @@
 .navBarDropdown li {
   margin: 10px 0 10px;
   font-family: "ArcherPro";
+  font-size: 1.5em;
 }
 .hamburger {
   position: absolute;

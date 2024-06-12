@@ -53,57 +53,88 @@ function Rankings() {
   const restsKnoxville = filteredKnoxville.sort((a, b) => a.votes - b.votes);
   const knoxvilleOrder = restsKnoxville.reverse();
   return (
-    <div className="rankingContainer">
-      <div className="cityContainer cityContainerNL">
-        <h1>Richmond</h1>
-        {richRestOrder.slice(0, 5).map((i) => (
-          <div key={i.id} className="rankingRestCon">
-            <p>{i.name}</p>
-            {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-          </div>
-        ))}
-      </div>
-      <div className="cityContainer cityContainerNL">
-        <h1>Raleigh</h1>
-        {raleighOrder.slice(0, 5).map((i) => (
-          <div key={i.id} className="rankingRestCon">
-            <p>{i.name}</p>
-            {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-          </div>
-        ))}
-      </div>
-      <div className="cityContainer cityContainerNL">
-        <h1>Charlotte</h1>
-        {charlotteOrder.slice(0, 5).map((i) => (
-          <div key={i.id} className="rankingRestCon">
-            <p>{i.name}</p> {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-          </div>
-        ))}
-      </div>
-      <div className="cityContainer cityContainerNL">
-        <h1>Charleston</h1>
-        {charlestonOrder.slice(0, 5).map((i) => (
-          <div key={i.id} className="rankingRestCon">
-            <p>{i.name}</p> {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-          </div>
-        ))}
-      </div>
-      <div className="cityContainer cityContainerNL">
-        <h1>Knoxville</h1>
-        {knoxvilleOrder.slice(0, 5).map((i) => (
-          <div key={i.id} className="rankingRestCon">
-            <p>{i.name}</p> {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-          </div>
-        ))}
-      </div>
-      <div className="cityContainer">
-        <h1>Greenville</h1>
-        {greenvilleOrder.slice(0, 5).map((i) => (
-          <div key={i.id} className="rankingRestCon">
-            <p>{i.name}</p> {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-          </div>
-        ))}
-      </div>
+    <div>
+      <h1 className="rankingHeader">Current Golden Tomato Rankings</h1>
+      <div className="rankingContainer">
+        <div className="cityContainer cityContainerNL">
+          <h1>Richmond</h1>
+          {richRestOrder.slice(0, 5).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="cityContainer cityContainerNL">
+          <h1>Raleigh</h1>
+          {raleighOrder.slice(0, 5).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="cityContainer cityContainerNL">
+          <h1>Charlotte</h1>
+          {charlotteOrder.slice(0, 5).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>{" "}
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="cityContainer cityContainerNL">
+          <h1>Charleston</h1>
+          {charlestonOrder.slice(0, 5).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>{" "}
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="cityContainer cityContainerNL">
+          <h1>Knoxville</h1>
+          {knoxvilleOrder.slice(0, 5).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>{" "}
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="cityContainer">
+          <h1>Greenville</h1>
+          {greenvilleOrder.slice(0, 5).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>{" "}
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>{" "}
     </div>
   );
 }
