@@ -12,7 +12,7 @@ function Accordion({ i }) {
   const handleRouteChange = (item) => {
     let rest = item;
     setRestName(rest);
-    let path = "/GoldenTomato";
+    let path = "/GoldenTomato#JumpHere";
     navigate(path);
   };
 
