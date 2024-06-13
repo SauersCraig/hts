@@ -1,6 +1,7 @@
 import "./Rankings.styles.css";
 import { useContext } from "react";
 import { RestContext } from "../../RestContext";
+import goldTom from "../../assets/goldtomato.png";
 function Rankings() {
   const { rests } = useContext(RestContext);
 
@@ -53,8 +54,8 @@ function Rankings() {
   const restsKnoxville = filteredKnoxville.sort((a, b) => a.votes - b.votes);
   const knoxvilleOrder = restsKnoxville.reverse();
   return (
-    <div>
-      <h1 className="rankingHeader">Current Golden Tomato Rankings</h1>
+    <div className="rankingDivContainer">
+      <img src={goldTom} alt="golden tomato" className="goldTom" />
       <div className="rankingContainer">
         <div className="cityContainer cityContainerNL">
           <h1>Richmond</h1>

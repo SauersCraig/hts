@@ -1,3 +1,14 @@
+.rankingDivContainer {
+  position: relative;
+  padding-top: 200px;
+}
+.goldTom {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 35%;
+  width: 30%;
+}
 .rankingContainer {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -7,6 +18,7 @@
   border-radius: 10px;
   padding: 20px 30px 20px;
   margin: 20px 30px 20px;
+  background-color: white;
 }
 .cityContainerNL {
   border-right: #231e52 solid 3px;
@@ -29,6 +41,13 @@
   .cityContainerNL {
     border-bottom: #231e52 solid 3px;
     border-right: none;
+  }
+  .goldTom {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 20%;
+    width: 60%;
   }
 }
 .rankingRestCon {

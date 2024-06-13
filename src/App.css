@@ -19,7 +19,9 @@
   src: local("ArcherProIta"),
     url(./assets/fonts/ArcherPro-SemiboldIta.otf) format("opentype");
 }
-
+img {
+  max-width: 100%;
+}
 a {
   font-family: "ArcherProIta";
   text-decoration: none;

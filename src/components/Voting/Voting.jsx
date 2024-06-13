@@ -5,7 +5,7 @@ import "./Voting.styles.css";
 export function Voting() {
   const [inputSearch, setInputSearch] = useState("");
   const { resName, rests } = useContext(RestContext);
-
+  const { voted, setVoted } = useState(true);
   const [restName, setRestName] = resName;
   const [restaurants, setRestaurants] = rests;
 
@@ -19,7 +19,7 @@ export function Voting() {
       console.error(error);
     } else {
       console.log(vote);
-      window.location.reload();
+      setVoted(true);
     }
   }
 
@@ -64,25 +64,34 @@ export function Voting() {
   }
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Search Restaurant Name"
-        onChange={inputHandler}
-        className="goldTomInput"
-      />
-      {restPick()}
-      {filteredrests.slice(0, 5).map((i) => (
-        <div key={i.id} className="restGTContainer">
-          <p className="restGTName">{i.name}</p>
-
-          <button
-            onClick={() => onClickVote(i.id, i.votes)}
-            className="restGTBtn"
-          >
-            Vote
-          </button>
+      {voted ? (
+        <div className="voted">
+          <h1>Thank You for Voting!</h1>
+          <h2>Come back tomorrow to vote again.</h2>
         </div>
-      ))}
+      ) : (
+        <div>
+          <input
+            type="text"
+            placeholder="Search Restaurant Name"
+            onChange={inputHandler}
+            className="goldTomInput"
+          />
+          {restPick()}
+          {filteredrests.slice(0, 5).map((i) => (
+            <div key={i.id} className="restGTContainer">
+              <p className="restGTName">{i.name}</p>
+
+              <button
+                onClick={() => onClickVote(i.id, i.votes)}
+                className="restGTBtn"
+              >
+                Vote
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

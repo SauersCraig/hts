@@ -46,3 +46,9 @@
     padding: 0px 0px 0px 20px;
   }
 }
+.voted {
+  text-align: center;
+}
+.voted h1 {
+  font-family: "Lian";
+}
