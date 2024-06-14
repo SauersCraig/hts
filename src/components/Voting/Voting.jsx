@@ -64,34 +64,32 @@ export function Voting() {
   }
   return (
     <div>
-      {voted ? (
-        <div className="voted">
-          <h1>Thank You for Voting!</h1>
-          <h2>Come back tomorrow to vote again.</h2>
-        </div>
-      ) : (
-        <div>
-          <input
-            type="text"
-            placeholder="Search Restaurant Name"
-            onChange={inputHandler}
-            className="goldTomInput"
-          />
-          {restPick()}
-          {filteredrests.slice(0, 5).map((i) => (
-            <div key={i.id} className="restGTContainer">
-              <p className="restGTName">{i.name}</p>
+      <div>
+        <p className="ctaVoting">
+          Use the search bar to find your favorite restaurant, then cast your
+          vote.
+        </p>
+        <input
+          type="text"
+          placeholder="Search Restaurant Name"
+          onChange={inputHandler}
+          className="goldTomInput"
+        />
 
-              <button
-                onClick={() => onClickVote(i.id, i.votes)}
-                className="restGTBtn"
-              >
-                Vote
-              </button>
-            </div>
-          ))}
-        </div>
-      )}
+        {restPick()}
+        {filteredrests.slice(0, 5).map((i) => (
+          <div key={i.id} className="restGTContainer">
+            <p className="restGTName">{i.name}</p>
+
+            <button
+              onClick={() => onClickVote(i.id, i.votes)}
+              className="restGTBtn"
+            >
+              Vote
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -25,10 +25,10 @@ export function NavBar() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/Restaurants">Restaurants</Link>
+              <Link to="/Restaurants">Participating Restaurants </Link>
             </li>
             <li>
-              <Link to="/GoldenTomato">Golden Tomato</Link>
+              <Link to="/GoldenTomato">Golden Tomato Award </Link>
             </li>
           </ul>
         </div>

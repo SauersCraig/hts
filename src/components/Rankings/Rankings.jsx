@@ -135,7 +135,7 @@ function Rankings() {
             </div>
           ))}
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 }

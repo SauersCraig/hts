@@ -24,7 +24,7 @@ export function Restaurants() {
   return (
     <div>
       <div className="infoRest">
-        <p>Click on your city to find participating restaurants.</p>
+        <p>Click on a city to find participating restaurants</p>
         <p>
           Click on the participating restaurant name for restaurant info and to
           see their Hot Tomato Summer specials and offerings.
