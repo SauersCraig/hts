@@ -1,0 +1,30 @@
+.formContainer {
+  text-align: center;
+}
+.signUpContainer {
+  height: 75vh;
+}
+.inputSignUp {
+  display: block;
+  margin: 20px auto 20px;
+  font-size: 1.3em;
+  width: 60%;
+  padding: 10px 20px 10px;
+  border-radius: 10px;
+  border: black solid 2px;
+}
+.subBtn {
+  font-family: "DukesTS";
+  border: solid 2px #ed3526;
+  padding: 10px 30px 10px;
+  background-color: #ed3526;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 20px;
+}
+.subBtn:hover {
+  background-color: white;
+  color: #ed3526;
+}

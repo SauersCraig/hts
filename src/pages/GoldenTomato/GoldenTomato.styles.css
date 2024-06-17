@@ -4,6 +4,15 @@
 .gtHeader {
   text-align: center;
 }
+.signOutContainer {
+  text-align: end;
+}
+.signOutBtn {
+  border: none;
+  background-color: transparent;
+  font-family: "ArcherProIta";
+  cursor: pointer;
+}
 @media only screen and (max-width: 900px) {
   .gtContainer {
     padding: 10px;
