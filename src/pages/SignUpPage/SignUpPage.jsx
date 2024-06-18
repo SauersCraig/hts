@@ -10,6 +10,7 @@ export function SignUpPage() {
     lastName: "",
     email: "",
     password: "",
+    conFirmPassword: "",
   });
   function handleChange(event) {
     const value = event.target.value;
@@ -17,22 +18,26 @@ export function SignUpPage() {
   }
   async function handleSubmit(e) {
     e.preventDefault();
-    try {
-      const { data, error } = await supabase.auth.signUp({
-        email: formData.email,
-        password: formData.password,
-        options: {
-          data: {
-            first_name: formData.firstName,
-            last_name: formData.lastName,
+    if (formData.password === formData.conFirmPassword) {
+      try {
+        const { data, error } = await supabase.auth.signUp({
+          email: formData.email,
+          password: formData.password,
+          options: {
+            data: {
+              first_name: formData.firstName,
+              last_name: formData.lastName,
+            },
           },
-        },
-      });
-      if (error) throw error;
-      navigate("/GoldenTomato");
-    } catch (error) {
-      alert(error);
-      console.log(error);
+        });
+        if (error) throw error;
+        navigate("/GoldenTomato");
+      } catch (error) {
+        alert(error);
+        console.log(error);
+      }
+    } else {
+      alert("Passwords Did Not Match");
     }
   }
   return (
@@ -60,6 +65,13 @@ export function SignUpPage() {
         <input
           placeholder="Password"
           name="password"
+          type="password"
+          onChange={handleChange}
+          className="inputSignUp"
+        />
+        <input
+          placeholder="Confirm Password"
+          name="conFirmPassword"
           type="password"
           onChange={handleChange}
           className="inputSignUp"

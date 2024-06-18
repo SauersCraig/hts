@@ -9,7 +9,6 @@ import { supabase } from "../../client";
 export function GoldenTomato() {
   const [token, setToken] = useState(false);
   const [userInfo, setUserInfo] = useState();
-  const [userID, setUserID] = useState();
   const [newDate, setNewDate] = useState();
   if (token) {
     sessionStorage.setItem("token", JSON.stringify(token));
@@ -26,12 +25,13 @@ export function GoldenTomato() {
     )
     .subscribe();
   useEffect(() => {
+    const today = new Date();
+    const date = today.getDate();
+    setNewDate(date);
+
     if (sessionStorage.getItem("token")) {
       let data = JSON.parse(sessionStorage.getItem("token"));
       setToken(data);
-      const today = new Date();
-      const date = today.getDate();
-      setNewDate(date);
     }
   }, []);
   useEffect(() => {
@@ -52,6 +52,7 @@ export function GoldenTomato() {
     setToken(false);
     sessionStorage.clear();
     setUserInfo([]);
+    location.reload();
   }
 
   let name = token ? token.user.user_metadata.first_name : "";
