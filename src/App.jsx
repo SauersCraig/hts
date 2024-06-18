@@ -35,7 +35,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Restaurants" element={<Restaurants />} />
         <Route path="/GoldenTomato" element={<GoldenTomato />} />
-        <Route path="SignUp" element={<SignUpPage />} />
+        <Route path="/SignUp" element={<SignUpPage />} />
       </Routes>
       <Footer />
     </RestContext.Provider>

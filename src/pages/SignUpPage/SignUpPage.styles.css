@@ -15,9 +15,9 @@
 }
 .subBtn {
   font-family: "DukesTS";
-  border: solid 2px #ed3526;
+  border: solid 2px #d8282f;
   padding: 10px 30px 10px;
-  background-color: #ed3526;
+  background-color: #d8282f;
   color: white;
   font-size: 2em;
   cursor: pointer;
@@ -26,5 +26,5 @@
 }
 .subBtn:hover {
   background-color: white;
-  color: #ed3526;
+  color: #d8282f;
 }

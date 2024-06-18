@@ -14,9 +14,9 @@
   }
 }
 .cityBtn {
-  border: solid 2px #ed3526;
+  border: solid 2px #d8282f;
   padding: 10px 0 10px;
-  background-color: #ed3526;
+  background-color: #d8282f;
   color: white;
   font-size: 2em;
   cursor: pointer;
@@ -24,7 +24,7 @@
 }
 
 .cityBtn:hover {
-  color: #ed3526;
+  color: #d8282f;
   background-color: white;
 }
 .infoRest {

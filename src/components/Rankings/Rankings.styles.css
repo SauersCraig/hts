@@ -25,7 +25,7 @@
 }
 .cityContainer h1 {
   text-align: center;
-  color: #ed3526;
+  color: #d8282f;
 }
 @media only screen and (max-width: 900px) {
   .rankingContainer {
@@ -49,7 +49,7 @@
     left: 10%;
     width: 80%;
   }
-} 
+}
 .rankingRestCon {
   display: grid;
   grid-template-columns: 4fr 1fr;

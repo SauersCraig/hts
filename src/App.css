@@ -51,13 +51,13 @@ body {
   font-family: "ArcherPro";
 }
 .btnHTS {
-  background-color: #ed3526;
+  background-color: #d8282f;
   padding: 10px 20px 10px;
   color: white;
   font-family: "ArcherPro";
-  border: 1px #ed3526 solid;
+  border: 1px #d8282f solid;
 }
 .btnHTS:hover {
-  color: #ed3526;
+  color: #d8282f;
   background-color: white;
 }
