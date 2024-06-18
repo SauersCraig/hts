@@ -2,10 +2,10 @@ import { useState, useContext } from "react";
 import { supabase } from "../../client";
 import { RestContext } from "../../RestContext";
 import "./Voting.styles.css";
-export function Voting() {
+export function Voting({ userInfo, newDate }) {
   const [inputSearch, setInputSearch] = useState("");
   const { resName, rests } = useContext(RestContext);
-  const { voted, setVoted } = useState(true);
+
   const [restName, setRestName] = resName;
   const [restaurants, setRestaurants] = rests;
 
@@ -18,11 +18,21 @@ export function Voting() {
     if (error) {
       console.error(error);
     } else {
-      console.log(vote);
-      setVoted(true);
+      updateUserVoteDate();
     }
   }
-
+  async function updateUserVoteDate() {
+    const { data, error } = await supabase
+      .from("profile")
+      .update({ vote_date: newDate })
+      .eq("id", userInfo.id)
+      .select();
+    if (error) {
+      console.error(error);
+    } else {
+      location.reload();
+    }
+  }
   function onClickVote(id, votes) {
     let vote = votes + 1;
     updateVotes(id, vote);

@@ -1,0 +1,14 @@
+.headerTY {
+  font-family: "Lian";
+  font-size: 5em;
+  text-align: center;
+  color: #ed3526;
+  font-weight: 400;
+  line-height: 1;
+}
+.secLineTY {
+  font-size: 2em;
+  text-align: center;
+  font-family: "DukesTS";
+  line-height: 0;
+}
