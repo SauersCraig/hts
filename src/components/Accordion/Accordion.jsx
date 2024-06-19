@@ -35,7 +35,7 @@ function Accordion({ i }) {
           <img
             src={isActive ? upIcon : downIcon}
             className="arrowIcon"
-            alt="Arrow Icon if Open Arrow is pointed up if closed Arrow is pointed down"
+            alt={isActive ? "Arrow Icon Pointed Up" : "Arrow Icon Pointed Down"}
           />
         </div>
       </div>
