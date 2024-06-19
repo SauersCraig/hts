@@ -9,7 +9,9 @@ export function NavBar() {
   return (
     <div className="navBar">
       <div>
-        <img src={htsLogo} alt="Hot Tomato Summer Logo" className="navLogo" />
+        <a href="/">
+          <img src={htsLogo} alt="Hot Tomato Summer Logo" className="navLogo" />
+        </a>
       </div>
       <img
         src={hamburg}
