@@ -32,7 +32,11 @@ function Accordion({ i }) {
           <div className="headerContainer">
             <h2 className="headerAccordion">{i.name}</h2>
           </div>
-          <img src={isActive ? upIcon : downIcon} className="arrowIcon" />
+          <img
+            src={isActive ? upIcon : downIcon}
+            className="arrowIcon"
+            alt="Arrow Icon if Open Arrow is pointed up if closed Arrow is pointed down"
+          />
         </div>
       </div>
 
