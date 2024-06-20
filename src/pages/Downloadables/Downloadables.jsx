@@ -1,5 +1,5 @@
 import mainLogo from "../../assets/UniversalHTSLogo.png";
-import "./Home.styles.css";
+import "./Downloadables.styles.css";
 import Reel from "../../assets/HotTomatoSummerReel.mp4";
 import HTSLogo from "../../assets/HTSLogo (png).png";
 import HTSLogo2 from "../../assets/HTSLogo2 (png).png";
@@ -7,7 +7,7 @@ import HTSLogo3 from "../../assets/HTSLogo3.png";
 import HTSLogo4 from "../../assets/HTSLogo4.png";
 import HTSLogoSocialPost from "../../assets/HTSLogoSocialPost.jpg";
 import HTSLogoSocialPost2 from "../../assets/HTSLogoSocialPost2.jpg";
-export function Home() {
+export function Downloadables() {
   return (
     <div className="comingSoonPage">
       <h1 className="comingSoon">Duke’s Hot Tomato Summer Assets</h1>
@@ -92,9 +92,6 @@ export function Home() {
           Sign Up for Hot Tomato Summer
         </a>
       </div>
-
-      <h1>Hot Tomato Summer</h1>
-      <img src={mainLogo} alt="Hot Tomato Summer Logo" />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { Restaurants } from "./pages/Restaurants/Restaurants";
 import { Home } from "./pages/Home/Home";
 import { GoldenTomato } from "./pages/GoldenTomato/GoldenTomato";
+import { Downloadables } from "./pages/Downloadables/Downloadables";
 function App() {
   const [session, setSession] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
@@ -46,6 +47,7 @@ function App() {
         path="/GoldenTomato"
         element={<GoldenTomato session={session} />}
       />
+      <Route path="/Downloadables" element={<Downloadables />}></Route>
     </Routes>
   );
 }
