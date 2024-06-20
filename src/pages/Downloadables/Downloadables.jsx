@@ -77,7 +77,7 @@ export function Downloadables() {
             <video width="500" height="500" autoplay loop>
               <source src={Reel} type="video/mp4"></source>
             </video>
-            <p>Hot Tomato Summer Reel (mp4) </p>
+            <p>Hot Tomato Summer Reel (.mp4) </p>
             <a href="/assets/HotTomatoSummerReel-DFA81biD.mp4" download>
               Download
             </a>
