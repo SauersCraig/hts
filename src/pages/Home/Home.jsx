@@ -35,6 +35,7 @@ export function Home() {
           </a>
         </div>
       </div>
+   
       <Rankings />
     </div>
   );

@@ -16,15 +16,6 @@ function Accordion({ i }) {
     navigate(path);
   };
 
-  function specialObj(i) {
-    console.log(i);
-    {
-      i.map((item) => {
-        console.log(item.name);
-        <p>{item.name}</p>;
-      });
-    }
-  }
   return (
     <div>
       <div className="accordion-item" onClick={() => setIsActive(!isActive)}>
@@ -45,21 +36,17 @@ function Accordion({ i }) {
           <div className="containerInfoSection">
             <div className="specContainer">
               <h2>Special</h2>
+
               <div className="infoAccordion">
                 {i.specialObj ? (
-                  <>
-                    <h3>The Garage Band - Kentucky Hot Brown</h3>
-                    <p>
-                      The standard open face hot mess - sourdough bread, house
-                      roasted turkey breast, cheddar cheese, smothered in gravy
-                      and topped with bacon
-                    </p>
-                    <h3>Stifler's Mom - Duke's Tomato Pie</h3>
-                    <p>
-                      Rawleigh's take on the classic summer pie - baked to
-                      perfection
-                    </p>
-                  </>
+                  <div>
+                    {i.specialObj.map((item) => (
+                      <div key={item.name}>
+                        <h3>{item.name}</h3>
+                        <p>{item.desc}</p>
+                      </div>
+                    ))}
+                  </div>
                 ) : (
                   <p>Specials Coming Soon</p>
                 )}
