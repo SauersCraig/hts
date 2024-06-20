@@ -39,7 +39,7 @@
   border-radius: 5px;
   box-shadow: 5px 5px 15px 0px rgba(45, 42, 38, 0.4);
   padding: 5px 20px 30px;
-  background-color: aliceblue;
+  background-color: rgb(250, 249, 249);
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -56,4 +56,9 @@
 .cardContainer {
   padding: 20px;
   height: 100%;
+}
+@media only screen and (max-width: 900px) {
+  .downloadContainer {
+    display: block;
+  }
 }
