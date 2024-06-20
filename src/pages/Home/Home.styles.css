@@ -1,4 +1,5 @@
 .comingSoonPage {
+  width: 100vw;
 }
 .homeLogo {
   display: block;
@@ -14,4 +15,37 @@
   margin: 0 auto 0;
   text-align: center;
   color: black;
+}
+.downloadContainer {
+  display: grid;
+  grid-template-columns: 47% 47%;
+  grid-gap: 5%;
+}
+.downloadImg {
+  display: block;
+  margin: 0 auto 0;
+  width: 80%;
+}
+.downloadCard {
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(45, 42, 38, 0.4);
+  padding: 5px 20px 30px;
+  background-color: aliceblue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.downloadCard a {
+  background-color: #d8282f;
+  border: 2px solid #d8282f;
+  color: white;
+  padding: 10px 20px 10px 20px;
+}
+.downloadCard a:hover {
+  background-color: white;
+  color: #d8282f;
+}
+.cardContainer {
+  padding: 20px;
+  height: 100%;
 }
