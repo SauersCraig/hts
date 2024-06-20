@@ -38,8 +38,8 @@ export function Home() {
             <a href="/src/assets/HTSLogo2%20(png).png" download>
               Download
             </a>
-          </div>{" "}
-        </div>{" "}
+          </div>
+        </div>
         <div className="cardContainer">
           <div className="downloadCard">
             <img src={HTSLogo3} className="downloadImg"></img>
@@ -47,7 +47,7 @@ export function Home() {
             <a href="/src/assets/HTSLogo3.png" download>
               Download
             </a>
-          </div>{" "}
+          </div>
         </div>
         <div className="cardContainer">
           <div className="downloadCard">
@@ -56,7 +56,7 @@ export function Home() {
             <a href="/src/assets/HTSLogo4.png" download>
               Download
             </a>
-          </div>{" "}
+          </div>
         </div>
         <div className="cardContainer">
           <div className="downloadCard">
@@ -65,8 +65,8 @@ export function Home() {
             <a href="/src/assets/HTSLogoSocialPost.jpg" download>
               Download
             </a>
-          </div>{" "}
-        </div>{" "}
+          </div>
+        </div>
         <div className="cardContainer">
           <div className="downloadCard">
             <img src={HTSLogoSocialPost2} className="downloadImg"></img>
@@ -74,8 +74,8 @@ export function Home() {
             <a href="/src/assets/HTSLogoSocialPost2.jpg" download>
               Download
             </a>
-          </div>{" "}
-        </div>{" "}
+          </div>
+        </div>
         <div className="cardContainer">
           <div className="downloadCard">
             <video width="500" height="500" autoplay loop>
@@ -85,7 +85,7 @@ export function Home() {
             <a href="/src/assets/HotTomatoSummerReel.mp4" download>
               Download
             </a>
-          </div>{" "}
+          </div>
         </div>
       </div>
     </div>
