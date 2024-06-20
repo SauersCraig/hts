@@ -10,7 +10,7 @@ import HTSLogoSocialPost2 from "../../assets/HTSLogoSocialPost2.jpg";
 export function Home() {
   return (
     <div className="comingSoonPage">
-      <p className="comingSoon">Download all Your Hot Tomato Summer Assets</p>
+      <h1 className="comingSoon">Download All Your Hot Tomato Summer Assets</h1>
 
       <img src={mainLogo} className="homeLogo" />
 

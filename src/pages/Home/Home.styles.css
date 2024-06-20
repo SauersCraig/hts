@@ -14,7 +14,15 @@
   display: block;
   margin: 0 auto 0;
   text-align: center;
-  color: black;
+  background-color: #d8282f;
+  border: 2px solid #d8282f;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  width: 30%;
+}
+.htsLink:hover {
+  background-color: white;
+  color: #d8282f;
 }
 .downloadContainer {
   display: grid;
