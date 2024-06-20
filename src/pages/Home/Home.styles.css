@@ -9,7 +9,7 @@
   width: 80%;
   margin: 0 auto 0;
 }
-.comingSoon {
+.comingSoonPage {
   font-size: 3em;
   text-align: center;
 }
@@ -46,13 +46,14 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.downloadCard a {
+.comingSoonPage a {
   background-color: #d8282f;
   border: 2px solid #d8282f;
   color: white;
   padding: 10px 20px 10px 20px;
+ 
 }
-.downloadCard a:hover {
+.comingSoonPage a:hover {
   background-color: white;
   color: #d8282f;
 }
