@@ -1,6 +1,9 @@
 .comingSoonPage {
   width: 100vw;
 }
+.comingSonnPage h1 {
+  text-align: center;
+}
 .homeLogo {
   display: block;
   width: 80%;
