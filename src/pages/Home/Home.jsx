@@ -10,26 +10,19 @@ import HTSLogoSocialPost2 from "../../assets/HTSLogoSocialPost2.jpg";
 export function Home() {
   return (
     <div className="comingSoonPage">
-      <h1 className="comingSoon">Download All Your Hot Tomato Summer Assets</h1>
+      <h1 className="comingSoon">Duke’s Hot Tomato Summer Assets</h1>
+      <p className="secondLine">
+        Download the assets below for use on social media, custom menu design,
+        and more during Hot Tomato Summer. If you have any questions, please
+        email dukeshts@sauerbrands.com.{" "}
+      </p>
 
-      <img src={mainLogo} className="homeLogo" />
-
-      <a
-        href="https://dukesmayo.com/pages/htsreg"
-        className="htsLink"
-        target="_blank"
-      >
-        Sign Up for Hot Tomato Summer
-      </a>
       <div className="downloadContainer">
         <div className="cardContainer">
           <div className="downloadCard">
             <img src={HTSLogo} className="downloadImg"></img>
             <p>Hot Tomato Summer Logo with date (.png) </p>
-            <a
-              href="https://hottomatosummer.com/assets/HTSLogo%20(png)-DK7Dw7ck.png"
-              download
-            >
+            <a href="/assets/HTSLogo%20(png)-DK7Dw7ck.png" download>
               Download
             </a>
           </div>
@@ -38,10 +31,7 @@ export function Home() {
           <div className="downloadCard">
             <img src={HTSLogo2} className="downloadImg"></img>
             <p>Hot Tomato Summer Logo without date (.png) </p>
-            <a
-              href="https://hottomatosummer.com/assets/HTSLogo2%20(png)-Bn1_X17a.png"
-              download
-            >
+            <a href="/assets/HTSLogo2%20(png)-Bn1_X17a.png" download>
               Download
             </a>
           </div>
@@ -50,10 +40,7 @@ export function Home() {
           <div className="downloadCard">
             <img src={HTSLogo3} className="downloadImg"></img>
             <p>Hot Tomato Summer Logo version 2 with date (.png) </p>
-            <a
-              href="https://hottomatosummer.com/assets/HTSLogo3-DiwW_QUf.png"
-              download
-            >
+            <a href="/assets/HTSLogo3-DiwW_QUf.png" download>
               Download
             </a>
           </div>
@@ -62,10 +49,7 @@ export function Home() {
           <div className="downloadCard">
             <img src={HTSLogo4} className="downloadImg"></img>
             <p>Hot Tomato Summer Logo version 2 without date (.png) </p>
-            <a
-              href="https://hottomatosummer.com/assets/HTSLogo4-DRJqUVif.png"
-              download
-            >
+            <a href="/assets/HTSLogo4-DRJqUVif.png" download>
               Download
             </a>
           </div>
@@ -74,10 +58,7 @@ export function Home() {
           <div className="downloadCard">
             <img src={HTSLogoSocialPost} className="downloadImg"></img>
             <p>Hot Tomato Summer social post (.jpg) </p>
-            <a
-              href="https://hottomatosummer.com/assets/HTSLogoSocialPost-BRSmX3fr.jpg"
-              download
-            >
+            <a href="/assets/HTSLogoSocialPost-BRSmX3fr.jpg" download>
               Download
             </a>
           </div>
@@ -86,10 +67,7 @@ export function Home() {
           <div className="downloadCard">
             <img src={HTSLogoSocialPost2} className="downloadImg"></img>
             <p>Hot Tomato Summer social post version 2 (.jpeg) </p>
-            <a
-              href="https://hottomatosummer.com/assets/HTSLogoSocialPost2-kbBQGmK0.jpg"
-              download
-            >
+            <a href="/assets/HTSLogoSocialPost2-kbBQGmK0.jpg" download>
               Download
             </a>
           </div>
@@ -100,14 +78,19 @@ export function Home() {
               <source src={Reel} type="video/mp4"></source>
             </video>
             <p>Hot Tomato Summer Reel (mp4) </p>
-            <a
-              href="https://hottomatosummer.com/assets/HotTomatoSummerReel-DFA81biD.mp4"
-              download
-            >
+            <a href="/assets/HotTomatoSummerReel-DFA81biD.mp4" download>
               Download
             </a>
           </div>
         </div>
+        <div></div>
+        <a
+          href="https://dukesmayo.com/pages/htsreg"
+          className="htsLink"
+          target="_blank"
+        >
+          Sign Up for Hot Tomato Summer
+        </a>
       </div>
     </div>
   );

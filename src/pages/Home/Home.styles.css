@@ -62,3 +62,8 @@
     display: block;
   }
 }
+.secondLine {
+  font-size: 1.4em;
+  padding: 20px 30px 20px;
+  text-align: center;
+}
