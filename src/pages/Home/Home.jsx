@@ -44,7 +44,7 @@ export function Home() {
           <div className="downloadCard">
             <img src={HTSLogo3} className="downloadImg"></img>
             <p>Hot Tomato Summer Logo version 2 with date (.png) </p>
-            <a href="/src/assets/HTSLogo3.png" download>
+            <a href="/assets/HTSLogo3-DiwW_QUf.png" download>
               Download
             </a>
           </div>
