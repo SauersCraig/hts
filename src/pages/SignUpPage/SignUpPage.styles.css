@@ -28,3 +28,11 @@
   background-color: white;
   color: #d8282f;
 }
+.checkboxLabel {
+  display: block;
+  width: 100%;
+}
+.checkbox {
+  accent-color: #d8282f;
+  transform: scale(1.2);
+}

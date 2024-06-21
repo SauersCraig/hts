@@ -12,6 +12,10 @@ export function SignUpPage() {
     password: "",
     conFirmPassword: "",
   });
+  const [optIn, setOptIn] = useState(true);
+  function toggleCheckBox() {
+    setOptIn(!optIn);
+  }
   function handleChange(event) {
     const value = event.target.value;
     setFormData({ ...formData, [event.target.name]: value });
@@ -76,6 +80,16 @@ export function SignUpPage() {
           onChange={handleChange}
           className="inputSignUp"
         />
+        <label className="checkboxLabel">
+          <input
+            type="checkbox"
+            name="optIn"
+            checked={optIn}
+            onChange={() => toggleCheckBox()}
+            className="checkbox"
+          />
+          Sign up for Twang News!
+        </label>
         <button type="submit" className="subBtn">
           Submit
         </button>
