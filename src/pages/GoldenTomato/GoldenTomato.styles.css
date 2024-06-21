@@ -10,8 +10,17 @@
 .signOutBtn {
   border: none;
   background-color: transparent;
-  font-family: "ArcherProIta";
+  font-family: "ArcherPro";
+  border: 1px #d8282f solid;
   cursor: pointer;
+  padding: 10px 30px 10px;
+  background-color: #d8282f;
+  color: white;
+  margin-top: 10px;
+}
+.signOutBtn:hover {
+  background-color: white;
+  color: #d8282f;
 }
 @media only screen and (max-width: 900px) {
   .gtContainer {
