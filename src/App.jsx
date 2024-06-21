@@ -41,7 +41,7 @@ function App() {
         <Route path="/GoldenTomato" element={<GoldenTomato />} />
         <Route path="/SignUp" element={<SignUpPage />} />
         <Route path="/Downloadables" element={<Downloadables />} />
-        <Route path="/ResetPassword" element={<ResetPassword />} />
+        <Route path="/GoldenTomatoResetPassword" element={<ResetPassword />} />
       </Routes>
       <Footer />
     </RestContext.Provider>
