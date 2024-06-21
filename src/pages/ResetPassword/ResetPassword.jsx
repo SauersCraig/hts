@@ -8,6 +8,7 @@ export function ResetPassword() {
     pass: "",
     confirmPass: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
   let navigate = useNavigate();
   function handleChange(event) {
     const value = event.target.value;
@@ -27,14 +28,14 @@ export function ResetPassword() {
     <div className="formContainer">
       <h1>Reset Password</h1>
       <input
-        type="password"
+        type={showPassword ? "text" : "password"}
         placeholder="Your Password"
         onChange={handleChange}
         name="pass"
         className="inputSignUp"
       />
       <input
-        type="password"
+        type={showPassword ? "text" : "password"}
         placeholder="Confirm Your Password"
         onChange={handleChange}
         name="confirmPass"
@@ -43,6 +44,9 @@ export function ResetPassword() {
       <button className="subBtn" onClick={confirmPasswords}>
         Reset Password
       </button>
+      <div onClick={() => setShowPassword(!showPassword)}>
+        <p className="showPass">Show Passwords</p>
+      </div>
     </div>
   );
 }
