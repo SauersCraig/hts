@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { supabase } from "../../client";
 import { Link } from "react-router-dom";
+import "./ResetPassword.styles.css";
 export function ResetPassword() {
   const [password, setPassword] = useState({
     pass: "",
@@ -20,7 +21,7 @@ export function ResetPassword() {
     });
   };
   return (
-    <div>
+    <div className="formContainer">
       <h1>Reset Password</h1>
       <input
         type="password"
@@ -36,6 +37,9 @@ export function ResetPassword() {
         name="confirmPass"
         className="inputSignUp"
       />
+      <button className="subBtn" onClick={confirmPasswords}>
+        Reset Password
+      </button>
     </div>
   );
 }
