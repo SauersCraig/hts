@@ -17,7 +17,7 @@ export function Login({ setToken }) {
     try {
       const { data: resetData, error } =
         await supabase.auth.resetPasswordForEmail(loginData.email, {
-          redirectTo: `${window.location.href}ResetPassword`,
+          redirectTo: `https://dukesdevsite.com/ResetPassword`,
         });
       setSuccess(true);
     } catch (error) {}
