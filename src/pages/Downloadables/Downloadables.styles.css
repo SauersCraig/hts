@@ -1,7 +1,3 @@
-.comingSoonPage {
-  display: block;
-}
-
 .homeLogo {
   display: block;
   width: 80%;
@@ -28,7 +24,10 @@
 .downloadContainer {
   display: grid;
   grid-template-columns: repeat(2, 47%);
+  grid-row-end: auto;
   grid-gap: 5%;
+  margin-bottom: 10px;
+  height: 100%;
 }
 .downloadImg {
   display: block;
@@ -56,7 +55,6 @@
 }
 .cardContainer {
   padding: 20px;
-  height: 100%;
 }
 @media only screen and (max-width: 900px) {
   .downloadContainer {
@@ -67,4 +65,7 @@
   font-size: 1.4em;
   padding: 20px 30px 20px;
   text-align: center;
+}
+.comingSoonPage2 {
+  margin-bottom: 1000px;
 }

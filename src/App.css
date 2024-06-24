@@ -62,3 +62,18 @@ body {
   color: #d8282f;
   background-color: white;
 }
+.headerTY {
+  font-family: "Lian";
+  font-size: 5em;
+  text-align: center;
+  color: #d8282f;
+  font-weight: 400;
+  line-height: 1;
+}
+main {
+  margin-bottom: 10px;
+  height: 100%;
+}
+video {
+  max-width: 100%;
+}

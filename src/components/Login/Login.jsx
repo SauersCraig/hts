@@ -67,6 +67,7 @@ export function Login({ setToken }) {
       )}
       {resetPassword && (
         <div className="formContainer">
+          <h1>Enter you email to reset your password.</h1>
           <input
             type="email"
             placeholder="Your Email"

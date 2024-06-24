@@ -1,9 +1,7 @@
 .formContainer {
   text-align: center;
 }
-.signUpContainer {
-  height: 75vh;
-}
+
 .inputSignUp {
   display: block;
   margin: 20px auto 20px;
