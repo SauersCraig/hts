@@ -35,14 +35,19 @@ function App() {
       }}
     >
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Restaurants" element={<Restaurants />} />
-        <Route path="/GoldenTomato" element={<GoldenTomato />} />
-        <Route path="/SignUp" element={<SignUpPage />} />
-        <Route path="/Downloadables" element={<Downloadables />} />
-        <Route path="/GoldenTomatoResetPassword" element={<ResetPassword />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Restaurants" element={<Restaurants />} />
+          <Route path="/GoldenTomato" element={<GoldenTomato />} />
+          <Route path="/SignUp" element={<SignUpPage />} />
+          <Route path="/Downloadables" element={<Downloadables />} />
+          <Route
+            path="/GoldenTomatoResetPassword"
+            element={<ResetPassword />}
+          />
+        </Routes>
+      </main>
       <Footer />
     </RestContext.Provider>
   );

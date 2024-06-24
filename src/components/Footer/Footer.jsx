@@ -1,7 +1,7 @@
 import "./Footer.styles.css";
 function Footer() {
   return (
-    <div className="footerDiv">
+    <footer className="footerDiv">
       <a
         href="https://sauerbrandsinc.com/pages/privacy-policy"
         target="_blank"
@@ -9,7 +9,7 @@ function Footer() {
       >
         Privacy Policy
       </a>
-    </div>
+    </footer>
   );
 }
 export default Footer;

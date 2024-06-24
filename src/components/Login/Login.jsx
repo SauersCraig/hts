@@ -43,6 +43,7 @@ export function Login({ setToken }) {
     <>
       {!resetPassword && (
         <div>
+          <h1 className="headerTY">Sign in to Vote</h1>
           <form onSubmit={handleSubmit} className="formContainer">
             <input
               type="email"
@@ -59,7 +60,7 @@ export function Login({ setToken }) {
               className="inputSignUp"
             />
             <button type="submit" className="subBtn">
-              Submit
+              Login
             </button>
           </form>
         </div>
@@ -90,7 +91,7 @@ export function Login({ setToken }) {
         {resetPassword ? "Login" : "Reset my password"}
       </p>
       <p className="signUpText">
-        Don't have an account? <Link to="/SignUp">Signup</Link>
+        Don't have an account? <Link to="/SignUp">Signup for an account.</Link>
       </p>
     </>
   );

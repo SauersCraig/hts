@@ -7,7 +7,7 @@ export function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="navBar">
+    <nav className="navBar">
       <div>
         <a href="/">
           <img src={htsLogo} alt="Hot Tomato Summer Logo" className="navLogo" />
@@ -35,6 +35,6 @@ export function NavBar() {
           </ul>
         </div>
       )}
-    </div>
+    </nav>
   );
 }
