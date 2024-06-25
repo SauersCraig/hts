@@ -58,13 +58,18 @@ function Accordion({ i }) {
             </div>
           </div>
           <div className="accordionBtnContainer">
-            <a
-              href={`https://www.google.com/maps/place/${i.address}`}
-              className="btnHTS"
-              target="_blank"
-            >
-              Directions
-            </a>
+            {i.address ? (
+              <a
+                href={`https://www.google.com/maps/place/${i.address}`}
+                className="btnHTS"
+                target="_blank"
+              >
+                Directions
+              </a>
+            ) : (
+              <div></div>
+            )}
+
             {i.website ? (
               <a href={i.website} target="_blank" className="btnHTS">
                 Website
