@@ -65,10 +65,13 @@ function Accordion({ i }) {
             >
               Directions
             </a>
-
-            <a href={i.website} target="_blank" className="btnHTS">
-              Website
-            </a>
+            {i.website ? (
+              <a href={i.website} target="_blank" className="btnHTS">
+                Website
+              </a>
+            ) : (
+              <div></div>
+            )}
 
             <a onClick={() => handleRouteChange(i)} className="btnHTS">
               Vote

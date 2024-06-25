@@ -57,6 +57,7 @@ body {
   font-family: "ArcherPro";
   border: 1px #d8282f solid;
   border-radius: 0;
+  cursor: pointer;
 }
 .btnHTS:hover {
   color: #d8282f;

@@ -99,7 +99,7 @@ export function SignUpPage() {
         </button>
       </form>
       <p className="signUpText">
-        Already have an account?{" "}
+        Already have an account?
         <Link to="/GoldenTomato">Login to your account.</Link>
       </p>
     </div>
