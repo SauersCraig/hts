@@ -2,6 +2,8 @@ import { useState, useEffect, createContext, useContext, useMemo } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { supabase } from "./client";
+import { RestContext } from "./RestContext";
+import ReactGA from "react-ga";
 
 import { SignUpPage } from "./pages/SignUpPage/SignUpPage";
 import { Restaurants } from "./pages/Restaurants/Restaurants";
@@ -11,7 +13,6 @@ import { GoldenTomato } from "./pages/GoldenTomato/GoldenTomato";
 import { ResetPassword } from "./pages/ResetPassword/ResetPassword";
 
 import { NavBar } from "./components/NavBar/NavBar";
-import { RestContext } from "./RestContext";
 import Footer from "./components/Footer/Footer";
 
 function App() {

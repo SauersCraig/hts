@@ -6,12 +6,14 @@ export function Restaurants() {
   const { rests } = useContext(RestContext);
   const [rest, setRest] = useState();
   const [restaurants, setRestaurants] = rests;
+  const [city, setCity] = useState("");
   function onCityClick(city) {
     const filterByCity = restaurants.filter(
       (restaurants) => restaurants.city == city
     );
 
     setRest(filterByCity);
+    setCity(city);
   }
 
   const Richmond = "Richmond, VA";
@@ -31,22 +33,40 @@ export function Restaurants() {
         </p>
       </div>
       <div className="cityBtnContainer">
-        <button onClick={() => onCityClick(Richmond)} className="cityBtn">
+        <button
+          onClick={() => onCityClick(Richmond)}
+          className={city === Richmond ? "activeBtn" : "cityBtn"}
+        >
           Richmond
         </button>
-        <button onClick={() => onCityClick(Greenville)} className="cityBtn">
+        <button
+          onClick={() => onCityClick(Greenville)}
+          className={city === Greenville ? "activeBtn" : "cityBtn"}
+        >
           Greenville
         </button>
-        <button onClick={() => onCityClick(Knoxville)} className="cityBtn">
+        <button
+          onClick={() => onCityClick(Knoxville)}
+          className={city === Knoxville ? "activeBtn" : "cityBtn"}
+        >
           Knoxville
         </button>
-        <button onClick={() => onCityClick(Charlotte)} className="cityBtn">
+        <button
+          onClick={() => onCityClick(Charlotte)}
+          className={city === Charlotte ? "activeBtn" : "cityBtn"}
+        >
           Charlotte
         </button>
-        <button onClick={() => onCityClick(Charleston)} className="cityBtn">
+        <button
+          onClick={() => onCityClick(Charleston)}
+          className={city === Charleston ? "activeBtn" : "cityBtn"}
+        >
           Charleston
         </button>
-        <button onClick={() => onCityClick(Raleigh)} className="cityBtn">
+        <button
+          onClick={() => onCityClick(Raleigh)}
+          className={city === Raleigh ? "activeBtn" : "cityBtn"}
+        >
           Raleigh
         </button>
       </div>

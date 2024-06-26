@@ -13,6 +13,16 @@
     row-gap: 10px;
   }
 }
+.activeBtn {
+  border: solid 2px #231e52;
+  padding: 10px 0 10px;
+  background-color: #231e52;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  font-family: "DukesTS";
+}
+
 .cityBtn {
   border: solid 2px #d8282f;
   padding: 10px 0 10px;
