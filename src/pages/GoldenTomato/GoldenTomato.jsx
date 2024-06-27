@@ -5,6 +5,7 @@ import { ThankYou } from "../../components/ThankYou/ThankYou";
 import Rankings from "../../components/Rankings/Rankings";
 import { useState, useEffect } from "react";
 import { supabase } from "../../client";
+import GoldTom from "../../assets/goldtomato.png";
 
 export function GoldenTomato() {
   const [token, setToken] = useState(false);
@@ -54,7 +55,7 @@ export function GoldenTomato() {
     setUserInfo([]);
     location.reload();
   }
-
+  console.log(newDate);
   let name = token ? token.user.user_metadata.first_name : "";
   return (
     <div>
@@ -73,8 +74,8 @@ export function GoldenTomato() {
                 ) : (
                   <>
                     <h1 className="gtHeader">
-                      Hello {name}! Enjoying Hot Tomato Summer?<br></br> Vote
-                      for your favorite restaurant to win the Golden Tomato
+                      Hello {name}! Enjoying Hot Tomato Summer?<br></br>
+                      Vote for your favorite restaurant to win the Golden Tomato
                       Award.
                     </h1>
                     <Voting userInfo={i} newDate={newDate} />

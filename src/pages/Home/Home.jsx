@@ -6,6 +6,7 @@ import moreInfo from "../../assets/hts-buttons-03.png";
 import restTom from "../../assets/hts-buttons-01.png";
 
 import Rankings from "../../components/Rankings/Rankings";
+import GoldTomCS from "../../components/GoldTomCS/GoldTomCS";
 export function Home() {
   return (
     <div className="comingSoonPage">
@@ -35,7 +36,7 @@ export function Home() {
           </a>
         </div>
       </div>
-   
+      <GoldTomCS />
       <Rankings />
     </div>
   );
