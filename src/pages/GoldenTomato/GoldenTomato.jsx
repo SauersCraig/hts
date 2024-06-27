@@ -88,6 +88,15 @@ export function GoldenTomato() {
         <Login setToken={setToken} />
       )}
       <Rankings />
+
+      <div>
+        <h1 className="votingComingSoonHeader">Voting For</h1>
+        <p className="VCSsecLine">the Golden Tomato Award starts July 18th.</p>
+        <p className="VCSsecLine">
+          Make sure to come on back and submit your vote.
+        </p>
+        <img src={GoldTom} alt="a giant golden tomato" className="goldTomCS" />
+      </div>
     </div>
   );
 }
