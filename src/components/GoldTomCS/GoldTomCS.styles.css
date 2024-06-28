@@ -29,6 +29,10 @@
 .goldTomCSHP {
   display: none;
 }
+.gifCS img {
+  display: block;
+  margin: 0 auto 0;
+}
 @media only screen and (max-width: 900px) {
   .gifCS {
     display: none;

@@ -15,16 +15,6 @@ export function GoldenTomato() {
     sessionStorage.setItem("token", JSON.stringify(token));
   }
 
-  const channels = supabase
-    .channel("custom-update-channel")
-    .on(
-      "postgres_changes",
-      { event: "UPDATE", schema: "public", table: "profile" },
-      (payload) => {
-        console.log("Change received!", payload);
-      }
-    )
-    .subscribe();
   useEffect(() => {
     const today = new Date();
     const date = today.getDate();
@@ -55,7 +45,7 @@ export function GoldenTomato() {
     setUserInfo([]);
     location.reload();
   }
-  console.log(newDate);
+
   let name = token ? token.user.user_metadata.first_name : "";
   return (
     <div>
