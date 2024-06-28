@@ -30,7 +30,7 @@ export function Voting({ userInfo, newDate }) {
     if (error) {
       console.error(error);
     } else {
-      location.reload();
+       location.reload();
     }
   }
   function onClickVote(id, votes) {

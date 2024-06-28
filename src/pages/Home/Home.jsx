@@ -37,7 +37,9 @@ export function Home() {
         </div>
       </div>
       <GoldTomCS />
-      <Rankings />
+      <div className="rankingDiv">
+        <Rankings />
+      </div>
     </div>
   );
 }

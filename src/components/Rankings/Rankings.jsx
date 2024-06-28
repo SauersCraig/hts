@@ -87,7 +87,7 @@ function Rankings() {
           <h1>Charlotte</h1>
           {charlotteOrder.slice(0, 5).map((i) => (
             <div key={i.id} className="rankingRestCon">
-              <p>{i.name}</p>{" "}
+              <p>{i.name}</p>
               {i.votes > 0 ? (
                 <p className="rankVotes">{i.votes}</p>
               ) : (
@@ -100,7 +100,7 @@ function Rankings() {
           <h1>Charleston</h1>
           {charlestonOrder.slice(0, 5).map((i) => (
             <div key={i.id} className="rankingRestCon">
-              <p>{i.name}</p>{" "}
+              <p>{i.name}</p>
               {i.votes > 0 ? (
                 <p className="rankVotes">{i.votes}</p>
               ) : (
@@ -113,7 +113,7 @@ function Rankings() {
           <h1>Knoxville</h1>
           {knoxvilleOrder.slice(0, 5).map((i) => (
             <div key={i.id} className="rankingRestCon">
-              <p>{i.name}</p>{" "}
+              <p>{i.name}</p>
               {i.votes > 0 ? (
                 <p className="rankVotes">{i.votes}</p>
               ) : (
@@ -126,7 +126,7 @@ function Rankings() {
           <h1>Greenville</h1>
           {greenvilleOrder.slice(0, 5).map((i) => (
             <div key={i.id} className="rankingRestCon">
-              <p>{i.name}</p>{" "}
+              <p>{i.name}</p>
               {i.votes > 0 ? (
                 <p className="rankVotes">{i.votes}</p>
               ) : (
