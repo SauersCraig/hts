@@ -77,7 +77,9 @@ export function GoldenTomato() {
       ) : (
         <Login setToken={setToken} />
       )}
-      <Rankings />
+      <div className="rankingDiv">
+        <Rankings />
+      </div>
 
       <div>
         <h1 className="votingComingSoonHeader">Voting For</h1>
