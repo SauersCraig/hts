@@ -30,9 +30,11 @@
 .rankingRestCon {
   display: grid;
   grid-template-columns: 4fr 1fr;
-  margin-right: 10px;
+  padding-right: 10px;
   border-bottom: #231e52 2px solid;
   height: 150px;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
 .rankingRestCon p {
   font-size: 1.5em;
@@ -56,6 +58,7 @@
   }
   .rankingRestCon {
     padding: 10px 20px 0;
+    margin-right: 0;
   }
   .cityContainerNL {
     border-bottom: #231e52 solid 3px;
