@@ -44,7 +44,7 @@ function App() {
           <Route path="/GoldenTomato" element={<GoldenTomato />} />
           <Route path="/SignUp" element={<SignUpPage />} />
           <Route path="/Downloadables" element={<Downloadables />} />
-          <Route path="/RestResetPassword" element={<ResetPassword />} />
+          <Route path="/ResetPassword" element={<ResetPassword />} />
           <Route path="/Rest" element={<Rest />} />
         </Routes>
       </main>

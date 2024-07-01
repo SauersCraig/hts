@@ -30,7 +30,7 @@ export function Voting({ userInfo, newDate }) {
     if (error) {
       console.error(error);
     } else {
-       location.reload();
+      location.reload();
     }
   }
   function onClickVote(id, votes) {
@@ -63,6 +63,7 @@ export function Voting({ userInfo, newDate }) {
               <button
                 onClick={() => onClickVote(restName.id, restName.votes)}
                 className="restGTBtn"
+                aria-label={restName.name}
               >
                 Vote
               </button>
