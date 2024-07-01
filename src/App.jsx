@@ -11,6 +11,7 @@ import { Home } from "./pages/Home/Home";
 import { Downloadables } from "./pages/Downloadables/Downloadables";
 import { GoldenTomato } from "./pages/GoldenTomato/GoldenTomato";
 import { ResetPassword } from "./pages/ResetPassword/ResetPassword";
+import Rest from "./pages/Reset/Rest";
 
 import { NavBar } from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
@@ -43,10 +44,8 @@ function App() {
           <Route path="/GoldenTomato" element={<GoldenTomato />} />
           <Route path="/SignUp" element={<SignUpPage />} />
           <Route path="/Downloadables" element={<Downloadables />} />
-          <Route
-            path="/GoldenTomatoResetPassword"
-            element={<ResetPassword />}
-          />
+          <Route path="/ResetPassword" element={<ResetPassword />} />
+          <Route path="/Rest" element={<Rest />} />
         </Routes>
       </main>
       <Footer />

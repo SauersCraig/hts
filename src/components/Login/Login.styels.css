@@ -1,6 +1,12 @@
 .signUpText {
   text-align: center;
 }
+.resetPassText {
+  display: block;
+  margin: 0 auto 0;
+  border: none;
+  background-color: transparent;        
+}
 .resetPassText:hover {
   cursor: pointer;
   color: #5044bd;

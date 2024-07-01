@@ -18,18 +18,19 @@ function Accordion({ i }) {
 
   return (
     <div>
-      <div className="accordion-item" onClick={() => setIsActive(!isActive)}>
+      <button className="accordion-item" onClick={() => setIsActive(!isActive)}>
         <div className="topAccordion">
           <div className="headerContainer">
             <h2 className="headerAccordion">{i.name}</h2>
           </div>
+
           <img
-            src={isActive ? upIcon : downIcon}
             className="arrowIcon"
+            src={isActive ? upIcon : downIcon}
             alt={isActive ? "Arrow Icon Pointed Up" : "Arrow Icon Pointed Down"}
           />
         </div>
-      </div>
+      </button>
 
       {isActive && (
         <div className="infoAccordion accordionDivide">
@@ -78,9 +79,9 @@ function Accordion({ i }) {
               <div></div>
             )}
 
-            <a onClick={() => handleRouteChange(i)} className="btnHTS">
+            <button onClick={() => handleRouteChange(i)} className="btnHTS">
               Vote
-            </a>
+            </button>
           </div>
         </div>
       )}

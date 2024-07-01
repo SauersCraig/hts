@@ -32,6 +32,8 @@
   top: 40px;
   width: 50px;
   color: #feb81c;
+  background-color: transparent;
+  border: none;
 }
 .hamburger:hover {
   cursor: pointer;

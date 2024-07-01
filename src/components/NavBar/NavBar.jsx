@@ -13,12 +13,13 @@ export function NavBar() {
           <img src={htsLogo} alt="Hot Tomato Summer Logo" className="navLogo" />
         </a>
       </div>
-      <img
-        src={hamburg}
-        alt="button to open dropdown menu"
-        className="hamburger"
-        onClick={() => setOpen(!open)}
-      />
+      <button className="hamburger">
+        <img
+          src={hamburg}
+          alt="button to open dropdown menu"
+          onClick={() => setOpen(!open)}
+        />
+      </button>
 
       {open && (
         <div className="navBarDropdown" onClick={() => setOpen(!open)}>

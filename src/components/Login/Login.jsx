@@ -7,21 +7,12 @@ export function Login({ setToken }) {
     email: "",
     password: "",
   });
-  const [resetPassword, setRestPassword] = useState(false);
-  const [success, setSuccess] = useState(false);
+
   function handleChange(event) {
     const value = event.target.value;
     setLoginData({ ...loginData, [event.target.name]: value });
   }
-  const sendResetPassword = async () => {
-    try {
-      const { data: resetData, error } =
-        await supabase.auth.resetPasswordForEmail(loginData.email, {
-          redirectTo: `${window.location.href}ResetPassword`,
-        });
-      setSuccess(true);
-    } catch (error) {}
-  };
+
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -41,33 +32,9 @@ export function Login({ setToken }) {
   }
   return (
     <>
-      {!resetPassword && (
-        <div>
-          <h1 className="headerTY">Sign in to Vote</h1>
-          <form onSubmit={handleSubmit} className="formContainer">
-            <input
-              type="email"
-              placeholder="Your Email"
-              onChange={handleChange}
-              name="email"
-              className="inputSignUp"
-            />
-            <input
-              type="password"
-              placeholder="Your Password"
-              onChange={handleChange}
-              name="password"
-              className="inputSignUp"
-            />
-            <button type="submit" className="subBtn">
-              Login
-            </button>
-          </form>
-        </div>
-      )}
-      {resetPassword && (
-        <div className="formContainer">
-          <h1>Enter you email to reset your password.</h1>
+      <div>
+        <h1 className="headerTY">Sign in to Vote</h1>
+        <form onSubmit={handleSubmit} className="formContainer">
           <input
             type="email"
             placeholder="Your Email"
@@ -75,21 +42,21 @@ export function Login({ setToken }) {
             name="email"
             className="inputSignUp"
           />
-          {success && (
-            <p className="signUpText">
-              Success! Check your email to reset your password.
-            </p>
-          )}
-          <button onClick={sendResetPassword} className="subBtn restBtn">
-            Reset Password
+          <input
+            type="password"
+            placeholder="Your Password"
+            onChange={handleChange}
+            name="password"
+            className="inputSignUp"
+          />
+          <button type="submit" className="subBtn">
+            Login
           </button>
-        </div>
-      )}
-      <p
-        onClick={() => setRestPassword(!resetPassword)}
-        className="signUpText resetPassText"
-      >
-        {resetPassword ? "Login" : "Reset my password"}
+        </form>
+      </div>
+
+      <p className="signUpText">
+        <Link to="/Rest">Reset Password</Link>
       </p>
       <p className="signUpText">
         Don't have an account? <Link to="/SignUp">Signup for an account.</Link>
