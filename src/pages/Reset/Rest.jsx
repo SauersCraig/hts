@@ -27,7 +27,7 @@ function Rest() {
 
   return (
     <div className="formContainer">
-      <h1>Enter you email to reset your password.</h1>
+      <h1>Enter your email to reset your password.</h1>
       <input
         type="email"
         placeholder="Your Email"
