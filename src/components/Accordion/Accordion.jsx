@@ -79,7 +79,7 @@ function Accordion({ i }) {
               <div></div>
             )}
 
-            <button onClick={() => handleRouteChange(i)} className="btnHTS">
+            <button onClick={() => handleRouteChange(i)} className="btnHTS voteBtn">
               Vote
             </button>
           </div>
