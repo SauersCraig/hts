@@ -48,9 +48,9 @@ export function SignUpPage() {
     }
   }
   return (
-    <div className="">
-      <h1 className="headerTY">Sign up for an account to Vote!</h1>
-      <form onSubmit={handleSubmit} className="formContainer signUpContainer">
+    <div className="signUpContainer">
+      <h1 className="headerTY">Create an account to vote</h1>
+      <form onSubmit={handleSubmit} className="formContainer ">
         <input
           placeholder="First Name"
           name="firstName"
@@ -92,7 +92,8 @@ export function SignUpPage() {
             onChange={() => toggleCheckBox()}
             className="checkbox"
           />
-          Sign up for Twang News!
+          Yes, sign me up for Duke's TWANG TALK newsletter, stuffed with special
+          offers, new products, merch drops & more!
         </label>
         <button type="submit" className="subBtn">
           Submit

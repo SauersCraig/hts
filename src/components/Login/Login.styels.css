@@ -1,11 +1,16 @@
 .signUpText {
   text-align: center;
 }
+.smallerSignUpText {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 0 10px 0;
+}
 .resetPassText {
   display: block;
   margin: 0 auto 0;
   border: none;
-  background-color: transparent;        
+  background-color: transparent;
 }
 .resetPassText:hover {
   cursor: pointer;
@@ -13,4 +18,20 @@
 }
 .restBtn {
   text-align: center;
+}
+.createAccount {
+  display: block;
+  margin: 0 auto 0;
+  text-align: center;
+  font-family: "DukesTS";
+  background-color: #d8282f;
+  padding: 10px 20px 10px;
+  width: 200px;
+  color: white;
+  font-size: 1.5em;
+  border: 1px #d8282f solid;
+}
+.createAccount:hover {
+  color: #d8282f;
+  background-color: white;
 }

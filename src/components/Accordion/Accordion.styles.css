@@ -10,6 +10,7 @@
 .voteBtn {
   font-family: "ArcherPro";
   font-size: 1em;
+  width: 100%;
 }
 .headerContainer {
   width: 75%;
@@ -18,11 +19,9 @@
   padding-left: 20px;
 }
 .specContainer {
-  border-right: solid;
+  border-right: solid 2px #231e52;
 }
-.rightDiv {
-  border-left: 3px #231e52 solid;
-}
+
 .specHeader {
   display: inline-block;
   padding-left: 20px;
@@ -36,28 +35,38 @@
   right: 0;
   bottom: 0;
 }
-.infoAccordion {
-  padding-left: 20px;
-  padding-bottom: 20px;
-}
+
 .accordionDivide {
-  border-top: solid #231e52 3px;
-  margin: 0px 40px 0px;
+  padding: 0px 30px 10px;
+  box-shadow: 5px 5px 15px 0px rgba(45, 42, 38, 0.4);
+  margin: 0 10px 10px;
 }
 .accordionBtnContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 5px;
   text-align: center;
 }
 .containerInfoSection {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin: 10px 0 10px;
+  margin: 0px 0 0px;
 }
 .goldenTomAccordion {
   text-align: center;
 }
 .goldenTomAccordion p {
   font-size: 3em;
+}
+@media only screen and (max-width: 900px) {
+  .containerInfoSection {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .specContainer {
+    border-right: none;
+  }
+  .accordion-item {
+    margin: 10px 10px 10px;
+  }
 }

@@ -14,6 +14,18 @@
   color: black;
   font-size: 2em;
 }
+.textContainerHomePage {
+  text-align: center;
+  padding: 10px 50px 10px;
+  margin: 0 100px 0;
+}
+.textContainerHomePage p {
+  font-size: 2em;
+  font-family: "DukesTS";
+}
+.textSpan {
+  font-size: 1.2em;
+}
 .htsLink:hover {
   color: #d8282f;
 }
@@ -24,9 +36,6 @@
   text-align: center;
 }
 
-.tomImg {
-  width: 75%;
-}
 .tomImg:hover {
   filter: brightness(90%);
 }
@@ -57,5 +66,10 @@
   }
   .rankingDiv {
     padding: 0 10px 0;
+  }
+  .textContainerHomePage {
+    text-align: center;
+    padding: 10px 0px 10px;
+    margin: 0 10px 0;
   }
 }

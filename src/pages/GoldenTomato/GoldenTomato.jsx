@@ -49,7 +49,7 @@ export function GoldenTomato() {
   let name = token ? token.user.user_metadata.first_name : "";
   return (
     <div>
-      {newDate < 18 ? (
+      {newDate < 1 ? (
         <div>
           <h1 className="votingComingSoonHeader">Voting For</h1>
           <p className="VCSsecLine">
@@ -82,8 +82,7 @@ export function GoldenTomato() {
                       <>
                         <h1 className="gtHeader">
                           Hello {name}! Enjoying Hot Tomato Summer?<br></br>
-                          Vote for your favorite restaurant to win the Golden
-                          Tomato Award.
+                          Vote for your favorite restaurant. The restaurant with the most votes in each city will win the Golden Tomato Award!
                         </h1>
                         <Voting userInfo={i} newDate={newDate} />
                       </>

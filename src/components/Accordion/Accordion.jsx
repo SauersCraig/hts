@@ -51,6 +51,27 @@ function Accordion({ i }) {
                 ) : (
                   <p>Specials Coming Soon</p>
                 )}
+                <div className="accordionBtnContainer">
+                  {i.address ? (
+                    <a
+                      href={`https://www.google.com/maps/place/${i.address}`}
+                      className="btnHTS"
+                      target="_blank"
+                    >
+                      Directions
+                    </a>
+                  ) : (
+                    <div></div>
+                  )}
+
+                  {i.website ? (
+                    <a href={i.website} target="_blank" className="btnHTS">
+                      Website
+                    </a>
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
               </div>
             </div>
             <div className="goldenTomAccordion">
@@ -58,31 +79,13 @@ function Accordion({ i }) {
               {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
             </div>
           </div>
-          <div className="accordionBtnContainer">
-            {i.address ? (
-              <a
-                href={`https://www.google.com/maps/place/${i.address}`}
-                className="btnHTS"
-                target="_blank"
-              >
-                Directions
-              </a>
-            ) : (
-              <div></div>
-            )}
 
-            {i.website ? (
-              <a href={i.website} target="_blank" className="btnHTS">
-                Website
-              </a>
-            ) : (
-              <div></div>
-            )}
-
-            <button onClick={() => handleRouteChange(i)} className="btnHTS voteBtn">
-              Vote
-            </button>
-          </div>
+          <button
+            onClick={() => handleRouteChange(i)}
+            className="btnHTS voteBtn"
+          >
+            Vote
+          </button>
         </div>
       )}
     </div>
