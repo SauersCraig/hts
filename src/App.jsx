@@ -15,7 +15,7 @@ import Rest from "./pages/Reset/Rest";
 
 import { NavBar } from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-
+const TRACKING_ID = "G-HKWFLNHQ5Q";
 function App() {
   const [restaurants, setRestaurants] = useState([]);
   const [restName, setRestName] = useState("");
@@ -28,7 +28,11 @@ function App() {
     const { data } = await supabase.from("Restaurants").select();
     setRestaurants(data);
   }
-
+  useEffect(() => {
+    ReactGA.initialize(TRACKING_ID, { debug: true });
+    // Send pageview with a custom path
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
   return (
     <RestContext.Provider
       value={{
