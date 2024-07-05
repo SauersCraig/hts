@@ -3,7 +3,9 @@ import { supabase } from "../../client";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./ResetPassword.styles.css";
+import ReactGA from "react-ga";
 export function ResetPassword() {
+  ReactGA.pageview(window.location.pathname + window.location.search);
   const [password, setPassword] = useState({
     pass: "",
     confirmPass: "",

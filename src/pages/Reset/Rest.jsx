@@ -2,8 +2,9 @@ import { supabase } from "../../client";
 import "./Rest.styles.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import ReactGA from "react-ga";
 function Rest() {
+  ReactGA.pageview(window.location.pathname + window.location.search);
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",

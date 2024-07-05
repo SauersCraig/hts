@@ -7,7 +7,9 @@ import restTom from "../../assets/htsRS.png";
 
 import Rankings from "../../components/Rankings/Rankings";
 import GoldTomCS from "../../components/GoldTomCS/GoldTomCS";
+import ReactGA from "react-ga";
 export function Home() {
+  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <div className="comingSoonPage">
       <div className="textContainerHomePage">

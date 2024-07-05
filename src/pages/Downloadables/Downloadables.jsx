@@ -7,7 +7,9 @@ import HTSLogo3 from "../../assets/HTSLogo3.png";
 import HTSLogo4 from "../../assets/HTSLogo4.png";
 import HTSLogoSocialPost from "../../assets/HTSLogoSocialPost.jpg";
 import HTSLogoSocialPost2 from "../../assets/HTSLogoSocialPost2.jpg";
+import ReactGA from "react-ga";
 export function Downloadables() {
+  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <div>
       <div className="comingSoonPage2">
@@ -99,4 +101,3 @@ export function Downloadables() {
     </div>
   );
 }
-

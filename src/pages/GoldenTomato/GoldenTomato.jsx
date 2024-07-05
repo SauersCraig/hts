@@ -9,7 +9,9 @@ import GoldTom from "../../assets/goldtomato.png";
 import Can from "../../assets/HTS-gif-can.gif";
 import Jar from "../../assets/HTS-gif-Jar-Tom.gif";
 import Lady from "../../assets/HTS-gifs-test2.gif";
+import ReactGA from "react-ga";
 export function GoldenTomato() {
+  ReactGA.pageview(window.location.pathname + window.location.search);
   const [token, setToken] = useState(false);
   const [userInfo, setUserInfo] = useState();
   const [newDate, setNewDate] = useState();

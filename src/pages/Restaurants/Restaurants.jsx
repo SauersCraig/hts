@@ -2,7 +2,9 @@ import "./Restaurants.styles.css";
 import { useState, useContext } from "react";
 import { RestSection } from "../../components/RestSection/RestSection";
 import { RestContext } from "../../RestContext";
+import ReactGA from "react-ga";
 export function Restaurants() {
+  ReactGA.pageview(window.location.pathname + window.location.search);
   const { rests } = useContext(RestContext);
   const [rest, setRest] = useState();
   const [restaurants, setRestaurants] = rests;

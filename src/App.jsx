@@ -31,7 +31,6 @@ function App() {
   useEffect(() => {
     ReactGA.initialize(TRACKING_ID, { debug: true });
     // Send pageview with a custom path
-    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
   return (
     <RestContext.Provider
