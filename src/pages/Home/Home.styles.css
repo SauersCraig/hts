@@ -19,8 +19,12 @@
   padding: 10px 50px 10px;
   margin: 0 100px 0;
 }
-.textContainerHomePage p {
+.textContainerHomePage h3 {
   font-size: 2em;
+  font-family: "DukesTS";
+}
+.textContainerHomePage p {
+  font-size: 1.6em;
   font-family: "DukesTS";
 }
 .textSpan {

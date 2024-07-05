@@ -12,11 +12,12 @@ function GoldTomCS() {
           alt="a yellow can with a bright red tomato bouncing up and down"
         />
       </div>
-      <img src={GoldTom} alt="Giant Golden Tomator" className="goldTomCSHP" />
+
       <div className="textSecGTCS">
         <h1 className="gtcsHeader">Golden Tomato Award</h1>
         <p className="secLineGTCS">Voting begins July 18th</p>
       </div>
+
       <div className="gifCS">
         <img
           src={Jar}

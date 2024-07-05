@@ -11,11 +11,14 @@ export function Home() {
   return (
     <div className="comingSoonPage">
       <div className="textContainerHomePage">
+        <h3>
+          Duke's Hot Tomato Summer is here <br></br> July 18-28!
+        </h3>
         <p>
-          Duke's Hot Tomato Summer is here - July 18-28!<br></br> 2024 promises
-          to be hotter than ever with over 350 restaurants participating across
-          6 cities <br></br> Charleston, SC; Charlotte, NC; Greenville, SC;
-          Knoxville, TN; Raleigh, NC; Richmond, VA.<br></br> Learn more below.
+          2024 promises to be hotter than ever with over 350 restaurants
+          participating across 6 cities <br></br> Charleston, SC; Charlotte, NC;
+          Greenville, SC; Knoxville, TN; Raleigh, NC; Richmond, VA.<br></br>
+          Learn more below.
         </p>
       </div>
       <div className="tomContainer">
@@ -45,9 +48,9 @@ export function Home() {
         </div>
       </div>
       <GoldTomCS />
-      <div className="rankingDiv">
+      {/* <div className="rankingDiv">
         <Rankings />
-      </div>
+      </div> */}
     </div>
   );
 }

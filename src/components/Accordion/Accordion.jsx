@@ -74,18 +74,18 @@ function Accordion({ i }) {
                 </div>
               </div>
             </div>
-            <div className="goldenTomAccordion">
+            {/* <div className="goldenTomAccordion">
               <h3>Votes for Golden Tomato</h3>
               {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-            </div>
+            </div> */}
           </div>
 
-          <button
+          {/* <button
             onClick={() => handleRouteChange(i)}
             className="btnHTS voteBtn"
           >
             Vote
-          </button>
+          </button> */}
         </div>
       )}
     </div>
