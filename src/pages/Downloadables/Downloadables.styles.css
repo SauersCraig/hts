@@ -1,70 +1,72 @@
-.comingSoonPage {
-    width: 100vw;
-  }
-  .homeLogo {
-    display: block;
-    width: 80%;
-    margin: 0 auto 0;
-  }
-  .comingSoon {
-    font-size: 3em;
-    text-align: center;
-  }
-  .htsLink {
-    display: block;
-    margin: 0 auto 0;
-    text-align: center;
-    background-color: #d8282f;
-    border: 2px solid #d8282f;
-    color: white;
-    padding: 10px 20px 10px 20px;
-    width: 30%;
-  }
-  .htsLink:hover {
-    background-color: white;
-    color: #d8282f;
-  }
+.homeLogo {
+  display: block;
+  width: 80%;
+  margin: 0 auto 0;
+}
+.comingSoon {
+  font-size: 3em;
+  text-align: center;
+}
+.htsLink {
+  display: block;
+  margin: 0 auto 0;
+  text-align: center;
+  background-color: #d8282f;
+  border: 2px solid #d8282f;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  width: 30%;
+}
+.htsLink:hover {
+  background-color: white;
+  color: #d8282f;
+}
+.downloadContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 47%);
+  grid-row-end: auto;
+  grid-gap: 5%;
+  margin-bottom: 10px;
+  height: 100%;
+}
+.downloadImg {
+  display: block;
+  margin: 0 auto 0;
+  width: 80%;
+}
+.downloadCard {
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(45, 42, 38, 0.4);
+  padding: 5px 20px 30px;
+  background-color: rgb(250, 249, 249);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.downloadCard a {
+  background-color: #d8282f;
+  border: 2px solid #d8282f;
+  color: white;
+  padding: 10px 20px 10px 20px;
+}
+.downloadCard a:hover {
+  background-color: white;
+  color: #d8282f;
+}
+.cardContainer {
+  padding: 20px;
+}
+@media only screen and (max-width: 900px) {
   .downloadContainer {
-    display: grid;
-    grid-template-columns: 47% 47%;
-    grid-gap: 5%;
+    grid-template-columns: 1fr;
   }
-  .downloadImg {
-    display: block;
-    margin: 0 auto 0;
-    width: 80%;
-  }
-  .downloadCard {
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 5px 5px 15px 0px rgba(45, 42, 38, 0.4);
-    padding: 5px 20px 30px;
-    background-color: rgb(250, 249, 249);
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .downloadCard a {
-    background-color: #d8282f;
-    border: 2px solid #d8282f;
-    color: white;
-    padding: 10px 20px 10px 20px;
-  }
-  .downloadCard a:hover {
-    background-color: white;
-    color: #d8282f;
-  }
-  .cardContainer {
-    padding: 20px;
-    height: 100%;
-  }
-  @media only screen and (max-width: 900px) {
-    .downloadContainer {
-      display: block;
-    }
-  }
-  .secondLine {
-    font-size: 1.4em;
-    padding: 20px 30px 20px;
-    text-align: center;
-  }
-  
+}
+.secondLine {
+  font-size: 1.4em;
+  padding: 20px 30px 20px;
+  text-align: center;
+}
+.comingSoonPage2 {
+  margin-bottom: 1000px;
+}
+

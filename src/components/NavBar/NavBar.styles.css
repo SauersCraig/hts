@@ -1,0 +1,40 @@
+.navBar {
+  background-color: #231e52;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.navLogo {
+  display: block;
+  height: 100px;
+  width: auto;
+  margin: 0 auto 0;
+}
+.navBarDropdown {
+  position: absolute;
+  right: 5px;
+  top: 120px;
+  padding: 10px 20px 0px 10px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  z-index: 99;
+}
+.navBarDropdown ul {
+  padding: 0px 20px 10px 5px;
+}
+.navBarDropdown li {
+  margin: 10px 0 10px;
+  font-family: "ArcherPro";
+  font-size: 1.5em;
+}
+.hamburger {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  width: 50px;
+  color: #feb81c;
+  background-color: transparent;
+  border: none;
+}
+.hamburger:hover {
+  cursor: pointer;
+}

@@ -1,15 +1,9 @@
-.comingSoonPage {
-  width: 100vw;
-}
-.comingSonnPage h1 {
-  text-align: center;
-}
 .homeLogo {
   display: block;
   width: 80%;
   margin: 0 auto 0;
 }
-.comingSoonPage {
+.comingSoon {
   font-size: 3em;
   text-align: center;
 }
@@ -17,57 +11,69 @@
   display: block;
   margin: 0 auto 0;
   text-align: center;
-  background-color: #d8282f;
-  border: 2px solid #d8282f;
-  color: white;
-  padding: 10px 20px 10px 20px;
-  width: 30%;
+  color: black;
+  font-size: 2em;
+}
+.textContainerHomePage {
+  text-align: center;
+  padding: 10px 50px 10px;
+  margin: 0 100px 0;
+}
+.textContainerHomePage h3 {
+  font-size: 2em;
+  font-family: "DukesTS";
+}
+.textContainerHomePage p {
+  font-size: 1.6em;
+  font-family: "DukesTS";
+}
+.textSpan {
+  font-size: 1.2em;
 }
 .htsLink:hover {
-  background-color: white;
   color: #d8282f;
 }
-.downloadContainer {
-  display: grid;
-  grid-template-columns: 47% 47%;
-  grid-gap: 5%;
-}
-.downloadImg {
+.tomLinkDiv {
   display: block;
-  margin: 0 auto 0;
-  width: 80%;
-}
-.downloadCard {
+  position: relative;
+  margin: 0 auto 50px;
   text-align: center;
-  border-radius: 5px;
-  box-shadow: 5px 5px 15px 0px rgba(45, 42, 38, 0.4);
-  padding: 5px 20px 30px;
-  background-color: rgb(250, 249, 249);
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
-.comingSoonPage a {
-  background-color: #d8282f;
-  border: 2px solid #d8282f;
-  color: white;
-  padding: 10px 20px 10px 20px;
- 
+
+.tomImg:hover {
+  filter: brightness(90%);
 }
-.comingSoonPage a:hover {
-  background-color: white;
-  color: #d8282f;
+.tomLinkContainer {
+  padding: 150px 0 0;
 }
-.cardContainer {
-  padding: 20px;
-  height: 100%;
+.tomContainer {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 @media only screen and (max-width: 900px) {
-  .downloadContainer {
-    display: block;
+  .tomContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
-}
-.secondLine {
-  font-size: 1.4em;
-  padding: 20px 30px 20px;
-  text-align: center;
+  .homeLink {
+    font-size: 2em;
+  }
+  .tomImg {
+    width: 95%;
+  }
+  .rankingDiv {
+    padding: 0 10px 0;
+  }
+  .textContainerHomePage {
+    text-align: center;
+    padding: 10px 0px 10px;
+    margin: 0 10px 0;
+  }
 }

@@ -1,0 +1,45 @@
+.cityBtnContainer {
+  margin: 20px 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 10px;
+}
+@media only screen and (max-width: 900px) {
+  .cityBtnContainer {
+    margin: 20px 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+}
+.activeBtn {
+  border: solid 2px #231e52;
+  padding: 10px 0 10px;
+  background-color: #231e52;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  font-family: "DukesTS";
+}
+
+.cityBtn {
+  border: solid 2px #d8282f;
+  padding: 10px 0 10px;
+  background-color: #d8282f;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  font-family: "DukesTS";
+}
+
+.cityBtn:hover {
+  color: #d8282f;
+  background-color: white;
+}
+.infoRest {
+  text-align: center;
+}
+.infoRest p {
+  font-size: 1.5em;
+}

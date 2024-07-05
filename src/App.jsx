@@ -1,16 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext, useContext, useMemo } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { supabase } from "./client";
-import { Auth } from "@supabase/auth-ui-react";
-import { ThemeSupa } from "@supabase/auth-ui-shared";
+import { RestContext } from "./RestContext";
+import ReactGA from "react-ga";
+
+import { SignUpPage } from "./pages/SignUpPage/SignUpPage";
 import { Restaurants } from "./pages/Restaurants/Restaurants";
 import { Home } from "./pages/Home/Home";
-import { GoldenTomato } from "./pages/GoldenTomato/GoldenTomato";
 import { Downloadables } from "./pages/Downloadables/Downloadables";
+import { GoldenTomato } from "./pages/GoldenTomato/GoldenTomato";
+import { ResetPassword } from "./pages/ResetPassword/ResetPassword";
+import Rest from "./pages/Reset/Rest";
+
+import { NavBar } from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
+
 function App() {
-  const [session, setSession] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
+  const [restName, setRestName] = useState("");
 
   useEffect(() => {
     getRestaurants();
@@ -21,34 +29,27 @@ function App() {
     setRestaurants(data);
   }
 
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      console.log(session.user.id);
-    });
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-    });
-
-    return () => subscription.unsubscribe();
-  }, []);
-
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route
-        path="/Restaurants"
-        element={<Restaurants restaurants={restaurants} />}
-      />
-      <Route
-        path="/GoldenTomato"
-        element={<GoldenTomato session={session} />}
-      />
-      <Route path="/Downloadables" element={<Downloadables />}></Route>
-    </Routes>
+    <RestContext.Provider
+      value={{
+        resName: [restName, setRestName],
+        rests: [restaurants, setRestaurants],
+      }}
+    >
+      <NavBar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Restaurants" element={<Restaurants />} />
+          <Route path="/GoldenTomato" element={<GoldenTomato />} />
+          <Route path="/SignUp" element={<SignUpPage />} />
+          <Route path="/Downloadables" element={<Downloadables />} />
+          <Route path="/ResetPassword" element={<ResetPassword />} />
+          <Route path="/Rest" element={<Rest />} />
+        </Routes>
+      </main>
+      <Footer />
+    </RestContext.Provider>
   );
 }
 

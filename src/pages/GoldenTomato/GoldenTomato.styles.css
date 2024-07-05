@@ -1,0 +1,48 @@
+.gtContainer {
+  padding: 30px;
+}
+.gtHeader {
+  text-align: center;
+}
+.signOutContainer {
+  text-align: end;
+}
+.signOutBtn {
+  border: none;
+  background-color: transparent;
+  font-family: "ArcherPro";
+  border: 1px #d8282f solid;
+  cursor: pointer;
+  padding: 10px 30px 10px;
+  background-color: #d8282f;
+  color: white;
+  margin-top: 10px;
+}
+.signOutBtn:hover {
+  background-color: white;
+  color: #d8282f;
+}
+.votingComingSoonHeader {
+  font-family: "Lian";
+  font-size: 5em;
+  text-align: center;
+  color: #d8282f;
+  font-weight: 400;
+  line-height: 1;
+}
+.goldTomCS {
+  display: block;
+  margin: 0 auto 0;
+  width: 60%;
+}
+.VCSsecLine {
+  font-size: 2em;
+  text-align: center;
+  font-family: "DukesTS";
+}
+
+@media only screen and (max-width: 900px) {
+  .gtContainer {
+    padding: 10px;
+  }
+}

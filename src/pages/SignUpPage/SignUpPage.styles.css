@@ -1,0 +1,39 @@
+.formContainer {
+  text-align: center;
+}
+
+.inputSignUp {
+  display: block;
+  margin: 20px auto 20px;
+  font-size: 1.3em;
+  width: 60%;
+  padding: 10px 20px 10px;
+  border-radius: 10px;
+  border: black solid 2px;
+}
+.subBtn {
+  font-family: "DukesTS";
+  border: solid 2px #d8282f;
+  padding: 10px 30px 10px;
+  background-color: #d8282f;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+
+  margin: 20px;
+}
+.subBtn:hover {
+  background-color: white;
+  color: #d8282f;
+}
+.checkboxLabel {
+  display: block;
+  width: 100%;
+}
+.checkbox {
+  accent-color: #d8282f;
+  transform: scale(1.2);
+}
+.signUpContainer {
+  margin-bottom: 150px;
+}

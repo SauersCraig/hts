@@ -1,10 +1,12 @@
-img {
-  max-width: 100%;
-}
 @font-face {
   font-family: "DukesTS";
   src: local("DukesTS"),
     url(./assets/fonts/Tungsten-Semibold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Lian";
+  src: local("Lian"), url(./assets/fonts/Lian.otf) format("opentype");
 }
 
 @font-face {
@@ -16,6 +18,20 @@ img {
   font-family: "ArcherProIta";
   src: local("ArcherProIta"),
     url(./assets/fonts/ArcherPro-SemiboldIta.otf) format("opentype");
+}
+img {
+  max-width: 100%;
+}
+a {
+  font-family: "ArcherProIta";
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #5044bd;
+}
+ul {
+  list-style-type: none;
 }
 h1 {
   font-family: "DukesTS";
@@ -33,5 +49,32 @@ body {
   margin: 0;
   padding: 0;
   font-family: "ArcherPro";
-  color: black;
+}
+.btnHTS {
+  background-color: #d8282f;
+  padding: 10px 20px 10px;
+  color: white;
+  font-family: "ArcherPro";
+  border: 1px #d8282f solid;
+  border-radius: 0;
+  cursor: pointer;
+}
+.btnHTS:hover {
+  color: #d8282f;
+  background-color: white;
+}
+.headerTY {
+  font-family: "DukesTS";
+  font-size: 4em;
+  text-align: center;
+  color: #d8282f;
+  font-weight: 400;
+  line-height: 0.8;
+}
+main {
+  margin-bottom: 10px;
+  height: 100%;
+}
+video {
+  max-width: 100%;
 }

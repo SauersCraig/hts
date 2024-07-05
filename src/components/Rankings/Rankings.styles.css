@@ -1,0 +1,101 @@
+.rankingDivContainer {
+  position: relative;
+  padding-top: 200px;
+}
+.goldTom {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 35%;
+  width: 30%;
+}
+.liveRankingHeaderContainer {
+  background-color: #d8282f;
+  padding: 5px 0 5px;
+  margin: 0 0 10px;
+}
+.liveRankingHeader {
+  color: white;
+  text-align: center;
+  font-family: "DukesTS";
+  font-size: 3em;
+  padding: 0;
+}
+.rankingContainer {
+  border: 4px solid #231e52;
+  border-radius: 10px;
+  margin: 0px 30px 20px;
+  background-color: white;
+}
+.rankingContainerGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 0px;
+  padding: 0px 30px 20px;
+}
+.cityContainerNL {
+  border-right: #231e52 solid 3px;
+}
+.cityContainer h1 {
+  text-align: center;
+  color: #d8282f;
+  font-size: 2.5em;
+}
+.rankingRestCon {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  padding-right: 10px;
+  border-top: #231e52 1px solid;
+  height: 100px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.rankingRestCon p {
+  font-size: 1.1em;
+}
+.rankVotes {
+  text-align: end;
+}
+.rankingHeader {
+  text-align: center;
+}
+@media only screen and (max-width: 900px) {
+  .rankingContainerGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+
+    padding: 20px 10px 20px;
+    margin: 20px 0px 20px;
+  }
+  .rankingRestCon {
+    padding: 10px 20px 0;
+    margin-right: 0;
+  }
+  .cityContainerNL {
+    border-bottom: #231e52 solid 5px;
+    border-right: none;
+  }
+  .goldTom {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 10%;
+    width: 80%;
+  }
+  .liveRankingHeaderContainer {
+    background-color: #d8282f;
+    padding: 1px 20px 1px;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+  }
+  .liveRankingHeader {
+    color: white;
+    text-align: center;
+    font-family: "DukesTS";
+    font-size: 1.8em;
+    padding: 0;
+  }
+}
