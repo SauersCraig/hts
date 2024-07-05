@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 30px 50px 30px;
-  border: 5px solid #5044bd;
+  border: 5px solid #231e52;
   border-radius: 10px;
 }
 .textSecGTCS {
@@ -32,7 +32,6 @@
   margin: 0 auto 0;
 }
 @media only screen and (max-width: 900px) {
-
   .goldTomCSContainer {
     display: block;
   }

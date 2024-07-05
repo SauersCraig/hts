@@ -8,6 +8,7 @@ import { supabase } from "../../client";
 import GoldTom from "../../assets/goldtomato.png";
 import Can from "../../assets/HTS-gif-can.gif";
 import Jar from "../../assets/HTS-gif-Jar-Tom.gif";
+import Lady from "../../assets/HTS-gifs-test2.gif";
 export function GoldenTomato() {
   const [token, setToken] = useState(false);
   const [userInfo, setUserInfo] = useState();
@@ -52,14 +53,18 @@ export function GoldenTomato() {
     <div>
       {newDate < 18 ? (
         <div>
-          <img src={GoldTom} className="goldTomCS" alt="A golden Tomato" />
-          <h1 className="votingComingSoonHeader">Voting For</h1>
-          <p className="VCSsecLine">
-            the Golden Tomato Award starts July 18th.
-          </p>
-          <p className="VCSsecLine">
-            Make sure to come on back and submit your vote.
-          </p>
+          <div className="topGridGTCS">
+            <img src={GoldTom} className="goldTomCS" alt="A golden Tomato" />
+            <div className="textItemTG">
+              <h1 className="votingComingSoonHeader">Voting For</h1>
+              <p className="VCSsecLine">
+                the Golden Tomato Award starts July 18th.
+              </p>
+              <p className="VCSsecLine">
+                Make sure to come on back and submit your vote.
+              </p>
+            </div>
+          </div>
           <div className="gifContainer">
             <div className="gifItem">
               <img
@@ -67,6 +72,11 @@ export function GoldenTomato() {
                 alt="a yellow can with a bright red tomato bouncing up and down"
               />
             </div>
+            <img
+              src={Lady}
+              className="goldTomGrid"
+              alt="A Tattooed lady on skates kicking her leg back and forth"
+            />
             <div className="gifItem">
               <img
                 src={Jar}
@@ -74,6 +84,11 @@ export function GoldenTomato() {
               />
             </div>
           </div>
+          <img
+            src={Lady}
+            className="ladyMobile"
+            alt="A Tattooed lady on skates kicking her leg back and forth"
+          />
         </div>
       ) : (
         <div>
