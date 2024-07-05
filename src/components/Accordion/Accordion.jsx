@@ -25,7 +25,7 @@ function Accordion({ i }) {
           </div>
 
           <img
-            className="arrowIcon"
+            className={isActive ? "arrowUpIcon" : "arrowIcon"}
             src={isActive ? upIcon : downIcon}
             alt={isActive ? "Arrow Icon Pointed Up" : "Arrow Icon Pointed Down"}
           />

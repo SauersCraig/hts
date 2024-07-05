@@ -6,7 +6,8 @@ import Rankings from "../../components/Rankings/Rankings";
 import { useState, useEffect } from "react";
 import { supabase } from "../../client";
 import GoldTom from "../../assets/goldtomato.png";
-
+import Can from "../../assets/HTS-gif-can.gif";
+import Jar from "../../assets/HTS-gif-Jar-Tom.gif";
 export function GoldenTomato() {
   const [token, setToken] = useState(false);
   const [userInfo, setUserInfo] = useState();
@@ -49,8 +50,9 @@ export function GoldenTomato() {
   let name = token ? token.user.user_metadata.first_name : "";
   return (
     <div>
-      {newDate < 1 ? (
+      {newDate < 18 ? (
         <div>
+          <img src={GoldTom} className="goldTomCS" alt="A golden Tomato" />
           <h1 className="votingComingSoonHeader">Voting For</h1>
           <p className="VCSsecLine">
             the Golden Tomato Award starts July 18th.
@@ -58,11 +60,20 @@ export function GoldenTomato() {
           <p className="VCSsecLine">
             Make sure to come on back and submit your vote.
           </p>
-          <img
-            src={GoldTom}
-            alt="a giant golden tomato"
-            className="goldTomCS"
-          />
+          <div className="gifContainer">
+            <div className="gifItem">
+              <img
+                src={Can}
+                alt="a yellow can with a bright red tomato bouncing up and down"
+              />
+            </div>
+            <div className="gifItem">
+              <img
+                src={Jar}
+                alt="a bright red tomato and a jar of dukes spilling out bouncing up and down"
+              />
+            </div>
+          </div>
         </div>
       ) : (
         <div>
@@ -82,7 +93,9 @@ export function GoldenTomato() {
                       <>
                         <h1 className="gtHeader">
                           Hello {name}! Enjoying Hot Tomato Summer?<br></br>
-                          Vote for your favorite restaurant. The restaurant with the most votes in each city will win the Golden Tomato Award!
+                          Vote for your favorite restaurant. The restaurant with
+                          the most votes in each city will win the Golden Tomato
+                          Award!
                         </h1>
                         <Voting userInfo={i} newDate={newDate} />
                       </>
