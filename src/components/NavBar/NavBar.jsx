@@ -30,20 +30,21 @@ export function NavBar() {
             <li>
               <Link to="/Restaurants">Restaurants & Specials </Link>
             </li>
-            <li>
-              <a
-                href="https://dukesmayo.com/collections/merchandise"
-                target="_blank"
-              >
-                Shop Merch
-              </a>
-            </li>
+
             <li>
               <Link to="/GoldenTomato">Vote Golden Tomato Award </Link>
             </li>
             <li>
               <a href="https://dukesmayo.com/" target="_blank">
                 Learn More
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://dukesmayo.com/collections/merchandise"
+                target="_blank"
+              >
+                Shop Merch
               </a>
             </li>
           </ul>
