@@ -19,7 +19,8 @@ export function Home() {
         <p>
           2024 promises to be hotter than ever with over 350 restaurants
           participating across 6 cities <br></br> Charleston, SC; Charlotte, NC;
-          Greenville, SC; Knoxville, TN; Raleigh, NC; Richmond, VA.<br></br>
+          Greenville, SC;<br></br> Knoxville, TN; Raleigh, NC; Richmond, VA.
+          <br></br>
           Learn more below.
         </p>
       </div>
