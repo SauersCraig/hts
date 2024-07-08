@@ -2,11 +2,13 @@ import "./Restaurants.styles.css";
 import { useState, useContext } from "react";
 import { RestSection } from "../../components/RestSection/RestSection";
 import { RestContext } from "../../RestContext";
+import Accordion from "../../components/Accordion/Accordion";
 import ReactGA from "react-ga";
 export function Restaurants() {
   ReactGA.pageview(window.location.pathname + window.location.search);
   const { rests } = useContext(RestContext);
   const [rest, setRest] = useState();
+  const [inputSearch, setInputSearch] = useState("");
   const [restaurants, setRestaurants] = rests;
   const [city, setCity] = useState("");
   function onCityClick(city) {
@@ -24,7 +26,20 @@ export function Restaurants() {
   const Greenville = "Greenville, SC";
   const Charlotte = "Charlotte, NC";
   const Knoxville = "Knoxville, TN";
-
+  let inputHandler = (e) => {
+    var lowerCase = e.target.value.toLowerCase();
+    setInputSearch(lowerCase);
+  };
+  const filteredrests = restaurants.filter((el) => {
+    //if no input the return the original
+    if (inputSearch === "") {
+      return;
+    }
+    //return the item which contains the user input
+    else {
+      return el.name.toLowerCase().includes(inputSearch);
+    }
+  });
   return (
     <div>
       <div className="infoRest">
@@ -72,9 +87,27 @@ export function Restaurants() {
           Raleigh
         </button>
       </div>
+      <div className="searchContainer">
+        <p className="ctaVoting">
+          Use the search bar to find your favorite restaurant.
+        </p>
+        <input
+          type="text"
+          placeholder="Search Restaurant Name"
+          onChange={inputHandler}
+          className="goldTomInput"
+        />
+        {filteredrests.slice(0, 5).map((i) => (
+          <div key={i.id} className="restCard">
+            <Accordion i={i} />
+          </div>
+        ))}
+      </div>
       <div>
         {rest ? (
-          <RestSection rests={rest} />
+          <div>
+            <RestSection rests={rest} />{" "}
+          </div>
         ) : (
           <RestSection rests={restaurants} />
         )}
