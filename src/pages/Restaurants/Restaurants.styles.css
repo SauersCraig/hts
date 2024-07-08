@@ -43,3 +43,9 @@
 .infoRest p {
   font-size: 1.5em;
 }
+.searchContainer {
+  border: #231e52 2px solid;
+  border-radius: 10px;
+  margin: 20px 10px 20px;
+  padding: 20px 0 20px;
+}
