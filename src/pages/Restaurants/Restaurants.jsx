@@ -30,16 +30,20 @@ export function Restaurants() {
     var lowerCase = e.target.value.toLowerCase();
     setInputSearch(lowerCase);
   };
-  const filteredrests = restaurants.filter((el) => {
+  const filteredrestaurants = restaurants.filter((el) => {
     //if no input the return the original
     if (inputSearch === "") {
       return;
     }
+
     //return the item which contains the user input
     else {
       return el.name.toLowerCase().includes(inputSearch);
     }
   });
+
+  //return the item which contains the user input
+
   return (
     <div>
       <div className="infoRest">
@@ -89,15 +93,16 @@ export function Restaurants() {
       </div>
       <div className="searchContainer">
         <p className="ctaVoting">
-          Use the search bar to find your favorite restaurant.
+          Use the search bar to find your favorite restaurant. 
         </p>
         <input
           type="text"
           placeholder="Search Restaurant Name"
           onChange={inputHandler}
-          className="goldTomInput"
+          className="restTomInput"
         />
-        {filteredrests.slice(0, 5).map((i) => (
+
+        {filteredrestaurants.slice(0, 5).map((i) => (
           <div key={i.id} className="restCard">
             <Accordion i={i} />
           </div>
@@ -106,7 +111,7 @@ export function Restaurants() {
       <div>
         {rest ? (
           <div>
-            <RestSection rests={rest} />{" "}
+            <RestSection rests={rest} />
           </div>
         ) : (
           <RestSection rests={restaurants} />
