@@ -3,7 +3,7 @@ import "./Home.styles.css";
 import voteTom from "../../assets/htsVGT.png";
 import merchTom from "../../assets/htsSM.png";
 import moreInfo from "../../assets/htsLM.png";
-import restTom from "../../assets/htsRS.png";
+import restTom from "../../assets/htsRS2.png";
 
 import Rankings from "../../components/Rankings/Rankings";
 import GoldTomCS from "../../components/GoldTomCS/GoldTomCS";
