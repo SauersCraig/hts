@@ -30,27 +30,10 @@ function App() {
   }
 
   return (
-    <RestContext.Provider
-      value={{
-        resName: [restName, setRestName],
-        rests: [restaurants, setRestaurants],
-      }}
-    >
-      <NavBar />
-      <h1>SARAH STOP LOOKING HERE!!!!!!!!!!!!!!!!</h1>  <h1>SARAH STOP LOOKING HERE!!!!!!!!!!!!!!!!</h1>  <h1>SARAH STOP LOOKING HERE!!!!!!!!!!!!!!!!</h1>  <h1>SARAH STOP LOOKING HERE!!!!!!!!!!!!!!!!</h1>  <h1>SARAH STOP LOOKING HERE!!!!!!!!!!!!!!!!</h1>
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Restaurants" element={<Restaurants />} />
-          <Route path="/GoldenTomato" element={<GoldenTomato />} />
-          <Route path="/SignUp" element={<SignUpPage />} />
-          <Route path="/Downloadables" element={<Downloadables />} />
-          <Route path="/ResetPassword" element={<ResetPassword />} />
-          <Route path="/Rest" element={<Rest />} />
-        </Routes>
-      </main>
-      <Footer />
-    </RestContext.Provider>
+    <>
+      <h1>Duke's Mayo Dev Site.</h1>{" "}
+      <h2>Nothing to see here move on please!!</h2>
+    </>
   );
 }
 
