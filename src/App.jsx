@@ -37,6 +37,7 @@ function App() {
       }}
     >
       <NavBar />
+      <h1>SARAH STOP LOOKING HERE!!!!!!!!!!!!!!!!</h1>  <h1>SARAH STOP LOOKING HERE!!!!!!!!!!!!!!!!</h1>  <h1>SARAH STOP LOOKING HERE!!!!!!!!!!!!!!!!</h1>  <h1>SARAH STOP LOOKING HERE!!!!!!!!!!!!!!!!</h1>  <h1>SARAH STOP LOOKING HERE!!!!!!!!!!!!!!!!</h1>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
