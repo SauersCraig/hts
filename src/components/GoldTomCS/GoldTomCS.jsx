@@ -2,6 +2,7 @@ import "./GoldTomCS.styles.css";
 
 import Can from "../../assets/HTS-gif-can.gif";
 import Jar from "../../assets/HTS-gif-Jar-Tom.gif";
+import Ballot from "../../assets/ballot.gif";
 import GoldTom from "../../assets/goldtomato.png";
 function GoldTomCS() {
   return (

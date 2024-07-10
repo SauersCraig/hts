@@ -78,7 +78,7 @@ export function GoldenTomato() {
             <img
               src={Ballot}
               className="goldTomGrid"
-              alt="A Tattooed lady on skates kicking her leg back and forth"
+              alt="A ballot box with a card with a green check mark on it."
             />
             <div className="gifItem">
               <img
