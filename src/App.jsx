@@ -29,7 +29,7 @@ function App() {
     setRestaurants(data);
   }
   useEffect(() => {
-    ReactGA.initialize(TRACKING_ID, { debug: true });
+    ReactGA.initialize(TRACKING_ID);
     // Send pageview with a custom path
   }, []);
   return (
