@@ -22,13 +22,16 @@ function GoldTomCS() {
 
       <div className="textSecGTCS">
         <h1 className="gtcsHeader">Golden Tomato Award</h1>
-        <p className="secLineGTCS">Voting begins July 18th</p>
+        <p className="secLineGTCS">
+          Voting begins July 18<sup>th</sup>
+        </p>
       </div>
 
       <div className="gifCS">
         <img
           src={Jar}
           alt="a bright red tomato and a jar of dukes spilling out bouncing up and down"
+          className="twoGifs"
         />
       </div>
     </div>

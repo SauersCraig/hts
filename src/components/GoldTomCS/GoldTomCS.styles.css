@@ -14,6 +14,7 @@
 }
 .ballotBox {
   padding-top: 70px;
+  
 }
 .textSecGTCS {
   padding: 10% 0 0;
@@ -34,7 +35,7 @@
   line-height: 0;
 }
 
-.gifCS img {
+.twoGifs {
   display: block;
   margin: 0 auto 0;
 }
