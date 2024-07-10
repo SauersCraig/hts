@@ -32,7 +32,7 @@ export function Home() {
         </div>
         <div className="tomLinkDiv">
           <a
-            href="https://dukesmayo.com/collections/merchandise"
+            href="https://dukesmayo.com/collections/hot-tomato-summer"
             target="_blank"
           >
             <img src={merchTom} alt="drawing of tomato" className="tomImg" />
