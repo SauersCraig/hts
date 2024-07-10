@@ -78,3 +78,6 @@ main {
 video {
   max-width: 100%;
 }
+sup {
+  font-size: small;
+}
