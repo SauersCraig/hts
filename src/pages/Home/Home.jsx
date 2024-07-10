@@ -14,10 +14,11 @@ export function Home() {
     <div className="comingSoonPage">
       <div className="textContainerHomePage">
         <h3>
-          Duke's Hot Tomato Summer is here <br></br> July 18-28!
+          Duke's Hot Tomato Summer is here! <br></br> July 18<sup>th</sup>-28
+          <sup>th</sup>
         </h3>
         <p>
-          2024 promises to be hotter than ever with over 350 restaurants
+          2024 promises to be hotter than ever with over 330 restaurants
           participating across 6 cities <br></br> Charleston, SC; Charlotte, NC;
           Greenville, SC;<br></br> Knoxville, TN; Raleigh, NC; Richmond, VA.
           <br></br>
@@ -45,7 +46,10 @@ export function Home() {
         </div>
 
         <div className="tomLinkDiv">
-          <a href="https://dukesmayo.com/" target="_blank">
+          <a
+            href="https://www.instagram.com/dukes_mayonnaise/?hl=en"
+            target="_blank"
+          >
             <img src={moreInfo} alt="drawing of tomato" className="tomImg" />
           </a>
         </div>

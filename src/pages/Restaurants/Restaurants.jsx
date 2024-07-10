@@ -47,10 +47,16 @@ export function Restaurants() {
   return (
     <div>
       <div className="infoRest">
-        <p>Click on a city to find participating restaurants</p>
         <p>
-          Click on the participating restaurant name for restaurant info and to
-          see their Hot Tomato Summer specials and offerings.
+          Click on your city of choice to find local participating restaurants.
+          Search for a restaurant in your city using the search bar or scroll to
+          find restaurants listed in alphabetical order.
+        </p>
+        <p>
+          Click on the arrow next to the restaurant to find Hot Tomato Summer
+          specials and restaurant information (including website and
+          directions). Hot Tomato Summer specials are subject to change. Please
+          check with the restaurant to confirm.
         </p>
       </div>
       <div className="cityBtnContainer">
@@ -93,7 +99,7 @@ export function Restaurants() {
       </div>
       <div className="searchContainer">
         <p className="ctaVoting">
-          Use the search bar to find your favorite restaurant. 
+          Use the search bar to find your favorite restaurant.
         </p>
         <input
           type="text"
