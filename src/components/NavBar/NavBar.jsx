@@ -37,7 +37,7 @@ export function NavBar() {
 
             <li>
               <a
-                href="https://dukesmayo.com/collections/merchandise"
+                href="https://dukesmayo.com/collections/hot-tomato-summer"
                 target="_blank"
               >
                 Shop Merch
