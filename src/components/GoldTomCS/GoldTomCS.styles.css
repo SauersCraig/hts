@@ -8,6 +8,13 @@
   border: 5px solid #231e52;
   border-radius: 10px;
 }
+.leftGifCon {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.ballotBox {
+  padding-top: 70px;
+}
 .textSecGTCS {
   padding: 10% 0 0;
   text-align: center;

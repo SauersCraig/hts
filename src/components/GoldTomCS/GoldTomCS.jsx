@@ -7,10 +7,16 @@ import GoldTom from "../../assets/goldtomato.png";
 function GoldTomCS() {
   return (
     <div className="goldTomCSContainer">
-      <div className="gifCS">
+      <div className="gifCS leftGifCon">
         <img
           src={Can}
           alt="a yellow can with a bright red tomato bouncing up and down"
+          className="shakingCan"
+        />
+        <img
+          src={Ballot}
+          className="ballotBox"
+          alt="A ballot box with a card with a green check mark on it."
         />
       </div>
 
