@@ -9,6 +9,7 @@ import GoldTom from "../../assets/goldtomato.png";
 import Can from "../../assets/HTS-gif-can.gif";
 import Jar from "../../assets/HTS-gif-Jar-Tom.gif";
 import Lady from "../../assets/HTS-gifs-test2.gif";
+import Ballot from "../../assets/ballot.gif";
 import ReactGA from "react-ga";
 export function GoldenTomato() {
   ReactGA.pageview(window.location.pathname + window.location.search);
@@ -75,7 +76,7 @@ export function GoldenTomato() {
               />
             </div>
             <img
-              src={Lady}
+              src={Ballot}
               className="goldTomGrid"
               alt="A Tattooed lady on skates kicking her leg back and forth"
             />
