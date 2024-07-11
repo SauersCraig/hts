@@ -19,11 +19,11 @@ export function Home() {
         </h2>
         <div className="cityContainer">
           <p>Charleston, SC | Charlotte, NC | Greenville, SC</p>
-          <p> Knoxville, TN | Raleigh, NC | Richmond, VA.</p>
+          <p> Knoxville, TN | Raleigh, NC | Richmond, VA</p>
         </div>
         <p>2024 promises to be hotter than ever with over </p>
-        <p>330 restaurants participating across 6 cities.</p>
-        <p>Learn more below.</p>
+        <p>330 restaurants participating across 6 cities</p>
+        <p>Learn more below</p>
       </div>
       <div className="tomContainer">
         <div className="tomLinkDiv">
