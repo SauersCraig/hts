@@ -21,9 +21,14 @@ function GoldTomCS() {
       </div>
 
       <div className="textSecGTCS">
-        <h1 className="gtcsHeader">Golden Tomato Award</h1>
-        <p className="secLineGTCS">
-          Voting begins July 18<sup>th</sup>
+        <h1 className="gtcsHeader">The</h1>
+        <h1 className="gtcsHeader">Golden Tomato</h1>
+        <h1 className="gtcsHeader">Award</h1>
+        <p className="VCSsecLine">
+          VOTING BEGINS
+          <span>
+            JULY 18<sup>th</sup>
+          </span>
         </p>
       </div>
 

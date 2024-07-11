@@ -14,7 +14,6 @@
 }
 .ballotBox {
   padding-top: 70px;
-  
 }
 .textSecGTCS {
   padding: 10% 0 0;
@@ -26,7 +25,7 @@
   text-align: center;
   color: #d8282f;
   font-weight: 400;
-  line-height: 1;
+  line-height: 0.3;
 }
 .secLineGTCS {
   font-size: 2em;
