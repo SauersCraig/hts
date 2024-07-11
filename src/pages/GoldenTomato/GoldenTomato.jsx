@@ -5,7 +5,7 @@ import { ThankYou } from "../../components/ThankYou/ThankYou";
 import Rankings from "../../components/Rankings/Rankings";
 import { useState, useEffect } from "react";
 import { supabase } from "../../client";
-import GoldTom from "../../assets/goldtomato.png";
+import GoldTom from "../../assets/goldTomTrophycrop.png";
 import Can from "../../assets/HTS-gif-can.gif";
 import Jar from "../../assets/HTS-gif-Jar-Tom.gif";
 import Lady from "../../assets/HTS-gifs-test2.gif";
@@ -57,16 +57,21 @@ export function GoldenTomato() {
       {newDate < 18 ? (
         <div>
           <div className="topGridGTCS">
-            <img src={GoldTom} className="goldTomCS" alt="A golden Tomato" />
             <div className="textItemTG">
-              <h1 className="votingComingSoonHeader">Voting For</h1>
+              <h1 className="votingComingSoonHeader">The</h1>
+              <h1 className="votingComingSoonHeader">Golden Tomato</h1>
+              <h1 className="votingComingSoonHeader">Award</h1>
               <p className="VCSsecLine">
-                the Golden Tomato Award starts July 18th.
+                VOTING BEGINS
+                <span>
+                  JULY 18<sup>th</sup>
+                </span>
               </p>
-              <p className="VCSsecLine">
-                Make sure to come on back and submit your vote.
+              <p className="comeBack2Vote">
+                Make sure to come on back and submit your vote!
               </p>
             </div>
+            <img src={GoldTom} className="goldTomCS" alt="A golden Tomato" />
           </div>
           <div className="gifContainer">
             <div className="gifItem">

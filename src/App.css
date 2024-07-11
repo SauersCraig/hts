@@ -19,6 +19,10 @@
   src: local("ArcherProIta"),
     url(./assets/fonts/ArcherPro-SemiboldIta.otf) format("opentype");
 }
+@font-face {
+  font-family: "DukesTNarrow";
+  src: url(./assets/fonts/TungstenNarrow-SemiBold.ttf) format("truetype");
+}
 img {
   max-width: 100%;
 }
@@ -34,15 +38,15 @@ ul {
   list-style-type: none;
 }
 h1 {
-  font-family: "DukesTS";
+  font-family: "DukesTNarrow";
   font-size: 3em;
 }
 h2 {
-  font-family: "DukesTS";
+  font-family: "DukesTNarrow";
   font-size: 2em;
 }
 h3 {
-  font-family: "DukesTS";
+  font-family: "DukesTNarrow";
   font-size: 1.3em;
 }
 body {
