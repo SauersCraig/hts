@@ -4,11 +4,17 @@ import voteTom from "../../assets/htsVGT.png";
 import merchTom from "../../assets/htsSM.png";
 import moreInfo from "../../assets/htsLM.png";
 import restTom from "../../assets/htsRS2.png";
-
+import { useState, useEffect } from "react";
 import Rankings from "../../components/Rankings/Rankings";
 import GoldTomCS from "../../components/GoldTomCS/GoldTomCS";
 import ReactGA from "react-ga";
 export function Home() {
+  const [newDate, setNewDate] = useState();
+  useEffect(() => {
+    const today = new Date();
+    const date = today.getDate();
+    setNewDate(date);
+  }, []);
   ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <div className="comingSoonPage">
@@ -54,10 +60,15 @@ export function Home() {
           </a>
         </div>
       </div>
-      <GoldTomCS />
-      {/* <div className="rankingDiv">
-        <Rankings />
-      </div> */}
+      <div>
+        {newDate < 18 ? (
+          <GoldTomCS />
+        ) : (
+          <div className="rankingDiv">
+            <Rankings />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

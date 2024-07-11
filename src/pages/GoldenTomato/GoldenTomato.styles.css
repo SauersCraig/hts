@@ -3,6 +3,10 @@
 }
 .gtHeader {
   text-align: center;
+  line-height: 0.5;
+}
+.gtHeader3 {
+  text-align: center;
 }
 .signOutContainer {
   text-align: end;
@@ -111,5 +115,9 @@
     border: 3px #231e52 solid;
     border-radius: 10px;
     margin: 20px 5px 20px;
+  }
+  .gtHeader {
+    text-align: center;
+    line-height: 0.9;
   }
 }

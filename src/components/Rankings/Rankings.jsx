@@ -1,7 +1,7 @@
 import "./Rankings.styles.css";
 import { useContext } from "react";
 import { RestContext } from "../../RestContext";
-import goldTom from "../../assets/goldtomato.png";
+import goldTom from "../../assets/goldTomTrophycrop.png";
 function Rankings() {
   const { rests } = useContext(RestContext);
 

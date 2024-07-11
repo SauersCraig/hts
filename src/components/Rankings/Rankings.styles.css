@@ -1,13 +1,10 @@
 .rankingDivContainer {
   position: relative;
-  padding-top: 200px;
 }
 .goldTom {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 35%;
-  width: 30%;
+  margin: 0px auto 0px;
+  display: block;
+  width: 20%;
 }
 .liveRankingHeaderContainer {
   background-color: #d8282f;
@@ -17,7 +14,7 @@
 .liveRankingHeader {
   color: white;
   text-align: center;
-  font-family: "DukesTS";
+  font-family: "DukesTNarrow";
   font-size: 3em;
   padding: 0;
 }
@@ -41,6 +38,7 @@
   text-align: center;
   color: #d8282f;
   font-size: 2.5em;
+  font-family: "DukesTNarrow";
 }
 .rankingRestCon {
   display: grid;
@@ -52,7 +50,8 @@
   margin-right: 5px;
 }
 .rankingRestCon p {
-  font-size: 1.1em;
+  font-size: 1.3em;
+  font-family: "DukesTNarrow";
 }
 .rankVotes {
   text-align: end;
@@ -78,13 +77,7 @@
     border-bottom: #231e52 solid 5px;
     border-right: none;
   }
-  .goldTom {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 10%;
-    width: 80%;
-  }
+
   .liveRankingHeaderContainer {
     background-color: #d8282f;
     padding: 1px 20px 1px;
@@ -94,8 +87,11 @@
   .liveRankingHeader {
     color: white;
     text-align: center;
-    font-family: "DukesTS";
-    font-size: 1.8em;
+    font-family: "DukesTNarrow";
+    font-size: 1.5em;
     padding: 0;
+  }
+  .goldTom {
+    width: 60%;
   }
 }

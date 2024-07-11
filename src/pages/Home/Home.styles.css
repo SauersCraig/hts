@@ -48,7 +48,7 @@
 .tomLinkDiv {
   display: block;
   position: relative;
-  margin: 0 auto 50px;
+  margin: 0 auto 0px;
   text-align: center;
 }
 
@@ -60,7 +60,7 @@
 }
 .tomContainer {
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 0px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 0px;
