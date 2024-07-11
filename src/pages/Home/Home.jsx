@@ -13,17 +13,17 @@ export function Home() {
   return (
     <div className="comingSoonPage">
       <div className="textContainerHomePage">
-        <h3>
-          Duke's Hot Tomato Summer is here! <br></br> July 18<sup>th</sup>-28
-          <sup>th</sup>
-        </h3>
-        <p>
-          2024 promises to be hotter than ever with over 330 restaurants
-          participating across 6 cities <br></br> Charleston, SC; Charlotte, NC;
-          Greenville, SC;<br></br> Knoxville, TN; Raleigh, NC; Richmond, VA.
-          <br></br>
-          Learn more below.
-        </p>
+        <h1>DUKE'S HOT TOMATO SUMMER IS HERE! </h1>
+        <h2>
+          July 18<sup>th</sup>-28<sup>th</sup>
+        </h2>
+        <div className="cityContainer">
+          <p>Charleston, SC | Charlotte, NC | Greenville, SC</p>
+          <p> Knoxville, TN | Raleigh, NC | Richmond, VA.</p>
+        </div>
+        <p>2024 promises to be hotter than ever with over </p>
+        <p>330 restaurants participating across 6 cities.</p>
+        <p>Learn more below.</p>
       </div>
       <div className="tomContainer">
         <div className="tomLinkDiv">
