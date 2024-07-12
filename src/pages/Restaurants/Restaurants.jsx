@@ -1,5 +1,5 @@
 import "./Restaurants.styles.css";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { RestSection } from "../../components/RestSection/RestSection";
 import { RestContext } from "../../RestContext";
 import Accordion from "../../components/Accordion/Accordion";
@@ -8,9 +8,18 @@ export function Restaurants() {
   ReactGA.pageview(window.location.pathname + window.location.search);
   const { rests } = useContext(RestContext);
   const [rest, setRest] = useState();
+  const [newDate, setNewDate] = useState();
   const [inputSearch, setInputSearch] = useState("");
   const [restaurants, setRestaurants] = rests;
   const [city, setCity] = useState("");
+
+  useEffect(() => {
+    const today = new Date();
+    console.log(today);
+    const date = today.getDate();
+    setNewDate(date);
+  }, []);
+
   function onCityClick(city) {
     const filterByCity = restaurants.filter(
       (restaurants) => restaurants.city == city
@@ -110,7 +119,7 @@ export function Restaurants() {
 
         {filteredrestaurants.slice(0, 5).map((i) => (
           <div key={i.id} className="restCard">
-            <Accordion i={i} />
+            <Accordion i={i} newDate={newDate} />
           </div>
         ))}
       </div>
