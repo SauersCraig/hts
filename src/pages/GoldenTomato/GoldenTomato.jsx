@@ -59,7 +59,7 @@ export function GoldenTomato() {
           <div className="topGridGTCS">
             <div className="textItemTG">
               <h1 className="votingComingSoonHeader">The</h1>
-              <h1 className="votingComingSoonHeader">Golden Tomato</h1>
+              <h1 className="votingComingSoonHeader gtWords">Golden Tomato</h1>
               <h1 className="votingComingSoonHeader">Award</h1>
               <p className="VCSsecLine">
                 VOTING BEGINS
@@ -73,30 +73,6 @@ export function GoldenTomato() {
             </div>
             <img src={GoldTom} className="goldTomCS" alt="A golden Tomato" />
           </div>
-          <div className="gifContainer">
-            <div className="gifItem">
-              <img
-                src={Can}
-                alt="a yellow can with a bright red tomato bouncing up and down"
-              />
-            </div>
-            <img
-              src={Ballot}
-              className="goldTomGrid"
-              alt="A ballot box with a card with a green check mark on it."
-            />
-            <div className="gifItem">
-              <img
-                src={Jar}
-                alt="a bright red tomato and a jar of dukes spilling out bouncing up and down"
-              />
-            </div>
-          </div>
-          <img
-            src={Lady}
-            className="ladyMobile"
-            alt="A Tattooed lady on skates kicking her leg back and forth"
-          />
         </div>
       ) : (
         <div>
