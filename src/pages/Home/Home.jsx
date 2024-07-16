@@ -53,7 +53,7 @@ export function Home() {
 
         <div className="tomLinkDiv">
           <a
-            href="https://www.instagram.com/dukes_mayonnaise/?hl=en"
+            href="https://dukesmayo.com/blogs/press-releases/hot-tomato-summer-is-back-and-juicier-than-ever"
             target="_blank"
           >
             <img src={moreInfo} alt="drawing of tomato" className="tomImg" />
