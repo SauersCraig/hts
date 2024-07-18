@@ -59,7 +59,7 @@ function Rankings() {
       <div className="rankingContainer">
         <div className="liveRankingHeaderContainer">
           <p className="liveRankingHeader">
-            GOLDEN TOMATO AWARD LIVE VOTING RESULTS
+            GOLDEN TOMATO AWARD LIVE VOTING RESULTS - TOP 3
           </p>
         </div>
         <div className="rankingContainerGrid">
