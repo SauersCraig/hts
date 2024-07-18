@@ -87,14 +87,18 @@ export function GoldenTomato() {
                     ) : (
                       <>
                         <h1 className="gtHeader">
-                          Hello {name}! Enjoying Hot Tomato Summer?
+                          Hello, {name}! Enjoying Hot Tomato Summer?
                         </h1>
                         <h2 className="gtHeader">
-                          Vote for your favorite restaurant!
+                          Vote for your favorite participating restaurant!
                         </h2>
                         <h3 className="gtHeader3">
                           The restaurant with the most votes in each city will
-                          win the Golden Tomato Award!
+                          win the covetd Golden Tomato Award!
+                        </h3>
+                        <h3 className="gtHeader3">
+                          For live results, visit the hottomatosummer.com
+                          homepage
                         </h3>
                         <Voting userInfo={i} newDate={newDate} />
                       </>
