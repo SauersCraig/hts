@@ -59,13 +59,13 @@ function Rankings() {
       <div className="rankingContainer">
         <div className="liveRankingHeaderContainer">
           <p className="liveRankingHeader">
-            GOLDEN TOMATO AWARD LIVE VOTING RESULTS - TOP 3
+            GOLDEN TOMATO AWARD LIVE VOTING RESULTS - TOP 5
           </p>
         </div>
         <div className="rankingContainerGrid">
           <div className="cityContainer cityContainerNL">
             <h1>Richmond</h1>
-            {richRestOrder.slice(0, 3).map((i) => (
+            {richRestOrder.slice(0, 5).map((i) => (
               <div key={i.id} className="rankingRestCon">
                 <p>{i.name}</p>
                 {i.votes > 0 ? (
