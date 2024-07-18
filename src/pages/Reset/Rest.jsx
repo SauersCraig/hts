@@ -38,7 +38,8 @@ function Rest() {
       />
       {success && (
         <p className="signUpText">
-          Success! Check your email to reset your password.
+          Success! Check your email to reset your password. Please check
+          spam/junk folders.
         </p>
       )}
       <button onClick={sendResetPassword} className="subBtn restBtn">
