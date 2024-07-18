@@ -59,14 +59,17 @@ export function Voting({ userInfo, newDate }) {
           {restName && (
             <div className="restGTContainer">
               <p className="restGTName">{restName.name}</p>
-
-              <button
-                onClick={() => onClickVote(restName.id, restName.votes)}
-                className="restGTBtn"
-                aria-label={restName.name}
-              >
-                Vote
-              </button>
+              {restName.id === 305 ? (
+                ""
+              ) : (
+                <button
+                  onClick={() => onClickVote(restName.id, restName.votes)}
+                  className="restGTBtn"
+                  aria-label={restName.name}
+                >
+                  Vote
+                </button>
+              )}
             </div>
           )}
         </div>
@@ -92,12 +95,17 @@ export function Voting({ userInfo, newDate }) {
           <div key={i.id} className="restGTContainer">
             <p className="restGTName">{i.name}</p>
 
-            <button
-              onClick={() => onClickVote(i.id, i.votes)}
-              className="restGTBtn"
-            >
-              Vote
-            </button>
+            {i.id === 305 ? (
+              <p>Not eligible for Golden Tomato</p>
+            ) : (
+              <button
+                onClick={() => onClickVote(restName.id, restName.votes)}
+                className="restGTBtn"
+                aria-label={restName.name}
+              >
+                Vote
+              </button>
+            )}
           </div>
         ))}
       </div>

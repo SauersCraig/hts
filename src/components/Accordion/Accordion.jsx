@@ -81,25 +81,31 @@ function Accordion({ i, newDate }) {
                 <></>
               ) : (
                 <div>
-                  <div className="goldenTomAccordion">
-                    <div className="gtaItem1">
-                      <h3 className="voteText">Votes for Golden Tomato</h3>
-                      {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
+                  {i.id === 305 ? (
+                    ""
+                  ) : (
+                    <div>
+                      <div className="goldenTomAccordion">
+                        <div className="gtaItem1">
+                          <h3 className="voteText">Votes for Golden Tomato</h3>
+                          {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
+                        </div>
+                        <div className="gtaItem2">
+                          <img
+                            src={GoldTomTrophy}
+                            className="trophyGT"
+                            alt="Golden Trophy of a person holding up a giant Tomato"
+                          />
+                        </div>
+                      </div>
+                      <button
+                        onClick={() => handleRouteChange(i)}
+                        className="btnHTS voteBtn"
+                      >
+                        VOTE NOW
+                      </button>
                     </div>
-                    <div className="gtaItem2">
-                      <img
-                        src={GoldTomTrophy}
-                        className="trophyGT"
-                        alt="Golden Trophy of a person holding up a giant Tomato"
-                      />
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleRouteChange(i)}
-                    className="btnHTS voteBtn"
-                  >
-                    VOTE NOW
-                  </button>
+                  )}
                 </div>
               )}
             </div>
