@@ -1,6 +1,9 @@
 .secLineTY {
   font-size: 2em;
   text-align: center;
-  font-family: "DukesTS";
+  font-family: "DukesTNarrow";
   line-height: 0;
+}
+.headerTY {
+  font-family: "DukesTS";
 }
