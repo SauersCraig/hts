@@ -62,7 +62,7 @@ function Rankings() {
             GOLDEN TOMATO AWARD LIVE VOTING RESULTS
           </p>
         </div>
-        <div class="rankingContainerGrid">
+        <div className="rankingContainerGrid">
           <div className="cityContainer cityContainerNL">
             <h1>Richmond</h1>
             {richRestOrder.slice(0, 3).map((i) => (
