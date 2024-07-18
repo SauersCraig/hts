@@ -99,9 +99,9 @@ export function Voting({ userInfo, newDate }) {
               <p>Not eligible for Golden Tomato</p>
             ) : (
               <button
-                onClick={() => onClickVote(restName.id, restName.votes)}
+                onClick={() => onClickVote(i.id, i.votes)}
                 className="restGTBtn"
-                aria-label={restName.name}
+                aria-label={i.name}
               >
                 Vote
               </button>
