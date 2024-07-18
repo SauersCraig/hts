@@ -76,18 +76,22 @@ function Accordion({ i, newDate }) {
               </div>
             </div>
             <div>
-              {newDate < 18 ? (
+              {newDate > 28 ? (
                 <></>
               ) : (
                 <div className="goldenTomAccordion">
+                  <div>
                   <h3>Votes for Golden Tomato</h3>
                   {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
+                  </div>
+                  <div>
                   <button
                     onClick={() => handleRouteChange(i)}
                     className="btnHTS voteBtn"
                   >
                     Vote
                   </button>
+                  </div>
                 </div>
               )}
             </div>
