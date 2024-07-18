@@ -7,11 +7,7 @@
   width: 95%;
   text-align: start;
 }
-.voteBtn {
-  font-family: "ArcherPro";
-  font-size: 1em;
-  width: 100%;
-}
+
 .headerContainer {
   width: 75%;
 }
@@ -60,9 +56,30 @@
 }
 .goldenTomAccordion {
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 2px solid #231e52;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+.voteText {
+  font-size: 2em;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .goldenTomAccordion p {
+  margin-top: 0;
+  padding-top: 0;
   font-size: 3em;
+}
+.gtaItem2 {
+  padding: 20px 0 0;
+}
+
+.voteBtn {
+  font-family: "DukesTS";
+  font-size: 1.3em;
+  width: 100%;
 }
 @media only screen and (max-width: 900px) {
   .containerInfoSection {

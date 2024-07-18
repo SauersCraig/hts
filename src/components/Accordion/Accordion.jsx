@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { RestContext } from "../../RestContext";
 import upIcon from "../../assets/icons/angle-up.svg";
 import downIcon from "../../assets/icons/angle-down.svg";
+import GoldTomTrophy from "../../assets/goldTomTrophy.png";
 function Accordion({ i, newDate }) {
   const [isActive, setIsActive] = useState(false);
   const { resName } = useContext(RestContext);
@@ -79,19 +80,26 @@ function Accordion({ i, newDate }) {
               {newDate > 28 ? (
                 <></>
               ) : (
-                <div className="goldenTomAccordion">
-                  <div>
-                  <h3>Votes for Golden Tomato</h3>
-                  {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
+                <div>
+                  <div className="goldenTomAccordion">
+                    <div className="gtaItem1">
+                      <h3 className="voteText">Votes for Golden Tomato</h3>
+                      {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
+                    </div>
+                    <div className="gtaItem2">
+                      <img
+                        src={GoldTomTrophy}
+                        className="trophyGT"
+                        alt="Golden Trophy of a person holding up a giant Tomato"
+                      />
+                    </div>
                   </div>
-                  <div>
                   <button
                     onClick={() => handleRouteChange(i)}
                     className="btnHTS voteBtn"
                   >
-                    Vote
+                    VOTE NOW
                   </button>
-                  </div>
                 </div>
               )}
             </div>
