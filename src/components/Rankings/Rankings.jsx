@@ -27,6 +27,7 @@ function Rankings() {
       { event: "*", schema: "public", table: "Restaurants" },
       (payload) => {
         updateRest(payload);
+        console.log(payload);
       }
     )
     .subscribe();
