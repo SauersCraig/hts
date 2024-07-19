@@ -25,15 +25,9 @@
   background-color: white;
 }
 .rankingContainerGrid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 15px;
-  grid-row-gap: 0px;
   padding: 0px 30px 20px;
 }
-.cityContainerNL {
-  border-right: #231e52 solid 3px;
-}
+
 .cityContainer h1 {
   text-align: center;
   color: #d8282f;
@@ -42,15 +36,15 @@
 }
 .rankingRestCon {
   display: grid;
-  grid-template-columns: 4fr 1fr;
-  padding-right: 10px;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 20% 0;
   border-top: #231e52 1px solid;
   height: 100px;
   margin-bottom: 5px;
   margin-right: 5px;
 }
 .rankingRestCon p {
-  font-size: 1.3em;
+  font-size: 2em;
   font-family: "DukesTNarrow";
 }
 .rankVotes {
@@ -58,6 +52,64 @@
 }
 .rankingHeader {
   text-align: center;
+}
+/* Dropdowns */
+
+.dropDownContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5px;
+  padding: 0 10px 0;
+  margin-top: 10px;
+}
+.numDropDownContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 80% 20%);
+  border: #231e52 solid 2px;
+  padding: 0px;
+  border-radius: 10px;
+  height: 40px;
+  margin: 0 0 0;
+}
+.arrowIconDD {
+  background-color: #d8282f;
+  height: 40px;
+  width: 100%;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+.arrowUpIconDD {
+  background-color: #231e52;
+  height: 40px;
+  width: 100%;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+.textDDContainer {
+  margin: -10px 0 0;
+  padding: 0 20px 10px;
+}
+.textDDContainer p {
+  font-size: 1.1em;
+}
+.instructText {
+  text-align: center;
+  color: #231e52;
+  font-size: 0.8em;
+}
+.dropDownOpened {
+  position: relative;
+  background-color: white;
+  border: #231e52 solid 2px;
+  padding: 0px 20px 0;
+  border-radius: 10px;
+  z-index: 99;
+  width: 100%;
+  margin: -8px 0 0;
+}
+
+.numDisplayOpen {
+  cursor: pointer;
 }
 @media only screen and (max-width: 900px) {
   .rankingContainerGrid {
@@ -70,12 +122,8 @@
     margin: 20px 0px 20px;
   }
   .rankingRestCon {
-    padding: 10px 20px 0;
+    padding: 10px 20px 20px;
     margin-right: 0;
-  }
-  .cityContainerNL {
-    border-bottom: #231e52 solid 5px;
-    border-right: none;
   }
 
   .liveRankingHeaderContainer {
@@ -88,10 +136,13 @@
     color: white;
     text-align: center;
     font-family: "DukesTNarrow";
-    font-size: 1.5em;
+    font-size: 1.8em;
     padding: 0;
   }
   .goldTom {
     width: 60%;
+  }
+  .rankingContainer {
+    margin: 0;
   }
 }
