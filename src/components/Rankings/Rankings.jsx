@@ -209,9 +209,11 @@ function Rankings() {
           <p className="liveRankingHeader">
             GOLDEN TOMATO AWARD LIVE VOTING RESULTS
           </p>
-        
         </div>
-        <p className="instructText">Select the city from the drop down below to see current voting results.</p>
+        <p className="instructText">
+          Select participating city from the drop down menu to see voting
+          results
+        </p>
         <div className="dropDownContainer">
           <div className="numDropDownContainer">
             <div className="textDDContainer">
