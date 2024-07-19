@@ -1,19 +1,25 @@
 import "./Rankings.styles.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { RestContext } from "../../RestContext";
 import { supabase } from "../../client";
 import goldTom from "../../assets/goldTomTrophycrop.png";
+import upIcon from "../../assets/icons/angle-up.svg";
+import downIcon from "../../assets/icons/angle-down.svg";
 function Rankings() {
   const { rests } = useContext(RestContext);
 
   const [restaurants, setRestaurants] = rests;
-
+  const [displayNum, setDisplayNum] = useState(5);
+  const [openNum, setOpenNum] = useState(false);
+  const [openCity, setOpenCity] = useState(false);
+  const [cityName, setCityName] = useState("Richmond");
   const Richmond = "Richmond, VA";
   const Charleston = "Charleston, SC";
   const Raleigh = "Raleigh, NC (Includes Triangle- Raleigh/Durham/Chapel Hill)";
   const Greenville = "Greenville, SC";
   const Charlotte = "Charlotte, NC";
   const Knoxville = "Knoxville, TN";
+
   const updateRest = (payload) => {
     const filterRest = restaurants.filter((i) => i.id !== payload.new.id);
 
@@ -27,9 +33,25 @@ function Rankings() {
       { event: "*", schema: "public", table: "Restaurants" },
       (payload) => {
         updateRest(payload);
+        console.log(payload);
       }
     )
     .subscribe();
+
+  const openNumDD = () => {
+    setOpenNum(!openNum);
+  };
+  const changeNum = (i) => {
+    setDisplayNum(i);
+    setOpenNum(!openNum);
+  };
+  const openCityDD = () => {
+    setOpenCity(!openCity);
+  };
+  const changeCity = (i) => {
+    setCityName(i);
+    setOpenCity(!openCity);
+  };
   const filteredRichmond = restaurants.filter(
     (restaurants) => restaurants.city == Richmond
   );
@@ -70,93 +92,218 @@ function Rankings() {
 
   const restsKnoxville = filteredKnoxville.sort((a, b) => a.votes - b.votes);
   const knoxvilleOrder = restsKnoxville.reverse();
+  console.log(cityName);
+  const displayMappedCity = () => {
+    if (cityName == "Richmond") {
+      return (
+        <div>
+          {richRestOrder.slice(0, displayNum).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+      );
+    } else if (cityName == "Raleigh") {
+      return (
+        <div>
+          {raleighOrder.slice(0, displayNum).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+      );
+    } else if (cityName == "Knoxville") {
+      return (
+        <div>
+          {knoxvilleOrder.slice(0, displayNum).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+      );
+    } else if (cityName == "Greenville") {
+      return (
+        <div>
+          {greenvilleOrder.slice(0, displayNum).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+      );
+    } else if (cityName == "Charlotte") {
+      return (
+        <div>
+          {charlotteOrder.slice(0, displayNum).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+      );
+    } else if (cityName == "Charleston") {
+      return (
+        <div>
+          {charlestonOrder.slice(0, displayNum).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          {richRestOrder.slice(0, displayNum).map((i) => (
+            <div key={i.id} className="rankingRestCon">
+              <p>{i.name}</p>
+              {i.votes > 0 ? (
+                <p className="rankVotes">{i.votes}</p>
+              ) : (
+                <p className="rankVotes">0</p>
+              )}
+            </div>
+          ))}
+        </div>
+      );
+    }
+  };
   return (
     <div className="rankingDivContainer">
       <img src={goldTom} alt="golden tomato" className="goldTom" />
       <div className="rankingContainer">
         <div className="liveRankingHeaderContainer">
           <p className="liveRankingHeader">
-            GOLDEN TOMATO AWARD LIVE VOTING RESULTS - TOP 5
+            GOLDEN TOMATO AWARD LIVE VOTING RESULTS
           </p>
         </div>
+        <div className="dropDownContainer">
+          <div className="numDropDownContainer">
+            <div className="textDDContainer">
+              <p className={openNum ? "placeHoderDD" : ""}>{cityName} </p>
+              {openCity && (
+                <div className="dropDownOpened">
+                  <p
+                    onClick={() => changeCity("Richmond")}
+                    className="numDisplayOpen"
+                  >
+                    Richmond
+                  </p>
+                  <p
+                    onClick={() => changeCity("Charlotte")}
+                    className="numDisplayOpen"
+                  >
+                    Charlotte
+                  </p>
+                  <p
+                    onClick={() => changeCity("Charleston")}
+                    className="numDisplayOpen"
+                  >
+                    Charleston
+                  </p>
+
+                  <p
+                    onClick={() => changeCity("Greenville")}
+                    className="numDisplayOpen"
+                  >
+                    Greenville
+                  </p>
+
+                  <p
+                    onClick={() => changeCity("Knoxville")}
+                    className="numDisplayOpen"
+                  >
+                    Knoxville
+                  </p>
+                  <p
+                    onClick={() => changeCity("Raleigh")}
+                    className="numDisplayOpen"
+                  >
+                    Raleigh
+                  </p>
+                </div>
+              )}
+            </div>
+            <div onClick={() => openCityDD()}>
+              <img
+                className={openCity ? "arrowUpIconDD" : "arrowIconDD"}
+                src={openCity ? upIcon : downIcon}
+                alt={
+                  openCity ? "Arrow Icon Pointed Up" : "Arrow Icon Pointed Down"
+                }
+              />
+            </div>
+          </div>
+          <div className="numDropDownContainer">
+            <div className="textDDContainer">
+              <p className={openNum ? "placeHoderDD" : ""}>Top {displayNum}</p>
+              {openNum && (
+                <div className="dropDownOpened">
+                  <p onClick={() => changeNum(5)} className="numDisplayOpen">
+                    Top 5
+                  </p>
+                  <p onClick={() => changeNum(10)} className="numDisplayOpen">
+                    Top 10
+                  </p>
+                  <p onClick={() => changeNum(25)} className="numDisplayOpen">
+                    Top 25
+                  </p>
+                  <p onClick={() => changeNum(50)} className="numDisplayOpen">
+                    Top 50
+                  </p>
+                </div>
+              )}
+            </div>
+            <div onClick={() => openNumDD()}>
+              <img
+                className={openNum ? "arrowUpIconDD" : "arrowIconDD"}
+                src={openNum ? upIcon : downIcon}
+                alt={
+                  openNum ? "Arrow Icon Pointed Up" : "Arrow Icon Pointed Down"
+                }
+              />
+            </div>
+          </div>
+        </div>
         <div className="rankingContainerGrid">
-          <div className="cityContainer cityContainerNL">
-            <h1>Richmond</h1>
-            {richRestOrder.slice(0, 5).map((i) => (
-              <div key={i.id} className="rankingRestCon">
-                <p>{i.name}</p>
-                {i.votes > 0 ? (
-                  <p className="rankVotes">{i.votes}</p>
-                ) : (
-                  <p className="rankVotes">0</p>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="cityContainer cityContainerNL">
-            <h1>Raleigh</h1>
-            {raleighOrder.slice(0, 5).map((i) => (
-              <div key={i.id} className="rankingRestCon">
-                <p>{i.name}</p>
-                {i.votes > 0 ? (
-                  <p className="rankVotes">{i.votes}</p>
-                ) : (
-                  <p className="rankVotes">0</p>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="cityContainer cityContainerNL">
-            <h1>Charlotte</h1>
-            {charlotteOrder.slice(0, 5).map((i) => (
-              <div key={i.id} className="rankingRestCon">
-                <p>{i.name}</p>
-                {i.votes > 0 ? (
-                  <p className="rankVotes">{i.votes}</p>
-                ) : (
-                  <p className="rankVotes">0</p>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="cityContainer cityContainerNL">
-            <h1>Charleston</h1>
-            {charlestonOrder.slice(0, 5).map((i) => (
-              <div key={i.id} className="rankingRestCon">
-                <p>{i.name}</p>
-                {i.votes > 0 ? (
-                  <p className="rankVotes">{i.votes}</p>
-                ) : (
-                  <p className="rankVotes">0</p>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="cityContainer cityContainerNL">
-            <h1>Knoxville</h1>
-            {knoxvilleOrder.slice(0, 5).map((i) => (
-              <div key={i.id} className="rankingRestCon">
-                <p>{i.name}</p>
-                {i.votes > 0 ? (
-                  <p className="rankVotes">{i.votes}</p>
-                ) : (
-                  <p className="rankVotes">0</p>
-                )}
-              </div>
-            ))}
-          </div>
           <div className="cityContainer">
-            <h1>Greenville</h1>
-            {greenvilleOrder.slice(0, 5).map((i) => (
-              <div key={i.id} className="rankingRestCon">
-                <p>{i.name}</p>
-                {i.votes > 0 ? (
-                  <p className="rankVotes">{i.votes}</p>
-                ) : (
-                  <p className="rankVotes">0</p>
-                )}
-              </div>
-            ))}
+            <h1>
+              {cityName} - Top {displayNum}
+            </h1>
+            {displayMappedCity()}
           </div>
         </div>
       </div>
