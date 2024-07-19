@@ -1,6 +1,7 @@
 import "./Rankings.styles.css";
 import { useContext } from "react";
 import { RestContext } from "../../RestContext";
+import { supabase } from "../../client";
 import goldTom from "../../assets/goldTomTrophycrop.png";
 function Rankings() {
   const { rests } = useContext(RestContext);
@@ -13,6 +14,22 @@ function Rankings() {
   const Greenville = "Greenville, SC";
   const Charlotte = "Charlotte, NC";
   const Knoxville = "Knoxville, TN";
+  const updateRest = (payload) => {
+    const filterRest = restaurants.filter((i) => i.id !== payload.new.id);
+
+    let x = [...filterRest, payload.new];
+    setRestaurants(x);
+  };
+  const channels = supabase
+    .channel("custom-all-channel")
+    .on(
+      "postgres_changes",
+      { event: "*", schema: "public", table: "Restaurants" },
+      (payload) => {
+        updateRest(payload);
+      }
+    )
+    .subscribe();
   const filteredRichmond = restaurants.filter(
     (restaurants) => restaurants.city == Richmond
   );
