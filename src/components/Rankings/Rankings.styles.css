@@ -92,6 +92,11 @@
 .textDDContainer p {
   font-size: 1.1em;
 }
+.instructText {
+  text-align: center;
+  color: #231e52;
+  font-size: 0.8em;
+}
 .dropDownOpened {
   position: relative;
   background-color: white;
@@ -131,7 +136,7 @@
     color: white;
     text-align: center;
     font-family: "DukesTNarrow";
-    font-size: 1.5em;
+    font-size: 1.8em;
     padding: 0;
   }
   .goldTom {
