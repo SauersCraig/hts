@@ -14,7 +14,7 @@ function Accordion({ i, newDate }) {
   const handleRouteChange = (item) => {
     let rest = item;
     setRestName(rest);
-    let path = "/GoldenTomato#JumpHere";
+    let path = "/GoldenTomato";
     navigate(path);
   };
 
