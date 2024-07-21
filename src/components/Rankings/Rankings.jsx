@@ -33,7 +33,7 @@ function Rankings() {
       { event: "*", schema: "public", table: "Restaurants" },
       (payload) => {
         updateRest(payload);
-        console.log(payload);
+   
       }
     )
     .subscribe();
@@ -92,7 +92,7 @@ function Rankings() {
 
   const restsKnoxville = filteredKnoxville.sort((a, b) => a.votes - b.votes);
   const knoxvilleOrder = restsKnoxville.reverse();
-  console.log(cityName);
+
   const displayMappedCity = () => {
     if (cityName == "Richmond") {
       return (
