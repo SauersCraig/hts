@@ -32,7 +32,7 @@ function App() {
     ReactGA.initialize(TRACKING_ID);
     // Send pageview with a custom path
   }, []);
-
+  console.log("Render");
   return (
     <RestContext.Provider
       value={{
