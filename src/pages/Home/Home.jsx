@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import Rankings from "../../components/Rankings/Rankings";
 import GoldTomCS from "../../components/GoldTomCS/GoldTomCS";
 import ReactGA from "react-ga";
+import BeRightBack from "../../components/BeRightBack/BeRightBack";
 export function Home() {
   const [newDate, setNewDate] = useState();
   useEffect(() => {
@@ -61,13 +62,14 @@ export function Home() {
         </div>
       </div>
       <div>
-        {newDate < 18 ? (
+        <BeRightBack />
+        {/* {newDate < 18 ? (
           <GoldTomCS />
         ) : (
           <div className="rankingDiv">
             <Rankings />
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

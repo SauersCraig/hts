@@ -3,6 +3,7 @@ import { Voting } from "../../components/Voting/Voting";
 import { Login } from "../../components/Login/Login";
 import { ThankYou } from "../../components/ThankYou/ThankYou";
 import Rankings from "../../components/Rankings/Rankings";
+import BeRightBack from "../../components/BeRightBack/BeRightBack";
 import { useState, useEffect } from "react";
 import { supabase } from "../../client";
 import GoldTom from "../../assets/goldTomTrophycrop.png";
@@ -50,7 +51,8 @@ export function GoldenTomato() {
   let name = token ? token.user.user_metadata.first_name : "";
   return (
     <div>
-      {newDate < 18 ? (
+      <BeRightBack />
+      {/* {newDate < 18 ? (
         <div>
           <div className="topGridGTCS">
             <div className="textItemTG">
@@ -113,7 +115,7 @@ export function GoldenTomato() {
             <Rankings />
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

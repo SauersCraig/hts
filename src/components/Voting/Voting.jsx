@@ -1,27 +1,33 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { supabase } from "../../client";
 import { RestContext } from "../../RestContext";
 import "./Voting.styles.css";
 export function Voting({ userInfo, newDate }) {
   const [inputSearch, setInputSearch] = useState("");
+
   const { resName, rests } = useContext(RestContext);
 
   const [restName, setRestName] = resName;
   const [restaurants, setRestaurants] = rests;
 
   async function updateVotes(id, vote) {
-    const { data, error } = await supabase
-      .from("Restaurants")
-      .update({ votes: vote })
-      .eq("id", id)
-      .select();
-    if (error) {
-      console.error(error);
+    if (userInfo.vote_date >= newDate) {
+      alert("You have already voted today!!");
     } else {
-      updateUserVoteDate();
+      const { data, error } = await supabase
+        .from("Restaurants")
+        .update({ votes: vote })
+        .eq("id", id)
+        .select();
+      if (error) {
+        console.error(error);
+      } else if (data) {
+        console.log(data);
+        window.location.reload();
+      }
     }
   }
-  async function updateUserVoteDate() {
+  async function updateUserVoteDate(id, vote) {
     const { data, error } = await supabase
       .from("profile")
       .update({ vote_date: newDate })
@@ -29,13 +35,14 @@ export function Voting({ userInfo, newDate }) {
       .select();
     if (error) {
       console.error(error);
-    } else {
-      location.reload();
+    } else if (data) {
+      updateVotes(id, vote);
+      console.log("user Updated:", newDate);
     }
   }
   function onClickVote(id, votes) {
     let vote = votes + 1;
-    updateVotes(id, vote);
+    updateUserVoteDate(id, vote);
   }
   let inputHandler = (e) => {
     var lowerCase = e.target.value.toLowerCase();
