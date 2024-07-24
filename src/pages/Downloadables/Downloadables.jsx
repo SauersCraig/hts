@@ -8,6 +8,7 @@ import HTSLogo4 from "../../assets/HTSLogo4.png";
 import HTSLogoSocialPost from "../../assets/HTSLogoSocialPost.jpg";
 import HTSLogoSocialPost2 from "../../assets/HTSLogoSocialPost2.jpg";
 import ReactGA from "react-ga";
+import Rankings from "../../components/Rankings/Rankings";
 export function Downloadables() {
   ReactGA.pageview(window.location.pathname + window.location.search);
   return (
@@ -98,6 +99,7 @@ export function Downloadables() {
       >
         Sign Up for Hot Tomato Summer
       </a>
+      <Rankings />
     </div>
   );
 }

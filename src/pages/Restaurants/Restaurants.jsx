@@ -4,6 +4,7 @@ import { RestSection } from "../../components/RestSection/RestSection";
 import { RestContext } from "../../RestContext";
 import Accordion from "../../components/Accordion/Accordion";
 import ReactGA from "react-ga";
+import Rankings from "../../components/Rankings/Rankings";
 export function Restaurants() {
   ReactGA.pageview(window.location.pathname + window.location.search);
   const { rests } = useContext(RestContext);
@@ -132,6 +133,7 @@ export function Restaurants() {
           <RestSection rests={restaurants} />
         )}
       </div>
+      <Rankings />
     </div>
   );
 }

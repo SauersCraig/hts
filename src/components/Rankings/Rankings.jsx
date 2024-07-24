@@ -24,6 +24,7 @@ function Rankings() {
     const filterRest = restaurants.filter((i) => i.id !== payload.new.id);
 
     let x = [...filterRest, payload.new];
+    console.log(payload);
     setRestaurants(x);
   };
   const channels = supabase
@@ -33,7 +34,6 @@ function Rankings() {
       { event: "*", schema: "public", table: "Restaurants" },
       (payload) => {
         updateRest(payload);
-   
       }
     )
     .subscribe();

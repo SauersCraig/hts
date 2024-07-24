@@ -3,6 +3,7 @@ import "./Rest.styles.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import ReactGA from "react-ga";
+import Rankings from "../../components/Rankings/Rankings";
 function Rest() {
   ReactGA.pageview(window.location.pathname + window.location.search);
   const [loginData, setLoginData] = useState({
@@ -51,6 +52,7 @@ function Rest() {
       <p className="signUpText">
         Don't have an account? <Link to="/SignUp">Signup for an account.</Link>
       </p>
+      <Rankings />
     </div>
   );
 }

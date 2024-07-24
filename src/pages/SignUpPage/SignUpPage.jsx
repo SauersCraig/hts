@@ -4,6 +4,7 @@ import { supabase } from "../../client";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ReactGA from "react-ga";
+import Rankings from "../../components/Rankings/Rankings";
 export function SignUpPage() {
   ReactGA.pageview(window.location.pathname + window.location.search);
   let navigate = useNavigate();
@@ -104,6 +105,7 @@ export function SignUpPage() {
         Already have an account?
         <Link to="/GoldenTomato">Login to your account.</Link>
       </p>
+      <Rankings />
     </div>
   );
 }

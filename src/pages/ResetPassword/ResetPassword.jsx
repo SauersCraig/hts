@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./ResetPassword.styles.css";
 import ReactGA from "react-ga";
+import Rankings from "../../components/Rankings/Rankings";
 export function ResetPassword() {
   ReactGA.pageview(window.location.pathname + window.location.search);
   const [password, setPassword] = useState({
@@ -49,6 +50,7 @@ export function ResetPassword() {
       <div onClick={() => setShowPassword(!showPassword)}>
         <p className="showPass">Show Passwords</p>
       </div>
+      <Rankings />
     </div>
   );
 }
