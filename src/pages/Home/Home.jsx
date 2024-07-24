@@ -62,14 +62,13 @@ export function Home() {
         </div>
       </div>
       <div>
-        <BeRightBack />
-        {/* {newDate < 18 ? (
+        {newDate < 18 ? (
           <GoldTomCS />
         ) : (
           <div className="rankingDiv">
             <Rankings />
           </div>
-        )} */}
+        )}
       </div>
     </div>
   );

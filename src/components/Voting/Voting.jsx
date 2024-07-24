@@ -41,7 +41,7 @@ export function Voting({ userInfo, newDate }) {
     }
   }
   function onClickVote(id, votes) {
-    let vote = votes + 1;
+    let vote = votes+1;
     updateUserVoteDate(id, vote);
   }
   let inputHandler = (e) => {
