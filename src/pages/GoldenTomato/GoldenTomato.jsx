@@ -50,72 +50,71 @@ export function GoldenTomato() {
 
   let name = token ? token.user.user_metadata.first_name : "";
   return (
-    // <div>
-    //   {newDate < 18 ? (
-    //     <div>
-    //       <div className="topGridGTCS">
-    //         <div className="textItemTG">
-    //           <h1 className="votingComingSoonHeader">The</h1>
-    //           <h1 className="votingComingSoonHeader gtWords">Golden Tomato</h1>
-    //           <h1 className="votingComingSoonHeader">Award</h1>
-    //           <p className="VCSsecLine">
-    //             VOTING BEGINS
-    //             <span>
-    //               JULY 18<sup>th</sup>
-    //             </span>
-    //           </p>
-    //           <p className="comeBack2Vote">
-    //             Make sure to come on back and submit your vote!
-    //           </p>
-    //         </div>
-    //         <img src={GoldTom} className="goldTomCS" alt="A golden Tomato" />
-    //       </div>
-    //     </div>
-    //   ) : (
-    //     <div>
-    //       {token ? (
-    //         <div>
-    //           <div className="signOutContainer">
-    //             <button onClick={() => signOut()} className="signOutBtn">
-    //               Sign Out
-    //             </button>
-    //           </div>
-    //           {userInfo &&
-    //             userInfo.map((i) => (
-    //               <div className="gtContainer" id="JumpHere" key={i.id}>
-    //                 {i.vote_date == newDate ? (
-    //                   <ThankYou name={name} />
-    //                 ) : (
-    //                   <>
-    //                     <h1 className="gtHeader">
-    //                       Hello, {name}! Enjoying Hot Tomato Summer?
-    //                     </h1>
-    //                     <h2 className="gtHeader">
-    //                       Vote for your favorite participating restaurant!
-    //                     </h2>
-    //                     <h3 className="gtHeader3">
-    //                       The restaurant with the most votes in each city will
-    //                       win the covetd Golden Tomato Award!
-    //                     </h3>
-    //                     <h3 className="gtHeader3">
-    //                       For live results, visit the hottomatosummer.com
-    //                       homepage
-    //                     </h3>
-    //                     <Voting userInfo={i} newDate={newDate} />
-    //                   </>
-    //                 )}
-    //               </div>
-    //             ))}
-    //         </div>
-    //       ) : (
-    //         <Login setToken={setToken} />
-    //       )}
-    //       <div className="rankingDiv">
-    //         <Rankings />
-    //       </div>
-    //     </div>
-    //   )} 
-    // </div>    
-     <BeRightBack/>
+    <div>
+      {newDate < 18 ? (
+        <div>
+          <div className="topGridGTCS">
+            <div className="textItemTG">
+              <h1 className="votingComingSoonHeader">The</h1>
+              <h1 className="votingComingSoonHeader gtWords">Golden Tomato</h1>
+              <h1 className="votingComingSoonHeader">Award</h1>
+              <p className="VCSsecLine">
+                VOTING BEGINS
+                <span>
+                  JULY 18<sup>th</sup>
+                </span>
+              </p>
+              <p className="comeBack2Vote">
+                Make sure to come on back and submit your vote!
+              </p>
+            </div>
+            <img src={GoldTom} className="goldTomCS" alt="A golden Tomato" />
+          </div>
+        </div>
+      ) : (
+        <div>
+          {token ? (
+            <div>
+              <div className="signOutContainer">
+                <button onClick={() => signOut()} className="signOutBtn">
+                  Sign Out
+                </button>
+              </div>
+              {userInfo &&
+                userInfo.map((i) => (
+                  <div className="gtContainer" id="JumpHere" key={i.id}>
+                    {i.vote_date == newDate ? (
+                      <ThankYou name={name} />
+                    ) : (
+                      <>
+                        <h1 className="gtHeader">
+                          Hello, {name}! Enjoying Hot Tomato Summer?
+                        </h1>
+                        <h2 className="gtHeader">
+                          Vote for your favorite participating restaurant!
+                        </h2>
+                        <h3 className="gtHeader3">
+                          The restaurant with the most votes in each city will
+                          win the covetd Golden Tomato Award!
+                        </h3>
+                        <h3 className="gtHeader3">
+                          For live results, visit the hottomatosummer.com
+                          homepage
+                        </h3>
+                        <Voting userInfo={i} newDate={newDate} />
+                      </>
+                    )}
+                  </div>
+                ))}
+            </div>
+          ) : (
+            <Login setToken={setToken} />
+          )}
+          <div className="rankingDiv">
+            <Rankings />
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
