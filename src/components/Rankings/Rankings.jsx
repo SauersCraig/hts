@@ -203,116 +203,117 @@ function Rankings() {
     }
   };
   return (
-    <div className="rankingDivContainer">
-      <img src={goldTom} alt="golden tomato" className="goldTom" />
-      <div className="rankingContainer">
-        <div className="liveRankingHeaderContainer">
-          <p className="liveRankingHeader">
-            GOLDEN TOMATO AWARD LIVE VOTING RESULTS
-          </p>
-        </div>
-        <p className="instructText">
-          Select participating city from the drop down menu to see voting
-          results
-        </p>
-        <div className="dropDownContainer">
-          <div className="numDropDownContainer">
-            <div className="textDDContainer">
-              <p className={openNum ? "placeHoderDD" : ""}>{cityName} </p>
-              {openCity && (
-                <div className="dropDownOpened">
-                  <p
-                    onClick={() => changeCity("Richmond")}
-                    className="numDisplayOpen"
-                  >
-                    Richmond
-                  </p>
-                  <p
-                    onClick={() => changeCity("Charlotte")}
-                    className="numDisplayOpen"
-                  >
-                    Charlotte
-                  </p>
-                  <p
-                    onClick={() => changeCity("Charleston")}
-                    className="numDisplayOpen"
-                  >
-                    Charleston
-                  </p>
+    <BeRightBack />
+    // <div className="rankingDivContainer">
+    //   <img src={goldTom} alt="golden tomato" className="goldTom" />
+    //   <div className="rankingContainer">
+    //     <div className="liveRankingHeaderContainer">
+    //       <p className="liveRankingHeader">
+    //         GOLDEN TOMATO AWARD LIVE VOTING RESULTS
+    //       </p>
+    //     </div>
+    //     <p className="instructText">
+    //       Select participating city from the drop down menu to see voting
+    //       results
+    //     </p>
+    //     <div className="dropDownContainer">
+    //       <div className="numDropDownContainer">
+    //         <div className="textDDContainer">
+    //           <p className={openNum ? "placeHoderDD" : ""}>{cityName} </p>
+    //           {openCity && (
+    //             <div className="dropDownOpened">
+    //               <p
+    //                 onClick={() => changeCity("Richmond")}
+    //                 className="numDisplayOpen"
+    //               >
+    //                 Richmond
+    //               </p>
+    //               <p
+    //                 onClick={() => changeCity("Charlotte")}
+    //                 className="numDisplayOpen"
+    //               >
+    //                 Charlotte
+    //               </p>
+    //               <p
+    //                 onClick={() => changeCity("Charleston")}
+    //                 className="numDisplayOpen"
+    //               >
+    //                 Charleston
+    //               </p>
 
-                  <p
-                    onClick={() => changeCity("Greenville")}
-                    className="numDisplayOpen"
-                  >
-                    Greenville
-                  </p>
+    //               <p
+    //                 onClick={() => changeCity("Greenville")}
+    //                 className="numDisplayOpen"
+    //               >
+    //                 Greenville
+    //               </p>
 
-                  <p
-                    onClick={() => changeCity("Knoxville")}
-                    className="numDisplayOpen"
-                  >
-                    Knoxville
-                  </p>
-                  <p
-                    onClick={() => changeCity("Raleigh")}
-                    className="numDisplayOpen"
-                  >
-                    Raleigh
-                  </p>
-                </div>
-              )}
-            </div>
-            <div onClick={() => openCityDD()}>
-              <img
-                className={openCity ? "arrowUpIconDD" : "arrowIconDD"}
-                src={openCity ? upIcon : downIcon}
-                alt={
-                  openCity ? "Arrow Icon Pointed Up" : "Arrow Icon Pointed Down"
-                }
-              />
-            </div>
-          </div>
-          <div className="numDropDownContainer">
-            <div className="textDDContainer">
-              <p className={openNum ? "placeHoderDD" : ""}>Top {displayNum}</p>
-              {openNum && (
-                <div className="dropDownOpened">
-                  <p onClick={() => changeNum(5)} className="numDisplayOpen">
-                    Top 5
-                  </p>
-                  <p onClick={() => changeNum(10)} className="numDisplayOpen">
-                    Top 10
-                  </p>
-                  <p onClick={() => changeNum(25)} className="numDisplayOpen">
-                    Top 25
-                  </p>
-                  <p onClick={() => changeNum(50)} className="numDisplayOpen">
-                    Top 50
-                  </p>
-                </div>
-              )}
-            </div>
-            <div onClick={() => openNumDD()}>
-              <img
-                className={openNum ? "arrowUpIconDD" : "arrowIconDD"}
-                src={openNum ? upIcon : downIcon}
-                alt={
-                  openNum ? "Arrow Icon Pointed Up" : "Arrow Icon Pointed Down"
-                }
-              />
-            </div>
-          </div>
-        </div>
-        <div className="rankingContainerGrid">
-          <div className="cityContainer">
-            <h1>
-              {cityName} - Top {displayNum}
-            </h1>
-            {displayMappedCity()}
-          </div>
-        </div>
-      </div>
-    </div>
+    //               <p
+    //                 onClick={() => changeCity("Knoxville")}
+    //                 className="numDisplayOpen"
+    //               >
+    //                 Knoxville
+    //               </p>
+    //               <p
+    //                 onClick={() => changeCity("Raleigh")}
+    //                 className="numDisplayOpen"
+    //               >
+    //                 Raleigh
+    //               </p>
+    //             </div>
+    //           )}
+    //         </div>
+    //         <div onClick={() => openCityDD()}>
+    //           <img
+    //             className={openCity ? "arrowUpIconDD" : "arrowIconDD"}
+    //             src={openCity ? upIcon : downIcon}
+    //             alt={
+    //               openCity ? "Arrow Icon Pointed Up" : "Arrow Icon Pointed Down"
+    //             }
+    //           />
+    //         </div>
+    //       </div>
+    //       <div className="numDropDownContainer">
+    //         <div className="textDDContainer">
+    //           <p className={openNum ? "placeHoderDD" : ""}>Top {displayNum}</p>
+    //           {openNum && (
+    //             <div className="dropDownOpened">
+    //               <p onClick={() => changeNum(5)} className="numDisplayOpen">
+    //                 Top 5
+    //               </p>
+    //               <p onClick={() => changeNum(10)} className="numDisplayOpen">
+    //                 Top 10
+    //               </p>
+    //               <p onClick={() => changeNum(25)} className="numDisplayOpen">
+    //                 Top 25
+    //               </p>
+    //               <p onClick={() => changeNum(50)} className="numDisplayOpen">
+    //                 Top 50
+    //               </p>
+    //             </div>
+    //           )}
+    //         </div>
+    //         <div onClick={() => openNumDD()}>
+    //           <img
+    //             className={openNum ? "arrowUpIconDD" : "arrowIconDD"}
+    //             src={openNum ? upIcon : downIcon}
+    //             alt={
+    //               openNum ? "Arrow Icon Pointed Up" : "Arrow Icon Pointed Down"
+    //             }
+    //           />
+    //         </div>
+    //       </div>
+    //     </div>
+    //     <div className="rankingContainerGrid">
+    //       <div className="cityContainer">
+    //         <h1>
+    //           {cityName} - Top {displayNum}
+    //         </h1>
+    //         {displayMappedCity()}
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
   );
 }
 
