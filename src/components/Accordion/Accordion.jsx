@@ -77,8 +77,8 @@ function Accordion({ i, newDate }) {
                 </div>
               </div>
             </div>
-          <div>
-              {newDate > 28 ? (
+            <div>
+              {/* {newDate > 28 ? (
                 <></>
               ) : (
                 <div>
@@ -108,8 +108,9 @@ function Accordion({ i, newDate }) {
                     </div>
                   )}
                 </div>
-              )}
-            </div> 
+              )} */}
+              <BeRightBack />
+            </div>
           </div>
         </div>
       )}
