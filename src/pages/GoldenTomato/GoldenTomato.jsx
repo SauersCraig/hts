@@ -51,7 +51,7 @@ export function GoldenTomato() {
   let name = token ? token.user.user_metadata.first_name : "";
   return (
     <div>
-      {/* {newDate < 18 ? (
+      {newDate < 18 ? (
         <div>
           <div className="topGridGTCS">
             <div className="textItemTG">
@@ -114,8 +114,7 @@ export function GoldenTomato() {
             <Rankings />
           </div>
         </div>
-      )} */}
-      <BeRightBack />
+      )} 
     </div>
   );
 }
