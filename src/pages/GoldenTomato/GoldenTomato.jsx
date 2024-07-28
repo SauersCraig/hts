@@ -51,7 +51,7 @@ export function GoldenTomato() {
   let name = token ? token.user.user_metadata.first_name : "";
   return (
     <div>
-      {newDate < 18 ? (
+      {newDate > 28 ? (
         <div>
           <div className="topGridGTCS">
             <div className="textItemTG">
@@ -59,13 +59,11 @@ export function GoldenTomato() {
               <h1 className="votingComingSoonHeader gtWords">Golden Tomato</h1>
               <h1 className="votingComingSoonHeader">Award</h1>
               <p className="VCSsecLine">
-                VOTING BEGINS
-                <span>
-                  JULY 18<sup>th</sup>
-                </span>
+                VOTING IS CLOSED
+              
               </p>
               <p className="comeBack2Vote">
-                Make sure to come on back and submit your vote!
+                Make sure to come on back July 30<sup>th</sup> to see who won!
               </p>
             </div>
             <img src={GoldTom} className="goldTomCS" alt="A golden Tomato" />

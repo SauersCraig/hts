@@ -14,7 +14,9 @@
 .headerAccordion {
   padding-left: 20px;
 }
-
+.votingCenter {
+  text-align: center;
+}
 .specHeader {
   display: inline-block;
   padding-left: 20px;

@@ -1,5 +1,5 @@
 import "./Accordion.styles.css";
-import { useState, useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { RestContext } from "../../RestContext";
 import upIcon from "../../assets/icons/angle-up.svg";
@@ -79,7 +79,10 @@ function Accordion({ i, newDate }) {
             </div>
             <div>
               {newDate > 28 ? (
-                <></>
+                <h3 className="votingCenter">
+                  Voting for the Golden Tomato is now closed.<br></br> Come back
+                  July 30th to see who won.
+                </h3>
               ) : (
                 <div>
                   {i.id === 305 ? (
