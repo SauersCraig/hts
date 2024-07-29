@@ -225,8 +225,8 @@ function Rankings() {
         <div>
           {newDate > 28 ? (
             <div className="tallyingResults">
-              <h1>Tallying Results</h1>
-              <h2>Come back July 30th to find out who won!</h2>
+              <h1>We are busy tallying the results</h1>
+              <h2>Come back July 30th to find out the Golden Tomato Winner in your city!</h2>
             </div>
           ) : (
             <div>

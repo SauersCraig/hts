@@ -63,7 +63,7 @@ export function GoldenTomato() {
               
               </p>
               <p className="comeBack2Vote">
-                Make sure to come on back July 30<sup>th</sup> to see who won!
+                Make sure to come on back July 30<sup>th</sup> to see who the Golden Tomato Winner in your city was!
               </p>
             </div>
             <img src={GoldTom} className="goldTomCS" alt="A golden Tomato" />
