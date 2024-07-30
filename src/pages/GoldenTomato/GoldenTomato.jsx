@@ -6,7 +6,7 @@ import Rankings from "../../components/Rankings/Rankings";
 import BeRightBack from "../../components/BeRightBack/BeRightBack";
 import { useState, useEffect } from "react";
 import { supabase } from "../../client";
-import GoldTom from "../../assets/goldTomTrophycrop.png";
+import GoldTom from "../../assets/goldTomTrophy.png";
 import ReactGA from "react-ga";
 export function GoldenTomato() {
   ReactGA.pageview(window.location.pathname + window.location.search);
@@ -51,68 +51,31 @@ export function GoldenTomato() {
   let name = token ? token.user.user_metadata.first_name : "";
   return (
     <div>
-      {newDate > 28 ? (
-        <div>
-          <div className="topGridGTCS">
-            <div className="textItemTG">
-              <h1 className="votingComingSoonHeader">The</h1>
-              <h1 className="votingComingSoonHeader gtWords">Golden Tomato</h1>
-              <h1 className="votingComingSoonHeader">Award</h1>
-              <p className="VCSsecLine">
-                VOTING IS CLOSED
-              
-              </p>
-              <p className="comeBack2Vote">
-                Make sure to come on back July 30<sup>th</sup> to see who the Golden Tomato Winner in your city was!
-              </p>
+      <div>
+        <div className="topGridGTCS">
+          <div className="textItemTG">
+            <h1 className="votingComingSoonHeader">The</h1>
+            <h1 className="votingComingSoonHeader gtWords">Golden Tomato</h1>
+            <h1 className="votingComingSoonHeader">Award</h1>
+            <h1 className="votingComingSoonHeader">Winners Are:</h1>
+            <div className="topGridGTCS2">
+              <p>Richmond:</p>
+              <p> Coco and Hazel</p>
+              <p>Charlotte:</p>
+              <p> Moo&Brew</p>
+              <p>Charleston:</p>
+              <p> Prohibition</p>
+              <p>Greenville: </p>
+              <p> Clayton's Deli</p>
+              <p>Knoxville:</p>
+              <p> Maple Hall</p>
+              <p>Raleigh:</p>
+              <p> Abbey Road Tavern & Grill</p>
             </div>
-            <img src={GoldTom} className="goldTomCS" alt="A golden Tomato" />
           </div>
+          <img src={GoldTom} alt="Trophy of a lady holding up a giant Tomato" />
         </div>
-      ) : (
-        <div>
-          {token ? (
-            <div>
-              <div className="signOutContainer">
-                <button onClick={() => signOut()} className="signOutBtn">
-                  Sign Out
-                </button>
-              </div>
-              {userInfo &&
-                userInfo.map((i) => (
-                  <div className="gtContainer" id="JumpHere" key={i.id}>
-                    {i.vote_date == newDate ? (
-                      <ThankYou name={name} />
-                    ) : (
-                      <>
-                        <h1 className="gtHeader">
-                          Hello, {name}! Enjoying Hot Tomato Summer?
-                        </h1>
-                        <h2 className="gtHeader">
-                          Vote for your favorite participating restaurant!
-                        </h2>
-                        <h3 className="gtHeader3">
-                          The restaurant with the most votes in each city will
-                          win the covetd Golden Tomato Award!
-                        </h3>
-                        <h3 className="gtHeader3">
-                          For live results, visit the hottomatosummer.com
-                          homepage
-                        </h3>
-                        <Voting userInfo={i} newDate={newDate} />
-                      </>
-                    )}
-                  </div>
-                ))}
-            </div>
-          ) : (
-            <Login setToken={setToken} />
-          )}
-          <div className="rankingDiv">
-            <Rankings />
-          </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 }

@@ -78,40 +78,21 @@ function Accordion({ i, newDate }) {
               </div>
             </div>
             <div>
-              {newDate > 28 ? (
-                <h3 className="votingCenter">
-                  Voting for the Golden Tomato is now closed.<br></br> Come back
-                  July 30th to see who won.
-                </h3>
-              ) : (
-                <div>
-                  {i.id === 305 ? (
-                    ""
-                  ) : (
-                    <div>
-                      <div className="goldenTomAccordion">
-                        <div className="gtaItem1">
-                          <h3 className="voteText">Votes for Golden Tomato</h3>
-                          {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
-                        </div>
-                        <div className="gtaItem2">
-                          <img
-                            src={GoldTomTrophy}
-                            className="trophyGT"
-                            alt="Golden Trophy of a person holding up a giant Tomato"
-                          />
-                        </div>
-                      </div>
-                      <button
-                        onClick={() => handleRouteChange(i)}
-                        className="btnHTS voteBtn"
-                      >
-                        VOTE NOW
-                      </button>
-                    </div>
-                  )}
+              <div>
+                <div className="goldenTomAccordion">
+                  <div className="gtaItem1">
+                    <h3 className="voteText">Votes for Golden Tomato</h3>
+                    {i.votes > 0 ? <p>{i.votes}</p> : <p>0</p>}
+                  </div>
+                  <div className="gtaItem2">
+                    <img
+                      src={GoldTomTrophy}
+                      className="trophyGT"
+                      alt="Golden Trophy of a person holding up a giant Tomato"
+                    />
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           </div>
         </div>

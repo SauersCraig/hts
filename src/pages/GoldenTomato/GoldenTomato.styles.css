@@ -78,6 +78,13 @@
   border-radius: 10px;
   margin: 20px 20px 20px;
 }
+.topGridGTCS2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border-radius: 10px;
+  margin: 20px 20px 20px;
+}
 .goldTomCS {
   width: 60%;
   display: block;
@@ -85,6 +92,14 @@
 }
 .textItemTG {
   padding: 30px 0 0;
+}
+.textItemTG p {
+  font-size: 2em;
+  font-family: "DukesTS";
+  color: #231e52;
+  text-align: center;
+  border-bottom: #231e52 solid 2px;
+  padding-bottom: 20px;
 }
 @media only screen and (max-width: 900px) {
   .gtContainer {
