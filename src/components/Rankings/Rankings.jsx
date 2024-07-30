@@ -282,7 +282,8 @@ function Rankings() {
             </div>
             <div className="rankingContainerGrid">
               <div className="cityContainer">
-                <h1>{cityName} Winner!</h1>
+                <h1>{cityName}</h1>
+                <h1>Winner and Runner-Ups</h1>
                 {displayMappedCity()}
               </div>
             </div>

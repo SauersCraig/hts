@@ -59,18 +59,19 @@ export function GoldenTomato() {
             <h1 className="votingComingSoonHeader">Award</h1>
             <h1 className="votingComingSoonHeader">Winners Are:</h1>
             <div className="topGridGTCS2">
-              <p>Richmond:</p>
-              <p> Coco and Hazel</p>
+            <p>Charleston:</p>
+            <p> Prohibition - 2634</p>
               <p>Charlotte:</p>
-              <p> Moo&Brew</p>
-              <p>Charleston:</p>
-              <p> Prohibition</p>
+              <p> Moo&Brew - 2706</p>
+          
               <p>Greenville: </p>
-              <p> Clayton's Deli</p>
+              <p> Clayton's Deli -2521</p>
               <p>Knoxville:</p>
-              <p> Maple Hall</p>
+              <p> Maple Hall - 896</p>
               <p>Raleigh:</p>
-              <p> Abbey Road Tavern & Grill</p>
+              <p> Abbey Road Tavern & Grill - 2057</p>
+              <p>Richmond:</p>
+              <p> Coco and Hazel - 4772</p>
             </div>
           </div>
           <img src={GoldTom} alt="Trophy of a lady holding up a giant Tomato" />
