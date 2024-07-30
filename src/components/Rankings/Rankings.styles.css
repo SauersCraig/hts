@@ -33,6 +33,14 @@
   color: #d8282f;
   font-size: 4em;
   font-family: "DukesTNarrow";
+  line-height: 0.5;
+}
+.runUp {
+  text-align: center;
+  color: #d8282f;
+  font-size: 3.4em;
+  line-height: 0.5;
+  font-family: "DukesTNarrow";
 }
 .rankingRestCon {
   display: grid;
