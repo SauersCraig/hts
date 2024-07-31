@@ -2,7 +2,7 @@ import "./Rankings.styles.css";
 import { useContext, useState, useEffect } from "react";
 import { RestContext } from "../../RestContext";
 import { supabase } from "../../client";
-import BeRightBack from "../BeRightBack/BeRightBack";
+
 import goldTom from "../../assets/goldTomTrophycrop.png";
 import upIcon from "../../assets/icons/angle-up.svg";
 import downIcon from "../../assets/icons/angle-down.svg";

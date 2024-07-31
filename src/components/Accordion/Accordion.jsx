@@ -5,7 +5,7 @@ import { RestContext } from "../../RestContext";
 import upIcon from "../../assets/icons/angle-up.svg";
 import downIcon from "../../assets/icons/angle-down.svg";
 import GoldTomTrophy from "../../assets/goldTomTrophy.png";
-import BeRightBack from "../BeRightBack/BeRightBack";
+
 function Accordion({ i, newDate }) {
   const [isActive, setIsActive] = useState(false);
   const { resName } = useContext(RestContext);

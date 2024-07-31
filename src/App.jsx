@@ -5,12 +5,11 @@ import { supabase } from "./client";
 import { RestContext } from "./RestContext";
 import ReactGA from "react-ga";
 
-import { SignUpPage } from "./pages/SignUpPage/SignUpPage";
 import { Restaurants } from "./pages/Restaurants/Restaurants";
 import { Home } from "./pages/Home/Home";
 import { Downloadables } from "./pages/Downloadables/Downloadables";
 import { GoldenTomato } from "./pages/GoldenTomato/GoldenTomato";
-import { ResetPassword } from "./pages/ResetPassword/ResetPassword";
+
 import Rest from "./pages/Reset/Rest";
 
 import { NavBar } from "./components/NavBar/NavBar";
@@ -46,9 +45,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Restaurants" element={<Restaurants />} />
           <Route path="/GoldenTomato" element={<GoldenTomato />} />
-          <Route path="/SignUp" element={<SignUpPage />} />
+
           <Route path="/Downloadables" element={<Downloadables />} />
-          <Route path="/RestResetPassword" element={<ResetPassword />} />
+
           <Route path="/Rest" element={<Rest />} />
         </Routes>
       </main>
